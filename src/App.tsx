@@ -76,7 +76,7 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
 
   return (
     <div className="flex flex-col items-center mt-6">
-      <div className="cube-container">
+      <div className="cube-container" data-dark={String(isDark)}>
         <div className="cube">
           {faces.map(({ name, label }) => (
             <div key={name} className={`cube-face ${name}`}>
@@ -341,7 +341,11 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
               )}
             </button>
             <button
-              onClick={onResetKey}
+              onClick={() => {
+                if (window.confirm('Reset API key?'))
+                  if (window.confirm('Are you sure? You will need to enter it again.'))
+                    onResetKey()
+              }}
               className={`text-xs underline mb-2 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
               title="Изменить API key"
             >
