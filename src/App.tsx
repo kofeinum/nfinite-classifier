@@ -63,7 +63,7 @@ const parsePivotPosition = (pivot: string): { face: string; x: string; y: string
   return { face, x, y }
 }
 
-const PivotCube = ({ pivot }: { pivot: string }) => {
+const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
   const position = parsePivotPosition(pivot)
   const faces = [
     { name: 'front', label: 'Front' },
@@ -92,9 +92,9 @@ const PivotCube = ({ pivot }: { pivot: string }) => {
           ))}
         </div>
       </div>
-      <div className="mt-4 p-4 bg-gray-100 rounded-lg text-center w-full shadow-inner">
-        <p className="text-sm text-gray-600 font-semibold">Pivot Point:</p>
-        <p className="text-base text-gray-800 font-mono break-words">{pivot}</p>
+      <div className={`mt-4 p-4 rounded-lg text-center w-full shadow-inner ${isDark ? 'bg-[#404040]' : 'bg-gray-100'}`}>
+        <p className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Pivot Point:</p>
+        <p className={`text-base font-mono break-words ${isDark ? 'text-gray-200' : 'text-gray-800'}`}>{pivot}</p>
       </div>
     </div>
   )
@@ -109,19 +109,14 @@ interface ResultDisplayProps {
   results: ClassificationResult[]
   selectedResultIndex: number | null
   copiedCategory: string | null
+  isDark: boolean
   onCopy: (category: string) => void
   onSelectResult: (index: number) => void
 }
 
 function ResultDisplay({
-  isLoading,
-  error,
-  notFound,
-  results,
-  selectedResultIndex,
-  copiedCategory,
-  onCopy,
-  onSelectResult,
+  isLoading, error, notFound, results, selectedResultIndex,
+  copiedCategory, isDark, onCopy, onSelectResult,
 }: ResultDisplayProps) {
   if (isLoading) {
     return (
@@ -136,35 +131,39 @@ function ResultDisplay({
   }
 
   if (error) {
-    return <p className="mt-8 text-center text-red-500 bg-red-100 p-4 rounded-lg">{error}</p>
+    return <p className="mt-8 text-center text-red-400 bg-red-900/20 p-4 rounded-lg">{error}</p>
   }
 
   if (notFound) {
-    return <p className="mt-8 text-center text-2xl font-semibold text-gray-700">не нашел</p>
+    return <p className={`mt-8 text-center text-2xl font-semibold ${isDark ? 'text-gray-400' : 'text-gray-700'}`}>не нашел</p>
   }
 
   if (results.length > 0) {
     return (
       <div className="w-full">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Found Categories:</h2>
-        <ul className="border border-gray-200 rounded-lg space-y-2 p-2 max-h-[50vh] overflow-y-auto">
+        <h2 className={`text-2xl font-bold mb-4 text-center ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>Found Categories:</h2>
+        <ul className={`border rounded-lg space-y-2 p-2 max-h-[50vh] overflow-y-auto ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
           {results.map((result, index) => (
             <li
               key={index}
               onClick={() => onSelectResult(index)}
-              className={`flex items-center justify-between text-gray-800 p-3 rounded-lg transition-all duration-200 cursor-pointer hover:bg-blue-50 ${selectedResultIndex === index ? 'bg-blue-100 border-l-4 border-blue-500' : 'bg-white'}`}
+              className={`flex items-center justify-between p-3 rounded-lg transition-all duration-200 cursor-pointer
+                ${selectedResultIndex === index
+                  ? isDark ? 'bg-blue-900/40 border-l-4 border-blue-400' : 'bg-blue-100 border-l-4 border-blue-500'
+                  : isDark ? 'bg-[#3a3a3a] hover:bg-[#444]' : 'bg-white hover:bg-blue-50'
+                } ${isDark ? 'text-gray-100' : 'text-gray-800'}`}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && onSelectResult(index)}
             >
               <span className="font-mono font-medium text-sm md:text-base">{result.category}</span>
               <div className="flex items-center space-x-3">
-                <span className="text-xs font-semibold text-blue-600 bg-blue-200/50 px-2.5 py-1 rounded-full">
+                <span className="text-xs font-semibold text-blue-400 bg-blue-900/30 px-2.5 py-1 rounded-full">
                   {Math.round(result.confidence * 100)}%
                 </span>
                 <button
                   onClick={(e) => { e.stopPropagation(); onCopy(result.category) }}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  className={`transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
                   aria-label={`Copy category ${result.category}`}
                 >
                   {copiedCategory === result.category ? (
@@ -192,10 +191,12 @@ function ResultDisplay({
 
 interface AppProps {
   apiKey: string
+  isDark: boolean
+  onToggleTheme: () => void
   onResetKey: () => void
 }
 
-export function App({ apiKey, onResetKey }: AppProps) {
+export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
   const [imageFile, setImageFile] = useState<File | null>(null)
   const [imageUrl, setImageUrl] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
@@ -317,20 +318,37 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4 md:p-8">
-      <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-6xl mx-auto">
+    <div className={`min-h-screen flex flex-col items-center justify-center p-4 md:p-8 ${isDark ? 'bg-[#282828]' : 'bg-gray-100'}`}>
+      <div className={`p-8 rounded-2xl shadow-xl w-full max-w-6xl mx-auto ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-4">
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">Nfinite category classifier</h1>
+          <div className="flex items-center justify-center gap-3">
+            <h1 className={`text-4xl font-bold mb-2 ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>
+              Nfinite category classifier
+            </h1>
+            <button
+              onClick={onToggleTheme}
+              className={`p-2 rounded-lg mb-2 transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
+              title={isDark ? 'Светлая тема' : 'Тёмная тема'}
+            >
+              {isDark ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364-.707.707M6.343 17.657l-.707.707m12.728 0-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              )}
+            </button>
             <button
               onClick={onResetKey}
-              className="text-xs text-gray-400 hover:text-gray-600 underline mb-2"
+              className={`text-xs underline mb-2 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
               title="Изменить API key"
             >
               API key
             </button>
           </div>
-          <p className="text-gray-500">Upload an image to classify it into a category.</p>
+          <p className={isDark ? 'text-gray-400' : 'text-gray-500'}>Upload an image to classify it into a category.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -345,18 +363,22 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
               onDrop={handleDrop}
               aria-label="Image upload drop zone"
             >
-              <div className={`flex justify-center rounded-lg border border-dashed px-6 py-10 transition-colors duration-300 ${isDragging ? 'border-blue-500 bg-blue-50' : 'border-gray-900/25 hover:border-gray-400'}`}>
+              <div className={`flex justify-center rounded-lg border border-dashed px-6 py-10 transition-colors duration-300
+                ${isDragging
+                  ? 'border-blue-500 bg-blue-900/20'
+                  : isDark ? 'border-gray-600 hover:border-gray-400' : 'border-gray-900/25 hover:border-gray-400'
+                }`}>
                 {imageUrl ? (
                   <img src={imageUrl} alt="Preview" className="max-h-64 rounded-lg object-contain" />
                 ) : (
                   <div className="text-center">
-                    <svg className="mx-auto h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <svg className={`mx-auto h-12 w-12 ${isDark ? 'text-gray-600' : 'text-gray-300'}`} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clipRule="evenodd" />
                     </svg>
-                    <div className="mt-4 flex text-sm leading-6 text-gray-600">
-                      <p className="pl-1">Click to upload or drag and drop</p>
+                    <div className="mt-4 flex text-sm leading-6 justify-center">
+                      <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>Click to upload or drag and drop</p>
                     </div>
-                    <p className="text-xs leading-5 text-gray-600">PNG, JPG, etc.</p>
+                    <p className={`text-xs leading-5 ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>PNG, JPG, etc.</p>
                   </div>
                 )}
               </div>
@@ -366,7 +388,7 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
             <button
               onClick={handleClassify}
               disabled={!imageFile || isLoading}
-              className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               aria-label="Classify uploaded image"
             >
               {isLoading ? 'Analyzing...' : 'Classify Image'}
@@ -383,13 +405,14 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
                 results={results}
                 selectedResultIndex={selectedResultIndex}
                 copiedCategory={copiedCategory}
+                isDark={isDark}
                 onCopy={handleCopy}
                 onSelectResult={setSelectedResultIndex}
               />
             </div>
             {selectedResultIndex !== null && results[selectedResultIndex] && (
               <div className="mt-4">
-                <PivotCube pivot={results[selectedResultIndex].pivot} />
+                <PivotCube pivot={results[selectedResultIndex].pivot} isDark={isDark} />
               </div>
             )}
           </div>

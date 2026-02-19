@@ -6,10 +6,19 @@ import './index.css'
 
 function Root() {
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('gemini-api-key') || '')
+  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark')
+
+  const toggleTheme = () => {
+    const next = !isDark
+    setIsDark(next)
+    localStorage.setItem('theme', next ? 'dark' : 'light')
+  }
 
   if (!apiKey) {
     return (
       <ApiKeySetup
+        isDark={isDark}
+        onToggleTheme={toggleTheme}
         onKeySet={(key) => {
           localStorage.setItem('gemini-api-key', key)
           setApiKey(key)
@@ -21,6 +30,8 @@ function Root() {
   return (
     <App
       apiKey={apiKey}
+      isDark={isDark}
+      onToggleTheme={toggleTheme}
       onResetKey={() => {
         localStorage.removeItem('gemini-api-key')
         setApiKey('')
