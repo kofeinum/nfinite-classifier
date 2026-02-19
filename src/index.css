@@ -5,8 +5,12 @@
 .cube-container {
     width: 200px;
     height: 200px;
-    perspective: 1000px;
+    perspective: 2000px;
     margin: 40px auto;
+    cursor: grab;
+}
+.cube-container:active {
+    cursor: grabbing;
 }
 
 .cube {
@@ -14,36 +18,35 @@
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateX(-30deg) rotateY(-45deg);
 }
 
 .cube-face {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border: 2px solid #3b82f6;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(59, 130, 246, 0.2);
     color: #1e3a8a;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-    line-height: 200px;
+    line-height: 180px;
     user-select: none;
     backface-visibility: visible;
 }
 
 [data-dark="true"] .cube-face {
     color: rgba(255, 255, 255, 0.85);
-    background: rgba(59, 130, 246, 0.15);
-    border-color: #60a5fa;
+    background: rgba(59, 130, 246, 0.25);
+    border-color: #6aacfc;
 }
 
-.front  { transform: rotateY(0deg)    translateZ(100px); }
-.back   { transform: rotateY(180deg)  translateZ(100px); }
-.right  { transform: rotateY(90deg)   translateZ(100px); }
-.left   { transform: rotateY(-90deg)  translateZ(100px); }
-.top    { transform: rotateX(90deg)   translateZ(100px); }
-.bottom { transform: rotateX(-90deg)  translateZ(100px); }
+.front  { transform: rotateY(0deg)    translateZ(90px); }
+.back   { transform: rotateY(180deg)  translateZ(90px); }
+.right  { transform: rotateY(90deg)   translateZ(90px); }
+.left   { transform: rotateY(-90deg)  translateZ(90px); }
+.top    { transform: rotateX(90deg)   translateZ(90px); }
+.bottom { transform: rotateX(-90deg)  translateZ(90px) rotateZ(180deg) scaleX(-1); }
 
 .pivot-point {
     position: absolute;
@@ -52,5 +55,5 @@
     background: red;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px red, 0 0 20px red;
+    box-shadow: 0 0 3px red, 0 0 6px red;
 }

@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, type DragEvent } from 'react'
+import React, { useState, useRef, useEffect, type ChangeEvent, type DragEvent } from 'react'
 import { GoogleGenAI, Type } from '@google/genai'
 import { CATEGORIES } from './categories'
 
@@ -10,23 +10,41 @@ interface ClassificationResult {
 
 // --- PIVOT CUBE VISUALIZATION ---
 
-const pivotCodeMap: Record<string, { face: string; x: string; y: string }> = {
-  'C1': { face: 'bottom', x: '0%', y: '100%' },
-  'C2': { face: 'bottom', x: '100%', y: '100%' },
-  'C3': { face: 'bottom', x: '100%', y: '0%' },
-  'C4': { face: 'bottom', x: '0%', y: '0%' },
-  'C7': { face: 'top', x: '100%', y: '0%' },
-  'C8': { face: 'top', x: '0%', y: '0%' },
-  'E1': { face: 'bottom', x: '50%', y: '100%' },
-  'E3': { face: 'bottom', x: '50%', y: '0%' },
-  'E11': { face: 'top', x: '50%', y: '0%' },
-  'S1': { face: 'bottom', x: '50%', y: '50%' },
-  'S4': { face: 'back', x: '50%', y: '50%' },
-  'S6': { face: 'top', x: '50%', y: '50%' },
+type FacePos = { face: string; x: string; y: string; half?: 'top' | 'bottom' | 'left' | 'right' }
+
+const halfStyles: Record<string, React.CSSProperties> = {
+  top:    { height: 10, borderRadius: '10px 10px 0 0', transform: 'translate(-50%, -100%)' },
+  bottom: { height: 10, borderRadius: '0 0 10px 10px', transform: 'translate(-50%, 0%)'    },
+  left:   { width:  10, borderRadius: '0 10px 10px 0', transform: 'translate(0%, -50%)'    },
+  right:  { width:  10, borderRadius: '10px 0 0 10px', transform: 'translate(-100%, -50%)' },
 }
 
-const parsePivotPosition = (pivot: string): { face: string; x: string; y: string } | null => {
-  if (!pivot) return null
+const pivotCodeMap: Record<string, FacePos[]> = {
+  'C1':  [{ face: 'bottom', x: '0%',  y: '100%' }],
+  'C2':  [{ face: 'bottom', x: '100%',y: '100%' }],
+  'C3':  [{ face: 'bottom', x: '100%',y: '0%'   }],
+  'C4':  [{ face: 'bottom', x: '0%',  y: '0%'   }],
+  'C7':  [{ face: 'top',    x: '100%',y: '0%'   }],
+  'C8':  [{ face: 'top',    x: '0%',  y: '0%'   }],
+  'E1':  [
+    { face: 'bottom', x: '50%', y: '100%', half: 'top'    },
+    { face: 'front',  x: '50%', y: '100%', half: 'top'    },
+  ],
+  'E3':  [
+    { face: 'bottom', x: '50%', y: '0%',   half: 'bottom' },
+    { face: 'back',   x: '50%', y: '100%', half: 'top'    },
+  ],
+  'E11': [
+    { face: 'top',    x: '50%', y: '0%',   half: 'bottom' },
+    { face: 'back',   x: '50%', y: '0%',   half: 'bottom' },
+  ],
+  'S1':  [{ face: 'bottom', x: '50%', y: '50%'  }],
+  'S4':  [{ face: 'back',   x: '50%', y: '50%'  }],
+  'S6':  [{ face: 'top',    x: '50%', y: '50%'  }],
+}
+
+const parsePivotPositions = (pivot: string): FacePos[] => {
+  if (!pivot) return []
 
   const codeMatch = pivot.match(/\((C|E|S|A)\d*\)/)
   if (codeMatch) {
@@ -60,11 +78,11 @@ const parsePivotPosition = (pivot: string): { face: string; x: string; y: string
     y = '50%'
   }
 
-  return { face, x, y }
+  return [{ face, x, y }]
 }
 
 const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
-  const position = parsePivotPosition(pivot)
+  const positions = parsePivotPositions(pivot)
   const faces = [
     { name: 'front', label: 'Front' },
     { name: 'back', label: 'Back' },
@@ -74,20 +92,67 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
     { name: 'right', label: 'Right' },
   ]
 
+  const [rotation, setRotation] = useState({ x: -22, y: -28 })
+  const dragging = useRef(false)
+  const lastPos = useRef({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const onMouseMove = (e: MouseEvent) => {
+      if (!dragging.current) return
+      const dx = e.clientX - lastPos.current.x
+      const dy = e.clientY - lastPos.current.y
+      lastPos.current = { x: e.clientX, y: e.clientY }
+      setRotation(prev => ({
+        x: Math.max(-85, Math.min(0, prev.x - dy * 0.5)),
+        y: prev.y + dx * 0.5,
+      }))
+    }
+    const onMouseUp = () => {
+      dragging.current = false
+      setIsReturning(true)
+      setRotation({ x: -25, y: -25 })
+    }
+    window.addEventListener('mousemove', onMouseMove)
+    window.addEventListener('mouseup', onMouseUp)
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove)
+      window.removeEventListener('mouseup', onMouseUp)
+    }
+  }, [])
+
+  const [isReturning, setIsReturning] = useState(false)
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    dragging.current = true
+    setIsReturning(false)
+    lastPos.current = { x: e.clientX, y: e.clientY }
+  }
+
   return (
     <div className="flex flex-col items-center mt-6">
-      <div className="cube-container" data-dark={String(isDark)}>
-        <div className="cube">
+      <div
+        className="cube-container"
+        data-dark={String(isDark)}
+        onMouseDown={onMouseDown}
+      >
+        <div
+          className="cube"
+          style={{
+            transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+            transition: isReturning ? 'transform 0.6s ease' : 'none',
+          }}
+        >
           {faces.map(({ name, label }) => (
             <div key={name} className={`cube-face ${name}`}>
               {label}
-              {position && position.face === name && (
+              {positions.filter(p => p.face === name).map((p, i) => (
                 <div
+                  key={i}
                   className="pivot-point"
-                  style={{ left: position.x, top: position.y }}
-                  aria-label={`Pivot point at ${position.x}, ${position.y} on the ${name} face`}
+                  style={{ left: p.x, top: p.y, ...(p.half ? halfStyles[p.half] : { borderRadius: '50%' }) }}
+                  aria-label={`Pivot point at ${p.x}, ${p.y} on the ${name} face`}
                 />
-              )}
+              ))}
             </div>
           ))}
         </div>
@@ -158,7 +223,7 @@ function ResultDisplay({
             >
               <span className="font-mono font-medium text-sm md:text-base">{result.category}</span>
               <div className="flex items-center space-x-3">
-                <span className="text-xs font-semibold text-blue-400 bg-blue-900/30 px-2.5 py-1 rounded-full">
+                <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${isDark ? 'text-blue-400 bg-blue-900/30' : 'text-blue-700 bg-blue-100'}`}>
                   {Math.round(result.confidence * 100)}%
                 </span>
                 <button
