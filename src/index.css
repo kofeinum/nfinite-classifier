@@ -15,17 +15,6 @@
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(-30deg) rotateY(-45deg);
-    animation: rotate-cube 25s infinite linear;
-    will-change: transform;
-}
-
-@keyframes rotate-cube {
-    from {
-        transform: rotateX(-30deg) rotateY(-45deg);
-    }
-    to {
-        transform: rotateX(-30deg) rotateY(315deg);
-    }
 }
 
 .cube-face {
@@ -40,7 +29,6 @@
     text-align: center;
     line-height: 200px;
     user-select: none;
-    backdrop-filter: blur(2px);
     backface-visibility: visible;
 }
 
