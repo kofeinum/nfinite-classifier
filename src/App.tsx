@@ -203,7 +203,7 @@ function ResultDisplay({
   }
 
   if (notFound) {
-    return <p className={`mt-8 text-center text-2xl font-semibold ${isDark ? 'text-gray-400' : 'text-gray-700'}`}>не нашел</p>
+    return <p className={`mt-8 text-center text-2xl font-semibold ${isDark ? 'text-gray-400' : 'text-gray-700'}`}>Not found</p>
   }
 
   if (results.length > 0) {
@@ -417,7 +417,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
             <button
               onClick={onToggleTheme}
               className={`p-2 rounded-lg mb-2 transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
-              title={isDark ? 'Светлая тема' : 'Тёмная тема'}
+              title={isDark ? 'Light theme' : 'Dark theme'}
             >
               {isDark ? (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -24,7 +24,7 @@ export function ApiKeySetup({ isDark, onToggleTheme, onKeySet }: ApiKeySetupProp
           <button
             onClick={onToggleTheme}
             className={`p-2 rounded-lg transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
-            title={isDark ? 'Светлая тема' : 'Тёмная тема'}
+            title={isDark ? 'Light theme' : 'Dark theme'}
           >
             {isDark ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -38,10 +38,10 @@ export function ApiKeySetup({ isDark, onToggleTheme, onKeySet }: ApiKeySetupProp
           </button>
         </div>
         <p className={`mb-1 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-          Для работы приложения нужен Gemini API key.
+          This app requires a Gemini API key to work.
         </p>
         <p className={`mb-6 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-          Получить бесплатно:{' '}
+          Get one for free:{' '}
           <a
             href="https://aistudio.google.com/apikey"
             target="_blank"
@@ -65,11 +65,11 @@ export function ApiKeySetup({ isDark, onToggleTheme, onKeySet }: ApiKeySetupProp
             disabled={!key.trim()}
             className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
           >
-            Сохранить и продолжить
+            Save and continue
           </button>
         </form>
         <p className={`text-xs mt-4 text-center ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
-          Ключ сохраняется только в вашем браузере
+          Your key is stored locally in your browser only
         </p>
       </div>
     </div>
