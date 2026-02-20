@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, type ChangeEvent, type DragEvent } from 'react'
 import { GoogleGenAI, Type } from '@google/genai'
-import { CATEGORY_LIST, SUBCATEGORIES, getTypes } from './categories'
+import { CATEGORIES } from './categories'
 
 interface ClassificationResult {
   category: string
@@ -225,9 +225,6 @@ function ResultDisplay({
               onKeyDown={(e) => e.key === 'Enter' && onSelectResult(index)}
             >
               <div className="flex flex-col min-w-0 mr-3">
-                <span className={`text-xs mb-0.5 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
-                  {result.category} › {result.subcategory}
-                </span>
                 <span className="font-mono font-medium text-sm md:text-base truncate">{result.type}</span>
               </div>
               <div className="flex items-center space-x-3 flex-shrink-0">
@@ -337,31 +334,28 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       const ai = new GoogleGenAI({ apiKey })
       const imagePart = await fileToGenerativePart(imageFile)
 
-      // Build the full category+subcategory list for Stage 1
-      const allSubcategoryLines = CATEGORY_LIST.flatMap(cat =>
-        SUBCATEGORIES[cat].map(sub => `${cat}|${sub}`)
-      ).join('\n')
+      const pivotMap = new Map(CATEGORIES.map(item => [item.type, item.pivot]))
+      const typeList = CATEGORIES.map(c => c.type).join('\n')
 
-      // --- STAGE 1: Identify ALL matching category+subcategory pairs ---
-      const stage1Response = await ai.models.generateContent({
+      const response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
         contents: { parts: [imagePart, { text:
-          `Analyze this product image. Identify the distinct objects shown and match each to a CATEGORY|SUBCATEGORY pair from the list below.\n\nRules:\n- The LARGEST object in the image is the most important — list it first\n- Smaller objects placed on or near it are secondary\n- Return up to 3 pairs ordered by object size (largest first)\n\n${allSubcategoryLines}`
+          `Analyze the image and identify all objects shown. From the following list of types, select all that apply. For each match provide a confidence score (0–1). Order results from most to least confident. If nothing matches, return an empty array.\n\nTypes:\n${typeList}`
         }]},
         config: {
           responseMimeType: 'application/json',
           responseSchema: {
             type: Type.OBJECT,
             properties: {
-              matches: {
+              results: {
                 type: Type.ARRAY,
                 items: {
                   type: Type.OBJECT,
                   properties: {
-                    category:    { type: Type.STRING },
-                    subcategory: { type: Type.STRING },
+                    type:       { type: Type.STRING },
+                    confidence: { type: Type.NUMBER },
                   },
-                  required: ['category', 'subcategory'],
+                  required: ['type', 'confidence'],
                 },
               },
             },
@@ -369,88 +363,23 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
         },
       })
 
-      const stage1 = JSON.parse(stage1Response.text ?? '{}')
-      const matches: { category: string; subcategory: string }[] = stage1.matches ?? []
+      const parsed = JSON.parse(response.text ?? '{}')
+      const typeResults: { type: string; confidence: number }[] = parsed.results ?? []
 
-      // Filter to valid pairs only
-      const validMatches = matches.filter(m =>
-        SUBCATEGORIES[m.category]?.includes(m.subcategory) &&
-        getTypes(m.category, m.subcategory).length > 0
-      )
-
-      if (validMatches.length === 0) {
+      if (typeResults.length === 0) {
         setNotFound(true)
         return
       }
 
-      // --- STAGE 2: For each valid pair, find matching types sequentially ---
-      setLoadingStage(2)
+      const finalResults: ClassificationResult[] = typeResults.map(r => ({
+        category: '',
+        subcategory: '',
+        type: r.type,
+        confidence: r.confidence,
+        pivot: pivotMap.get(r.type) ?? 'S1',
+      }))
 
-      const stage2Results: ClassificationResult[][] = []
-      for (const { category, subcategory } of validMatches) {
-        const result = await (async () => {
-          const candidates = getTypes(category, subcategory)
-          const typeList = candidates.map(c => c.type).join('\n')
-
-          const resp = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
-            contents: { parts: [imagePart, { text:
-              `The image contains objects from ${category} › ${subcategory}.\nSelect all matching types and provide confidence scores (0-1). Only include types actually visible in the image. If none match, return empty array.\n\nTypes:\n${typeList}`
-            }]},
-            config: {
-              responseMimeType: 'application/json',
-              responseSchema: {
-                type: Type.OBJECT,
-                properties: {
-                  results: {
-                    type: Type.ARRAY,
-                    items: {
-                      type: Type.OBJECT,
-                      properties: {
-                        type:       { type: Type.STRING },
-                        confidence: { type: Type.NUMBER },
-                      },
-                      required: ['type', 'confidence'],
-                    },
-                  },
-                },
-              },
-            },
-          })
-
-          const parsed = JSON.parse(resp.text ?? '{}')
-          const typeResults: { type: string; confidence: number }[] = parsed.results ?? []
-          const pivotLookup = new Map(candidates.map(c => [c.type, c.pivot]))
-
-          return typeResults.map(r => ({
-            category,
-            subcategory,
-            type: r.type,
-            confidence: r.confidence,
-            pivot: pivotLookup.get(r.type) ?? 'S1',
-          }))
-        })()
-        stage2Results.push(result)
-      }
-
-      // Merge, sort by confidence, deduplicate by type
-      const seen = new Set<string>()
-      const allResults: ClassificationResult[] = stage2Results
-        .flat()
-        .filter(r => r.confidence > 0.1)
-        .sort((a, b) => b.confidence - a.confidence)
-        .filter(r => {
-          if (seen.has(r.type)) return false
-          seen.add(r.type)
-          return true
-        })
-
-      if (allResults.length === 0) {
-        setNotFound(true)
-        return
-      }
-
-      setResults(allResults)
+      setResults(finalResults)
       setSelectedResultIndex(0)
     } catch (err) {
       console.error(err)
