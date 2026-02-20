@@ -275,6 +275,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
   const [copiedType, setCopiedType] = useState<string | null>(null)
   const [selectedResultIndex, setSelectedResultIndex] = useState<number | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [usedModel, setUsedModel] = useState<string | null>(null)
 
   async function fileToGenerativePart(file: File) {
     const base64EncodedDataPromise = new Promise<string>((resolve) => {
@@ -343,6 +344,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
     setResults([])
     setNotFound(false)
     setSelectedResultIndex(null)
+    setUsedModel(null)
 
     try {
       const ai = new GoogleGenAI({ apiKey })
@@ -352,33 +354,48 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       const pivotMap = new Map(pool.map(item => [item.type, item.pivot]))
       const typeList = pool.map(c => c.type).join('\n')
 
-      const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: { parts: [imagePart, { text:
-          `Analyze the image and identify all objects shown. From the following list of types, select all that apply. For each match provide a confidence score (0–1). Order results from most to least confident. If nothing matches, return an empty array.\n\nTypes:\n${typeList}`
-        }]},
-        config: {
-          responseMimeType: 'application/json',
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: {
-              results: {
-                type: Type.ARRAY,
-                items: {
-                  type: Type.OBJECT,
-                  properties: {
-                    type:       { type: Type.STRING },
-                    confidence: { type: Type.NUMBER },
-                  },
-                  required: ['type', 'confidence'],
+      const prompt = `Analyze the image and identify all objects shown. From the following list of types, select all that apply. For each match provide a confidence score (0–1). Order results from most to least confident. If nothing matches, return an empty array.\n\nTypes:\n${typeList}`
+      const schema = {
+        responseMimeType: 'application/json',
+        responseSchema: {
+          type: Type.OBJECT,
+          properties: {
+            results: {
+              type: Type.ARRAY,
+              items: {
+                type: Type.OBJECT,
+                properties: {
+                  type:       { type: Type.STRING },
+                  confidence: { type: Type.NUMBER },
                 },
+                required: ['type', 'confidence'],
               },
             },
           },
         },
-      })
+      }
 
-      const parsed = JSON.parse(response.text ?? '{}')
+      const models = ['gemini-2.5-flash', 'gemini-2.0-flash']
+      let response = null
+      let activeModel = models[0]
+      for (const model of models) {
+        try {
+          response = await ai.models.generateContent({
+            model,
+            contents: { parts: [imagePart, { text: prompt }] },
+            config: schema,
+          })
+          activeModel = model
+          break
+        } catch (err) {
+          const is429 = err instanceof Error && err.message.includes('429')
+          if (is429 && model !== models[models.length - 1]) continue
+          throw err
+        }
+      }
+      setUsedModel(activeModel)
+
+      const parsed = JSON.parse(response!.text ?? '{}')
       const typeResults: { type: string; confidence: number }[] = parsed.results ?? []
 
       if (typeResults.length === 0) {
@@ -530,6 +547,11 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
                 onSelectResult={setSelectedResultIndex}
               />
             </div>
+            {usedModel === 'gemini-2.0-flash' && (
+              <p className="mt-2 text-xs text-center text-amber-500">
+                ⚠ Rate limit reached — switched to gemini-2.0-flash
+              </p>
+            )}
             {selectedResultIndex !== null && results[selectedResultIndex] && (
               <div className="mt-4">
                 <PivotCube pivot={results[selectedResultIndex].pivot} isDark={isDark} />
