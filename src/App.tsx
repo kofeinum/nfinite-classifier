@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, type ChangeEvent, type DragEvent } from 'react'
 import { GoogleGenAI, Type } from '@google/genai'
-import { CATEGORIES } from './categories'
+import { CATEGORIES, CATEGORY_LIST } from './categories'
 
 interface ClassificationResult {
   category: string
@@ -276,6 +276,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
   const [isDragging, setIsDragging] = useState(false)
   const [copiedType, setCopiedType] = useState<string | null>(null)
   const [selectedResultIndex, setSelectedResultIndex] = useState<number | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
   async function fileToGenerativePart(file: File) {
     const base64EncodedDataPromise = new Promise<string>((resolve) => {
@@ -306,6 +307,21 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
     if (file) handleFile(file)
   }
 
+  useEffect(() => {
+    const handlePaste = (e: ClipboardEvent) => {
+      const items = e.clipboardData?.items
+      if (!items) return
+      for (const item of Array.from(items)) {
+        if (item.type.startsWith('image/')) {
+          const file = item.getAsFile()
+          if (file) { handleFile(file); break }
+        }
+      }
+    }
+    window.addEventListener('paste', handlePaste)
+    return () => window.removeEventListener('paste', handlePaste)
+  }, [])
+
   const handleDragEnter = (e: DragEvent<HTMLLabelElement>) => { e.preventDefault(); e.stopPropagation(); setIsDragging(true) }
   const handleDragLeave = (e: DragEvent<HTMLLabelElement>) => { e.preventDefault(); e.stopPropagation(); setIsDragging(false) }
   const handleDragOver = (e: DragEvent<HTMLLabelElement>) => { e.preventDefault(); e.stopPropagation() }
@@ -334,8 +350,9 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       const ai = new GoogleGenAI({ apiKey })
       const imagePart = await fileToGenerativePart(imageFile)
 
-      const pivotMap = new Map(CATEGORIES.map(item => [item.type, item.pivot]))
-      const typeList = CATEGORIES.map(c => c.type).join('\n')
+      const pool = selectedCategory ? CATEGORIES.filter(c => c.category === selectedCategory) : CATEGORIES
+      const pivotMap = new Map(pool.map(item => [item.type, item.pivot]))
+      const typeList = pool.map(c => c.type).join('\n')
 
       const response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
@@ -423,7 +440,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
               API key
             </button>
           </div>
-          <p className={isDark ? 'text-gray-400' : 'text-gray-500'}>Upload an image to classify it into a category.</p>
+          <p className={isDark ? 'text-gray-400' : 'text-gray-500'}>Upload, drag & drop, or paste (Ctrl+V) an image.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -464,8 +481,40 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
               disabled={!imageFile || loadingStage > 0}
               className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             >
-              {loadingStage > 0 ? stageLabels[loadingStage] : 'Classify Image'}
+              {loadingStage > 0
+                ? stageLabels[loadingStage]
+                : selectedCategory ? `Classify in ${selectedCategory}` : 'Classify Image'}
             </button>
+
+            {/* Category filter chips */}
+            <div className="mt-4">
+              <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Filter by category:</p>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  onClick={() => setSelectedCategory(null)}
+                  className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
+                    selectedCategory === null
+                      ? 'bg-blue-600 text-white'
+                      : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                  }`}
+                >
+                  ALL
+                </button>
+                {CATEGORY_LIST.map(cat => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
+                    className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
+                      selectedCategory === cat
+                        ? 'bg-blue-600 text-white'
+                        : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right: Results and Cube */}
