@@ -154,9 +154,9 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
 
 // --- LOADING INDICATOR ---
 
-const stageLabels = ['', 'Identifying category...', 'Identifying subcategory...', 'Identifying type...']
+const stageLabels = ['', 'Scanning image...', 'Classifying objects...']
 
-function LoadingIndicator({ stage }: { stage: 1 | 2 | 3 }) {
+function LoadingIndicator({ stage }: { stage: 1 | 2 }) {
   return (
     <div className="flex flex-col items-center justify-center mt-8 space-y-4">
       <svg className="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -165,7 +165,7 @@ function LoadingIndicator({ stage }: { stage: 1 | 2 | 3 }) {
       </svg>
       <p className="text-lg text-gray-500">{stageLabels[stage]}</p>
       <div className="flex space-x-2">
-        {[1, 2, 3].map(s => (
+        {[1, 2].map(s => (
           <div
             key={s}
             className={`h-2 w-8 rounded-full transition-colors duration-300 ${s <= stage ? 'bg-blue-500' : 'bg-gray-300'}`}
@@ -195,7 +195,7 @@ function ResultDisplay({
   copiedType, isDark, onCopy, onSelectResult,
 }: ResultDisplayProps) {
   if (loadingStage > 0) {
-    return <LoadingIndicator stage={loadingStage as 1 | 2 | 3} />
+    return <LoadingIndicator stage={loadingStage as 1 | 2} />
   }
 
   if (error) {
@@ -337,81 +337,31 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       const ai = new GoogleGenAI({ apiKey })
       const imagePart = await fileToGenerativePart(imageFile)
 
-      // --- STAGE 1: Identify category ---
+      // Build the full category+subcategory list for Stage 1
+      const allSubcategoryLines = CATEGORY_LIST.flatMap(cat =>
+        SUBCATEGORIES[cat].map(sub => `${cat}|${sub}`)
+      ).join('\n')
+
+      // --- STAGE 1: Identify ALL matching category+subcategory pairs ---
       const stage1Response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
         contents: { parts: [imagePart, { text:
-          `Look at this image and identify the main object's category.\nChoose ONE from this list:\n${CATEGORY_LIST.join(', ')}\n\nReturn JSON: { "category": "KITCHEN" }`
-        }]},
-        config: {
-          responseMimeType: 'application/json',
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: { category: { type: Type.STRING } },
-            required: ['category'],
-          },
-        },
-      })
-
-      const stage1 = JSON.parse(stage1Response.text ?? '{}')
-      const category: string = stage1.category
-
-      if (!category || !SUBCATEGORIES[category]) {
-        setNotFound(true)
-        return
-      }
-
-      // --- STAGE 2: Identify subcategory ---
-      setLoadingStage(2)
-      const subcategoryList = SUBCATEGORIES[category]
-
-      const stage2Response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: { parts: [imagePart, { text:
-          `The object in the image belongs to the ${category} category.\nChoose the most appropriate subcategory:\n${subcategoryList.join(', ')}\n\nReturn JSON: { "subcategory": "UTENSILS" }`
-        }]},
-        config: {
-          responseMimeType: 'application/json',
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: { subcategory: { type: Type.STRING } },
-            required: ['subcategory'],
-          },
-        },
-      })
-
-      const stage2 = JSON.parse(stage2Response.text ?? '{}')
-      const subcategory: string = stage2.subcategory
-
-      const candidates = getTypes(category, subcategory)
-      if (!subcategory || candidates.length === 0) {
-        setNotFound(true)
-        return
-      }
-
-      // --- STAGE 3: Identify exact type ---
-      setLoadingStage(3)
-      const typeList = candidates.map(c => c.type).join('\n')
-
-      const stage3Response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: { parts: [imagePart, { text:
-          `The object is ${category} › ${subcategory}.\nSelect all matching types and provide confidence scores (0-1). Order by confidence descending.\n\nTypes:\n${typeList}`
+          `Look at this image. Identify ALL objects visible and select every matching CATEGORY|SUBCATEGORY pair from the list below.\n\nFor each object you see, pick the most appropriate pair. Return up to 6 pairs ordered by relevance.\n\n${allSubcategoryLines}`
         }]},
         config: {
           responseMimeType: 'application/json',
           responseSchema: {
             type: Type.OBJECT,
             properties: {
-              results: {
+              matches: {
                 type: Type.ARRAY,
                 items: {
                   type: Type.OBJECT,
                   properties: {
-                    type: { type: Type.STRING },
-                    confidence: { type: Type.NUMBER },
+                    category:    { type: Type.STRING },
+                    subcategory: { type: Type.STRING },
                   },
-                  required: ['type', 'confidence'],
+                  required: ['category', 'subcategory'],
                 },
               },
             },
@@ -419,24 +369,86 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
         },
       })
 
-      const stage3 = JSON.parse(stage3Response.text ?? '{}')
-      const typeResults: { type: string; confidence: number }[] = stage3.results ?? []
+      const stage1 = JSON.parse(stage1Response.text ?? '{}')
+      const matches: { category: string; subcategory: string }[] = stage1.matches ?? []
 
-      if (typeResults.length === 0) {
+      // Filter to valid pairs only
+      const validMatches = matches.filter(m =>
+        SUBCATEGORIES[m.category]?.includes(m.subcategory) &&
+        getTypes(m.category, m.subcategory).length > 0
+      )
+
+      if (validMatches.length === 0) {
         setNotFound(true)
         return
       }
 
-      const pivotLookup = new Map(candidates.map(c => [c.type, c.pivot]))
-      const finalResults: ClassificationResult[] = typeResults.map(r => ({
-        category,
-        subcategory,
-        type: r.type,
-        confidence: r.confidence,
-        pivot: pivotLookup.get(r.type) ?? 'S1',
-      }))
+      // --- STAGE 2: For each valid pair, find matching types in parallel ---
+      setLoadingStage(2)
 
-      setResults(finalResults)
+      const stage2Results = await Promise.all(
+        validMatches.map(async ({ category, subcategory }) => {
+          const candidates = getTypes(category, subcategory)
+          const typeList = candidates.map(c => c.type).join('\n')
+
+          const resp = await ai.models.generateContent({
+            model: 'gemini-2.5-flash',
+            contents: { parts: [imagePart, { text:
+              `The image contains objects from ${category} › ${subcategory}.\nSelect all matching types and provide confidence scores (0-1). Only include types actually visible in the image. If none match, return empty array.\n\nTypes:\n${typeList}`
+            }]},
+            config: {
+              responseMimeType: 'application/json',
+              responseSchema: {
+                type: Type.OBJECT,
+                properties: {
+                  results: {
+                    type: Type.ARRAY,
+                    items: {
+                      type: Type.OBJECT,
+                      properties: {
+                        type:       { type: Type.STRING },
+                        confidence: { type: Type.NUMBER },
+                      },
+                      required: ['type', 'confidence'],
+                    },
+                  },
+                },
+              },
+            },
+          })
+
+          const parsed = JSON.parse(resp.text ?? '{}')
+          const typeResults: { type: string; confidence: number }[] = parsed.results ?? []
+          const pivotLookup = new Map(candidates.map(c => [c.type, c.pivot]))
+
+          return typeResults.map(r => ({
+            category,
+            subcategory,
+            type: r.type,
+            confidence: r.confidence,
+            pivot: pivotLookup.get(r.type) ?? 'S1',
+          }))
+        })
+      )
+
+      // Merge, sort by confidence, deduplicate by type
+      const seen = new Set<string>()
+      const allResults: ClassificationResult[] = stage2Results
+        .flat()
+        .filter(r => r.confidence > 0.1)
+        .sort((a, b) => b.confidence - a.confidence)
+        .filter(r => {
+          if (seen.has(r.type)) return false
+          seen.add(r.type)
+          return true
+        })
+
+      if (allResults.length === 0) {
+        setNotFound(true)
+        return
+      }
+
+      setResults(allResults)
       setSelectedResultIndex(0)
     } catch (err) {
       console.error(err)
