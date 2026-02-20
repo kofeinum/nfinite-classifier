@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect, type ChangeEvent, type DragEvent } from 'react'
 import { GoogleGenAI, Type } from '@google/genai'
-import { CATEGORIES } from './categories'
+import { CATEGORY_LIST, SUBCATEGORIES, getTypes } from './categories'
 
 interface ClassificationResult {
   category: string
+  subcategory: string
+  type: string
   confidence: number
   pivot: string
 }
@@ -20,65 +22,52 @@ const halfStyles: Record<string, React.CSSProperties> = {
 }
 
 const pivotCodeMap: Record<string, FacePos[]> = {
+  'A':   [{ face: 'front',  x: '50%', y: '50%'  }],
   'C1':  [{ face: 'bottom', x: '0%',  y: '100%' }],
   'C2':  [{ face: 'bottom', x: '100%',y: '100%' }],
   'C3':  [{ face: 'bottom', x: '100%',y: '0%'   }],
   'C4':  [{ face: 'bottom', x: '0%',  y: '0%'   }],
+  'C5':  [{ face: 'top',    x: '0%',  y: '100%' }],
+  'C6':  [{ face: 'top',    x: '100%',y: '100%' }],
   'C7':  [{ face: 'top',    x: '100%',y: '0%'   }],
   'C8':  [{ face: 'top',    x: '0%',  y: '0%'   }],
   'E1':  [
     { face: 'bottom', x: '50%', y: '100%', half: 'top'    },
     { face: 'front',  x: '50%', y: '100%', half: 'top'    },
   ],
+  'E2':  [{ face: 'bottom', x: '100%', y: '50%' }],
   'E3':  [
     { face: 'bottom', x: '50%', y: '0%',   half: 'bottom' },
     { face: 'back',   x: '50%', y: '100%', half: 'top'    },
   ],
+  'E4':  [{ face: 'bottom', x: '0%', y: '50%' }],
+  'E5':  [{ face: 'front',  x: '100%', y: '50%' }],
+  'E6':  [{ face: 'right',  x: '50%',  y: '100%' }],
+  'E7':  [{ face: 'back',   x: '100%', y: '50%' }],
+  'E8':  [{ face: 'left',   x: '50%',  y: '100%' }],
+  'E9':  [{ face: 'front',  x: '50%',  y: '0%'  }],
+  'E10': [{ face: 'right',  x: '50%',  y: '0%'  }],
   'E11': [
     { face: 'top',    x: '50%', y: '0%',   half: 'bottom' },
     { face: 'back',   x: '50%', y: '0%',   half: 'bottom' },
   ],
+  'E12': [{ face: 'left',   x: '50%', y: '0%' }],
   'S1':  [{ face: 'bottom', x: '50%', y: '50%'  }],
+  'S2':  [{ face: 'front',  x: '50%', y: '50%'  }],
+  'S3':  [{ face: 'right',  x: '50%', y: '50%'  }],
   'S4':  [{ face: 'back',   x: '50%', y: '50%'  }],
+  'S5':  [{ face: 'left',   x: '50%', y: '50%'  }],
   'S6':  [{ face: 'top',    x: '50%', y: '50%'  }],
 }
 
 const parsePivotPositions = (pivot: string): FacePos[] => {
   if (!pivot) return []
-
-  const codeMatch = pivot.match(/\((C|E|S|A)\d*\)/)
-  if (codeMatch) {
-    const code = codeMatch[0].replace(/[()]/g, '')
-    if (pivotCodeMap[code]) return pivotCodeMap[code]
-  }
-
-  const lowerPivot = pivot.toLowerCase()
-  let face = 'bottom'
-  if (lowerPivot.includes('back')) face = 'back'
-  else if (lowerPivot.includes('front')) face = 'front'
-  else if (lowerPivot.includes('left')) face = 'left'
-  else if (lowerPivot.includes('right')) face = 'right'
-  else if (lowerPivot.includes('top')) face = 'top'
-
-  let x = '50%'
-  if (lowerPivot.includes('left')) x = '0%'
-  else if (lowerPivot.includes('right')) x = '100%'
-
-  let y = '50%'
-  if (face === 'top' || face === 'bottom') {
-    if (lowerPivot.includes('back')) y = '0%'
-    else if (lowerPivot.includes('front')) y = '100%'
-  } else {
-    if (lowerPivot.includes('top')) y = '0%'
-    else if (lowerPivot.includes('bottom')) y = '100%'
-  }
-
-  if (lowerPivot.includes('center') || lowerPivot.includes('middle')) {
-    x = '50%'
-    y = '50%'
-  }
-
-  return [{ face, x, y }]
+  // Direct code lookup (new format: "S1", "E3", "C4", "A")
+  if (pivotCodeMap[pivot]) return pivotCodeMap[pivot]
+  // Legacy: code in parentheses "(E3)"
+  const codeMatch = pivot.match(/\b(C|E|S|A)\d*\b/)
+  if (codeMatch && pivotCodeMap[codeMatch[0]]) return pivotCodeMap[codeMatch[0]]
+  return [{ face: 'bottom', x: '50%', y: '50%' }]
 }
 
 const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
@@ -93,6 +82,7 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
   ]
 
   const [rotation, setRotation] = useState({ x: -22, y: -28 })
+  const [isReturning, setIsReturning] = useState(false)
   const dragging = useRef(false)
   const lastPos = useRef({ x: 0, y: 0 })
 
@@ -110,7 +100,7 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
     const onMouseUp = () => {
       dragging.current = false
       setIsReturning(true)
-      setRotation({ x: -25, y: -25 })
+      setRotation({ x: -22, y: -28 })
     }
     window.addEventListener('mousemove', onMouseMove)
     window.addEventListener('mouseup', onMouseUp)
@@ -119,8 +109,6 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
       window.removeEventListener('mouseup', onMouseUp)
     }
   }, [])
-
-  const [isReturning, setIsReturning] = useState(false)
 
   const onMouseDown = (e: React.MouseEvent) => {
     dragging.current = true
@@ -150,7 +138,6 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
                   key={i}
                   className="pivot-point"
                   style={{ left: p.x, top: p.y, ...(p.half ? halfStyles[p.half] : { borderRadius: '50%' }) }}
-                  aria-label={`Pivot point at ${p.x}, ${p.y} on the ${name} face`}
                 />
               ))}
             </div>
@@ -159,7 +146,31 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
       </div>
       <div className={`mt-4 p-4 rounded-lg text-center w-full shadow-inner ${isDark ? 'bg-[#404040]' : 'bg-gray-100'}`}>
         <p className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Pivot Point:</p>
-        <p className={`text-base font-mono break-words ${isDark ? 'text-gray-200' : 'text-gray-800'}`}>{pivot}</p>
+        <p className={`text-base font-mono ${isDark ? 'text-gray-200' : 'text-gray-800'}`}>{pivot}</p>
+      </div>
+    </div>
+  )
+}
+
+// --- LOADING INDICATOR ---
+
+const stageLabels = ['', 'Identifying category...', 'Identifying subcategory...', 'Identifying type...']
+
+function LoadingIndicator({ stage }: { stage: 1 | 2 | 3 }) {
+  return (
+    <div className="flex flex-col items-center justify-center mt-8 space-y-4">
+      <svg className="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+      </svg>
+      <p className="text-lg text-gray-500">{stageLabels[stage]}</p>
+      <div className="flex space-x-2">
+        {[1, 2, 3].map(s => (
+          <div
+            key={s}
+            className={`h-2 w-8 rounded-full transition-colors duration-300 ${s <= stage ? 'bg-blue-500' : 'bg-gray-300'}`}
+          />
+        ))}
       </div>
     </div>
   )
@@ -168,31 +179,23 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
 // --- RESULT DISPLAY ---
 
 interface ResultDisplayProps {
-  isLoading: boolean
+  loadingStage: 0 | 1 | 2 | 3
   error: string | null
   notFound: boolean
   results: ClassificationResult[]
   selectedResultIndex: number | null
-  copiedCategory: string | null
+  copiedType: string | null
   isDark: boolean
-  onCopy: (category: string) => void
+  onCopy: (type: string) => void
   onSelectResult: (index: number) => void
 }
 
 function ResultDisplay({
-  isLoading, error, notFound, results, selectedResultIndex,
-  copiedCategory, isDark, onCopy, onSelectResult,
+  loadingStage, error, notFound, results, selectedResultIndex,
+  copiedType, isDark, onCopy, onSelectResult,
 }: ResultDisplayProps) {
-  if (isLoading) {
-    return (
-      <div className="flex flex-col items-center justify-center text-gray-500 mt-8 h-full">
-        <svg className="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-        </svg>
-        <p className="mt-2 text-lg">Analyzing...</p>
-      </div>
-    )
+  if (loadingStage > 0) {
+    return <LoadingIndicator stage={loadingStage as 1 | 2 | 3} />
   }
 
   if (error) {
@@ -206,7 +209,7 @@ function ResultDisplay({
   if (results.length > 0) {
     return (
       <div className="w-full">
-        <h2 className={`text-2xl font-bold mb-4 text-center ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>Found Categories:</h2>
+        <h2 className={`text-2xl font-bold mb-4 text-center ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>Found:</h2>
         <ul className={`border rounded-lg space-y-2 p-2 max-h-[50vh] overflow-y-auto ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
           {results.map((result, index) => (
             <li
@@ -221,17 +224,22 @@ function ResultDisplay({
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && onSelectResult(index)}
             >
-              <span className="font-mono font-medium text-sm md:text-base">{result.category}</span>
-              <div className="flex items-center space-x-3">
+              <div className="flex flex-col min-w-0 mr-3">
+                <span className={`text-xs mb-0.5 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+                  {result.category} › {result.subcategory}
+                </span>
+                <span className="font-mono font-medium text-sm md:text-base truncate">{result.type}</span>
+              </div>
+              <div className="flex items-center space-x-3 flex-shrink-0">
                 <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${isDark ? 'text-blue-400 bg-blue-900/30' : 'text-blue-700 bg-blue-100'}`}>
                   {Math.round(result.confidence * 100)}%
                 </span>
                 <button
-                  onClick={(e) => { e.stopPropagation(); onCopy(result.category) }}
+                  onClick={(e) => { e.stopPropagation(); onCopy(result.type) }}
                   className={`transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
-                  aria-label={`Copy category ${result.category}`}
+                  aria-label={`Copy type ${result.type}`}
                 >
-                  {copiedCategory === result.category ? (
+                  {copiedType === result.type ? (
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -264,12 +272,12 @@ interface AppProps {
 export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
   const [imageFile, setImageFile] = useState<File | null>(null)
   const [imageUrl, setImageUrl] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
+  const [loadingStage, setLoadingStage] = useState<0 | 1 | 2 | 3>(0)
   const [results, setResults] = useState<ClassificationResult[]>([])
   const [error, setError] = useState<string | null>(null)
   const [notFound, setNotFound] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
-  const [copiedCategory, setCopiedCategory] = useState<string | null>(null)
+  const [copiedType, setCopiedType] = useState<string | null>(null)
   const [selectedResultIndex, setSelectedResultIndex] = useState<number | null>(null)
 
   async function fileToGenerativePart(file: File) {
@@ -310,16 +318,16 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
     if (file) handleFile(file)
   }
 
-  const handleCopy = (category: string) => {
-    navigator.clipboard.writeText(category)
-    setCopiedCategory(category)
-    setTimeout(() => setCopiedCategory(null), 2000)
+  const handleCopy = (type: string) => {
+    navigator.clipboard.writeText(type)
+    setCopiedType(type)
+    setTimeout(() => setCopiedType(null), 2000)
   }
 
   const handleClassify = async () => {
     if (!imageFile) { setError('Please select an image first.'); return }
 
-    setIsLoading(true)
+    setLoadingStage(1)
     setError(null)
     setResults([])
     setNotFound(false)
@@ -328,32 +336,82 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
     try {
       const ai = new GoogleGenAI({ apiKey })
       const imagePart = await fileToGenerativePart(imageFile)
-      const pivotMap = new Map(CATEGORIES.map(item => [item.category, item.pivot]))
 
-      const prompt = `Analyze the image and identify the object(s) shown. From the following list of categories, please select all that apply. For each category, provide a confidence score between 0 and 1 indicating how certain you are of the match. Order the results from most to least relevant. If none of the categories apply, return an empty array.
-
-Categories:
-${CATEGORIES.map(c => c.category).join('\n')}`
-
-      const response = await ai.models.generateContent({
+      // --- STAGE 1: Identify category ---
+      const stage1Response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
-        contents: {
-          parts: [imagePart, { text: prompt }],
+        contents: { parts: [imagePart, { text:
+          `Look at this image and identify the main object's category.\nChoose ONE from this list:\n${CATEGORY_LIST.join(', ')}\n\nReturn JSON: { "category": "KITCHEN" }`
+        }]},
+        config: {
+          responseMimeType: 'application/json',
+          responseSchema: {
+            type: Type.OBJECT,
+            properties: { category: { type: Type.STRING } },
+            required: ['category'],
+          },
         },
+      })
+
+      const stage1 = JSON.parse(stage1Response.text ?? '{}')
+      const category: string = stage1.category
+
+      if (!category || !SUBCATEGORIES[category]) {
+        setNotFound(true)
+        return
+      }
+
+      // --- STAGE 2: Identify subcategory ---
+      setLoadingStage(2)
+      const subcategoryList = SUBCATEGORIES[category]
+
+      const stage2Response = await ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: { parts: [imagePart, { text:
+          `The object in the image belongs to the ${category} category.\nChoose the most appropriate subcategory:\n${subcategoryList.join(', ')}\n\nReturn JSON: { "subcategory": "UTENSILS" }`
+        }]},
+        config: {
+          responseMimeType: 'application/json',
+          responseSchema: {
+            type: Type.OBJECT,
+            properties: { subcategory: { type: Type.STRING } },
+            required: ['subcategory'],
+          },
+        },
+      })
+
+      const stage2 = JSON.parse(stage2Response.text ?? '{}')
+      const subcategory: string = stage2.subcategory
+
+      const candidates = getTypes(category, subcategory)
+      if (!subcategory || candidates.length === 0) {
+        setNotFound(true)
+        return
+      }
+
+      // --- STAGE 3: Identify exact type ---
+      setLoadingStage(3)
+      const typeList = candidates.map(c => c.type).join('\n')
+
+      const stage3Response = await ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: { parts: [imagePart, { text:
+          `The object is ${category} › ${subcategory}.\nSelect all matching types and provide confidence scores (0-1). Order by confidence descending.\n\nTypes:\n${typeList}`
+        }]},
         config: {
           responseMimeType: 'application/json',
           responseSchema: {
             type: Type.OBJECT,
             properties: {
-              categories: {
+              results: {
                 type: Type.ARRAY,
                 items: {
                   type: Type.OBJECT,
                   properties: {
-                    category: { type: Type.STRING },
+                    type: { type: Type.STRING },
                     confidence: { type: Type.NUMBER },
                   },
-                  required: ['category', 'confidence'],
+                  required: ['type', 'confidence'],
                 },
               },
             },
@@ -361,24 +419,30 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
         },
       })
 
-      const classified = JSON.parse(response.text ?? '')
+      const stage3 = JSON.parse(stage3Response.text ?? '{}')
+      const typeResults: { type: string; confidence: number }[] = stage3.results ?? []
 
-      if (classified.categories?.length > 0) {
-        const categoriesWithPivots = classified.categories.map((result: { category: string; confidence: number }) => ({
-          ...result,
-          pivot: pivotMap.get(result.category) || 'Pivot information not available.',
-        }))
-        setResults(categoriesWithPivots)
-        setSelectedResultIndex(0)
-      } else {
+      if (typeResults.length === 0) {
         setNotFound(true)
+        return
       }
+
+      const pivotLookup = new Map(candidates.map(c => [c.type, c.pivot]))
+      const finalResults: ClassificationResult[] = typeResults.map(r => ({
+        category,
+        subcategory,
+        type: r.type,
+        confidence: r.confidence,
+        pivot: pivotLookup.get(r.type) ?? 'S1',
+      }))
+
+      setResults(finalResults)
+      setSelectedResultIndex(0)
     } catch (err) {
       console.error(err)
-      const errorMessage = err instanceof Error ? err.message : 'An unexpected error occurred.'
-      setError(`Error: ${errorMessage}`)
+      setError(`Error: ${err instanceof Error ? err.message : 'An unexpected error occurred.'}`)
     } finally {
-      setIsLoading(false)
+      setLoadingStage(0)
     }
   }
 
@@ -412,7 +476,6 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
                     onResetKey()
               }}
               className={`text-xs underline mb-2 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
-              title="Изменить API key"
             >
               API key
             </button>
@@ -421,7 +484,7 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          {/* Left Column: Uploader */}
+          {/* Left: Uploader */}
           <div className="w-full">
             <label
               htmlFor="file-upload"
@@ -430,7 +493,6 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
               onDragLeave={handleDragLeave}
               onDragOver={handleDragOver}
               onDrop={handleDrop}
-              aria-label="Image upload drop zone"
             >
               <div className={`flex justify-center rounded-lg border border-dashed px-6 py-10 transition-colors duration-300
                 ${isDragging
@@ -456,24 +518,23 @@ ${CATEGORIES.map(c => c.category).join('\n')}`
 
             <button
               onClick={handleClassify}
-              disabled={!imageFile || isLoading}
+              disabled={!imageFile || loadingStage > 0}
               className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-              aria-label="Classify uploaded image"
             >
-              {isLoading ? 'Analyzing...' : 'Classify Image'}
+              {loadingStage > 0 ? stageLabels[loadingStage] : 'Classify Image'}
             </button>
           </div>
 
-          {/* Right Column: Results and Cube */}
+          {/* Right: Results and Cube */}
           <div className="flex flex-col space-y-6">
             <div className="flex-grow min-h-[100px]">
               <ResultDisplay
-                isLoading={isLoading}
+                loadingStage={loadingStage}
                 error={error}
                 notFound={notFound}
                 results={results}
                 selectedResultIndex={selectedResultIndex}
-                copiedCategory={copiedCategory}
+                copiedType={copiedType}
                 isDark={isDark}
                 onCopy={handleCopy}
                 onSelectResult={setSelectedResultIndex}
