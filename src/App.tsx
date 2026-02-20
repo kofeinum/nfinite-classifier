@@ -346,7 +346,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       const stage1Response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
         contents: { parts: [imagePart, { text:
-          `Look at this image. Identify ALL objects visible and select every matching CATEGORY|SUBCATEGORY pair from the list below.\n\nFor each object you see, pick the most appropriate pair. Return up to 6 pairs ordered by relevance.\n\n${allSubcategoryLines}`
+          `Analyze this product image. Identify the distinct objects shown and match each to a CATEGORY|SUBCATEGORY pair from the list below.\n\nRules:\n- The LARGEST object in the image is the most important — list it first\n- Smaller objects placed on or near it are secondary\n- Return up to 6 pairs ordered by object size (largest first)\n\n${allSubcategoryLines}`
         }]},
         config: {
           responseMimeType: 'application/json',
