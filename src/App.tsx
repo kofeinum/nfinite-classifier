@@ -209,39 +209,37 @@ function ResultDisplay({
   if (results.length > 0) {
     return (
       <div className="w-full">
-        <h2 className={`text-2xl font-bold mb-4 text-center ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>Found:</h2>
-        <ul className={`border rounded-lg space-y-2 p-2 max-h-[50vh] overflow-y-auto ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
+        <h2 className={`text-base font-semibold mb-1.5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Found:</h2>
+        <ul className={`border rounded-lg p-1 max-h-[50vh] overflow-y-auto ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
           {results.map((result, index) => (
             <li
               key={index}
               onClick={() => onSelectResult(index)}
-              className={`flex items-center justify-between p-3 rounded-lg transition-all duration-200 cursor-pointer
+              className={`flex items-center justify-between px-2 py-1 rounded transition-all duration-150 cursor-pointer
                 ${selectedResultIndex === index
-                  ? isDark ? 'bg-blue-900/40 border-l-4 border-blue-400' : 'bg-blue-100 border-l-4 border-blue-500'
-                  : isDark ? 'bg-[#3a3a3a] hover:bg-[#444]' : 'bg-white hover:bg-blue-50'
+                  ? isDark ? 'bg-blue-900/40 border-l-2 border-blue-400' : 'bg-blue-100 border-l-2 border-blue-500'
+                  : isDark ? 'hover:bg-[#444]' : 'hover:bg-blue-50'
                 } ${isDark ? 'text-gray-100' : 'text-gray-800'}`}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && onSelectResult(index)}
             >
-              <div className="flex flex-col min-w-0 mr-3">
-                <span className="font-mono font-medium text-sm md:text-base truncate">{result.type}</span>
-              </div>
-              <div className="flex items-center space-x-3 flex-shrink-0">
-                <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${isDark ? 'text-blue-400 bg-blue-900/30' : 'text-blue-700 bg-blue-100'}`}>
+              <span className="font-mono text-xs truncate mr-2">{result.type}</span>
+              <div className="flex items-center space-x-1.5 flex-shrink-0">
+                <span className={`text-xs font-semibold px-1.5 py-0.5 rounded-full ${isDark ? 'text-blue-400 bg-blue-900/30' : 'text-blue-700 bg-blue-100'}`}>
                   {Math.round(result.confidence * 100)}%
                 </span>
                 <button
                   onClick={(e) => { e.stopPropagation(); onCopy(result.type) }}
-                  className={`transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
-                  aria-label={`Copy type ${result.type}`}
+                  className={`transition-colors ${isDark ? 'text-gray-600 hover:text-gray-300' : 'text-gray-300 hover:text-gray-600'}`}
+                  aria-label={`Copy ${result.type}`}
                 >
                   {copiedType === result.type ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                     </svg>
                   )}
