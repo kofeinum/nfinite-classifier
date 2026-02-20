@@ -346,7 +346,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       const stage1Response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
         contents: { parts: [imagePart, { text:
-          `Analyze this product image. Identify the distinct objects shown and match each to a CATEGORY|SUBCATEGORY pair from the list below.\n\nRules:\n- The LARGEST object in the image is the most important — list it first\n- Smaller objects placed on or near it are secondary\n- Return up to 6 pairs ordered by object size (largest first)\n\n${allSubcategoryLines}`
+          `Analyze this product image. Identify the distinct objects shown and match each to a CATEGORY|SUBCATEGORY pair from the list below.\n\nRules:\n- The LARGEST object in the image is the most important — list it first\n- Smaller objects placed on or near it are secondary\n- Return up to 3 pairs ordered by object size (largest first)\n\n${allSubcategoryLines}`
         }]},
         config: {
           responseMimeType: 'application/json',
@@ -383,11 +383,12 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
         return
       }
 
-      // --- STAGE 2: For each valid pair, find matching types in parallel ---
+      // --- STAGE 2: For each valid pair, find matching types sequentially ---
       setLoadingStage(2)
 
-      const stage2Results = await Promise.all(
-        validMatches.map(async ({ category, subcategory }) => {
+      const stage2Results: ClassificationResult[][] = []
+      for (const { category, subcategory } of validMatches) {
+        const result = await (async () => {
           const candidates = getTypes(category, subcategory)
           const typeList = candidates.map(c => c.type).join('\n')
 
@@ -428,8 +429,9 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
             confidence: r.confidence,
             pivot: pivotLookup.get(r.type) ?? 'S1',
           }))
-        })
-      )
+        })()
+        stage2Results.push(result)
+      }
 
       // Merge, sort by confidence, deduplicate by type
       const seen = new Set<string>()
