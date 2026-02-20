@@ -415,7 +415,16 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       setSelectedResultIndex(0)
     } catch (err) {
       console.error(err)
-      setError(`Error: ${err instanceof Error ? err.message : 'An unexpected error occurred.'}`)
+      const msg = err instanceof Error ? err.message : ''
+      if (msg.includes('429') || msg.includes('quota') || msg.includes('limit')) {
+        setError(
+          selectedCategory === null
+            ? 'Daily token quota exceeded. Select a specific category (not ALL) to reduce token usage, or try again after midnight Pacific Time.'
+            : 'Daily token quota exceeded. Try again after midnight Pacific Time.'
+        )
+      } else {
+        setError(`Error: ${msg || 'An unexpected error occurred.'}`)
+      }
     } finally {
       setLoadingStage(0)
     }
@@ -509,8 +518,8 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
                   onClick={() => setSelectedCategory(null)}
                   className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
                     selectedCategory === null
-                      ? 'bg-blue-600 text-white'
-                      : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                      ? 'bg-amber-600/80 text-white'
+                      : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
                   }`}
                 >
                   ALL
@@ -530,6 +539,11 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
                 ))}
               </div>
             </div>
+            {selectedCategory === null && (
+              <p className="mt-2 text-xs text-amber-500/80">
+                ⚠ All-categories mode uses ~16k tokens/request — select a category above for faster results.
+              </p>
+            )}
           </div>
 
           {/* Right: Results and Cube */}
