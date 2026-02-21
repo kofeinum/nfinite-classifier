@@ -432,44 +432,47 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
 
   return (
     <div className={`min-h-screen flex flex-col items-center justify-center p-4 md:p-8 ${isDark ? 'bg-[#282828]' : 'bg-gray-100'}`}>
-      <div className={`p-8 rounded-2xl shadow-xl w-full max-w-6xl mx-auto ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3">
-            <h1 className={`text-4xl font-bold mb-2 ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>
-              Nfinite category classifier
-            </h1>
-            <button
-              onClick={onToggleTheme}
-              className={`p-2 rounded-lg mb-2 transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
-              title={isDark ? 'Light theme' : 'Dark theme'}
-            >
-              {isDark ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364-.707.707M6.343 17.657l-.707.707m12.728 0-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-              )}
-            </button>
-            <button
-              onClick={() => {
-                if (window.confirm('Reset API key?'))
-                  if (window.confirm('Are you sure? You will need to enter it again.'))
-                    onResetKey()
-              }}
-              className={`text-xs underline mb-2 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
-            >
-              API key
-            </button>
-          </div>
-          <p className={isDark ? 'text-gray-400' : 'text-gray-500'}>Upload, drag & drop, or paste (Ctrl+V) an image.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          {/* Left: Uploader */}
+      <div className={`p-8 rounded-2xl shadow-xl w-full mx-auto transition-all duration-300 ${imageUrl ? 'max-w-6xl' : 'max-w-md'} ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
+        <div className={`grid gap-8 items-start ${imageUrl ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
+          {/* Left: Title + Uploader */}
           <div className="w-full">
+            {/* Title row */}
+            <div className="flex items-center justify-between mb-3">
+              <h1 className={`text-2xl font-bold ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>
+                Nfinite category classifier
+              </h1>
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={onToggleTheme}
+                  className={`p-2 rounded-lg transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
+                  title={isDark ? 'Light theme' : 'Dark theme'}
+                >
+                  {isDark ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364-.707.707M6.343 17.657l-.707.707m12.728 0-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+                    </svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                  )}
+                </button>
+                <button
+                  onClick={() => {
+                    if (window.confirm('Reset API key?'))
+                      if (window.confirm('Are you sure? You will need to enter it again.'))
+                        onResetKey()
+                  }}
+                  className={`text-xs underline px-1 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
+                >
+                  API key
+                </button>
+              </div>
+            </div>
+            <p className={`text-sm mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+              Upload, drag & drop, or paste (Ctrl+V) an image.
+            </p>
+
             <label
               htmlFor="file-upload"
               className="w-full cursor-pointer"
@@ -500,53 +503,58 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
             </label>
             <input id="file-upload" name="file-upload" type="file" className="sr-only" accept="image/*" onChange={handleImageChange} />
 
-            <button
-              onClick={handleClassify}
-              disabled={!imageFile || loadingStage > 0}
-              className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-            >
-              {loadingStage > 0
-                ? stageLabels[loadingStage]
-                : selectedCategory ? `Classify in ${selectedCategory}` : 'Classify Image'}
-            </button>
-
-            {/* Category filter chips */}
-            <div className="mt-4">
-              <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Filter by category:</p>
-              <div className="flex flex-wrap gap-1.5">
+            {imageUrl && (
+              <>
                 <button
-                  onClick={() => setSelectedCategory(null)}
-                  className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
-                    selectedCategory === null
-                      ? 'bg-amber-600/80 text-white'
-                      : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
-                  }`}
+                  onClick={handleClassify}
+                  disabled={!imageFile || loadingStage > 0}
+                  className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 >
-                  ALL
+                  {loadingStage > 0
+                    ? stageLabels[loadingStage]
+                    : selectedCategory ? `Classify in ${selectedCategory}` : 'Classify Image'}
                 </button>
-                {CATEGORY_LIST.map(cat => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
-                    className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
-                      selectedCategory === cat
-                        ? 'bg-blue-600 text-white'
-                        : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
-            </div>
-            {selectedCategory === null && (
-              <p className="mt-2 text-xs text-amber-500/80">
-                ⚠ All-categories mode uses ~16k tokens/request — select a category above for faster results.
-              </p>
+
+                {/* Category filter chips */}
+                <div className="mt-4">
+                  <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Filter by category:</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <button
+                      onClick={() => setSelectedCategory(null)}
+                      className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
+                        selectedCategory === null
+                          ? 'bg-amber-600/80 text-white'
+                          : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
+                      }`}
+                    >
+                      ALL
+                    </button>
+                    {CATEGORY_LIST.map(cat => (
+                      <button
+                        key={cat}
+                        onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
+                        className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
+                          selectedCategory === cat
+                            ? 'bg-blue-600 text-white'
+                            : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                        }`}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {selectedCategory === null && (
+                  <p className="mt-2 text-xs text-amber-500/80">
+                    ⚠ All-categories mode uses ~16k tokens/request — select a category above for faster results.
+                  </p>
+                )}
+              </>
             )}
           </div>
 
-          {/* Right: Results and Cube */}
+          {/* Right: Results and Cube — only when image is selected */}
+          {imageUrl && (
           <div className="flex flex-col space-y-6">
             <div className="flex-grow min-h-[100px]">
               <ResultDisplay
@@ -572,6 +580,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
               </div>
             )}
           </div>
+          )}
         </div>
       </div>
     </div>
