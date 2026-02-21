@@ -435,9 +435,9 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
   return (
     <div className={`min-h-screen flex flex-col items-center justify-center p-4 md:p-8 ${isDark ? 'bg-[#282828]' : 'bg-gray-100'}`}>
       <div className={`p-8 rounded-2xl shadow-xl w-full mx-auto min-h-[720px] ${everExpanded ? 'transition-[max-width] duration-500 ease-out' : ''} ${imageUrl ? 'max-w-6xl' : 'max-w-[600px]'} ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
-        <div className={`grid gap-8 items-start ${imageUrl ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
-          {/* Left: Title + Uploader */}
-          <div className="w-full">
+        <div className="flex gap-8 items-start">
+          {/* Left: Title + Uploader — fixed width, never reflows */}
+          <div className="w-[536px] shrink-0 min-h-[656px]">
             {/* Title row */}
             <div className="flex items-center justify-between mb-3">
               <h1 className={`text-2xl font-bold ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>
@@ -551,9 +551,9 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
             )}
           </div>
 
-          {/* Right: Results and Cube — only when image is selected */}
+          {/* Right: Results and Cube — appears when image is selected */}
           {imageUrl && (
-          <div className="flex flex-col space-y-6">
+          <div className="flex-1 min-w-0 flex flex-col space-y-6">
             <div className="flex-grow min-h-[100px]">
               <ResultDisplay
                 loadingStage={loadingStage}
