@@ -503,53 +503,49 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
             </label>
             <input id="file-upload" name="file-upload" type="file" className="sr-only" accept="image/*" onChange={handleImageChange} />
 
-            {imageUrl && (
-              <>
-                <button
-                  onClick={handleClassify}
-                  disabled={!imageFile || loadingStage > 0}
-                  className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                >
-                  {loadingStage > 0
-                    ? stageLabels[loadingStage]
-                    : selectedCategory ? `Classify in ${selectedCategory}` : 'Classify Image'}
-                </button>
+            <button
+              onClick={handleClassify}
+              disabled={!imageFile || loadingStage > 0}
+              className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            >
+              {loadingStage > 0
+                ? stageLabels[loadingStage]
+                : selectedCategory ? `Classify in ${selectedCategory}` : 'Classify Image'}
+            </button>
 
-                {/* Category filter chips */}
-                <div className="mt-4">
-                  <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Filter by category:</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    <button
-                      onClick={() => setSelectedCategory(null)}
-                      className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
-                        selectedCategory === null
-                          ? 'bg-amber-600/80 text-white'
-                          : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
-                      }`}
-                    >
-                      ALL
-                    </button>
-                    {CATEGORY_LIST.map(cat => (
-                      <button
-                        key={cat}
-                        onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
-                        className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
-                          selectedCategory === cat
-                            ? 'bg-blue-600 text-white'
-                            : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-                        }`}
-                      >
-                        {cat}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                {selectedCategory === null && (
-                  <p className="mt-2 text-xs text-amber-500/80">
-                    ⚠ All-categories mode uses ~16k tokens/request — select a category above for faster results.
-                  </p>
-                )}
-              </>
+            {/* Category filter chips */}
+            <div className="mt-4">
+              <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Filter by category:</p>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  onClick={() => setSelectedCategory(null)}
+                  className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
+                    selectedCategory === null
+                      ? 'bg-amber-600/80 text-white'
+                      : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
+                  }`}
+                >
+                  ALL
+                </button>
+                {CATEGORY_LIST.map(cat => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
+                    className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
+                      selectedCategory === cat
+                        ? 'bg-blue-600 text-white'
+                        : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {selectedCategory === null && (
+              <p className="mt-2 text-xs text-amber-500/80">
+                ⚠ All-categories mode uses ~16k tokens/request — select a category above for faster results.
+              </p>
             )}
           </div>
 
