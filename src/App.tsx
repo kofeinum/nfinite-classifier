@@ -195,10 +195,11 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
 
 const stageLabels = ['', 'Scanning image...', 'Classifying objects...']
 
-function LoadingIndicator({ stage }: { stage: 1 | 2 }) {
+function LoadingIndicator({ stage, isDark }: { stage: 1 | 2; isDark: boolean }) {
+  const accent = isDark ? '#c8963c' : '#c8963c'
   return (
     <div className="flex flex-col items-center justify-center mt-8 space-y-4">
-      <svg className="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <svg className={`animate-spin h-8 w-8 ${isDark ? '' : 'text-blue-500'}`} style={accent ? { color: accent } : undefined} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
       </svg>
@@ -207,7 +208,8 @@ function LoadingIndicator({ stage }: { stage: 1 | 2 }) {
         {[1, 2].map(s => (
           <div
             key={s}
-            className={`h-2 w-8 rounded-full transition-colors duration-300 ${s <= stage ? 'bg-blue-500' : 'bg-gray-300'}`}
+            className={`h-2 w-8 rounded-full transition-all duration-300 ${s <= stage ? '' : 'opacity-30'} ${isDark ? '' : s <= stage ? 'bg-blue-500' : 'bg-blue-300'}`}
+            style={isDark ? { backgroundColor: accent } : undefined}
           />
         ))}
       </div>
@@ -234,7 +236,7 @@ function ResultDisplay({
   copiedType, isDark, onCopy, onSelectResult,
 }: ResultDisplayProps) {
   if (loadingStage > 0) {
-    return <LoadingIndicator stage={loadingStage as 1 | 2} />
+    return <LoadingIndicator stage={loadingStage as 1 | 2} isDark={isDark} />
   }
 
   if (error) {
@@ -589,8 +591,8 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
               </div>
             </div>
             {selectedCategory === null && (
-              <p className="mt-2 text-xs text-amber-500/80">
-                ⚠ All-categories mode uses ~16k tokens/request — select a category above for faster results.
+              <p className={`mt-4 text-sm font-medium ${isDark ? 'text-amber-500/80' : 'text-amber-700'}`}>
+                ⚠ Select a category to save tokens
               </p>
             )}
           </div>
