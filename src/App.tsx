@@ -276,6 +276,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
   const [selectedResultIndex, setSelectedResultIndex] = useState<number | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [usedModel, setUsedModel] = useState<string | null>(null)
+  const [everExpanded, setEverExpanded] = useState(false)
 
   async function fileToGenerativePart(file: File) {
     const base64EncodedDataPromise = new Promise<string>((resolve) => {
@@ -296,6 +297,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       setError(null)
       setNotFound(false)
       setSelectedResultIndex(null)
+      setEverExpanded(true)
     } else {
       setError('Please provide an image file.')
     }
@@ -432,7 +434,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
 
   return (
     <div className={`min-h-screen flex flex-col items-center justify-center p-4 md:p-8 ${isDark ? 'bg-[#282828]' : 'bg-gray-100'}`}>
-      <div className={`p-8 rounded-2xl shadow-xl w-full mx-auto transition-all duration-300 ${imageUrl ? 'max-w-6xl' : 'max-w-md'} ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
+      <div className={`p-8 rounded-2xl shadow-xl w-full mx-auto min-h-[720px] ${everExpanded ? 'transition-[max-width] duration-500 ease-out' : ''} ${imageUrl ? 'max-w-6xl' : 'max-w-[600px]'} ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
         <div className={`grid gap-8 items-start ${imageUrl ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
           {/* Left: Title + Uploader */}
           <div className="w-full">
