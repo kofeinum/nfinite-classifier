@@ -318,6 +318,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [usedModel, setUsedModel] = useState<string | null>(null)
   const [everExpanded, setEverExpanded] = useState(false)
+  const [showApiMenu, setShowApiMenu] = useState(false)
 
   async function fileToGenerativePart(file: File) {
     const base64EncodedDataPromise = new Promise<string>((resolve) => {
@@ -348,6 +349,13 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
     const file = e.target.files?.[0]
     if (file) handleFile(file)
   }
+
+  useEffect(() => {
+    if (!showApiMenu) return
+    const close = () => setShowApiMenu(false)
+    window.addEventListener('click', close)
+    return () => window.removeEventListener('click', close)
+  }, [showApiMenu])
 
   useEffect(() => {
     const handlePaste = (e: ClipboardEvent) => {
@@ -500,16 +508,39 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
                     </svg>
                   )}
                 </button>
-                <button
-                  onClick={() => {
-                    if (window.confirm('Reset API key?'))
-                      if (window.confirm('Are you sure? You will need to enter it again.'))
-                        onResetKey()
-                  }}
-                  className={`text-xs underline px-1 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
-                >
-                  API key
-                </button>
+                <div className="relative">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setShowApiMenu(v => !v) }}
+                    className={`text-xs underline px-1 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
+                  >
+                    API key
+                  </button>
+                  {showApiMenu && (
+                    <div
+                      onClick={(e) => e.stopPropagation()}
+                      className={`absolute right-0 top-6 z-50 w-64 rounded-lg shadow-xl p-3 text-xs ${isDark ? 'bg-[#2a2a2a] border border-gray-700 text-gray-300' : 'bg-white border border-gray-200 text-gray-700'}`}
+                    >
+                      <p className="font-semibold mb-2">How to get a Gemini API key</p>
+                      <ol className={`space-y-1 mb-2 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                        <li>1. Open <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">aistudio.google.com/apikey</a></li>
+                        <li>2. Sign in with your Google account</li>
+                        <li>3. Click <span className={`font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>"Create API key"</span></li>
+                        <li>4. Copy the key and paste it here</li>
+                      </ol>
+                      <hr className={`my-2 ${isDark ? 'border-gray-700' : 'border-gray-200'}`} />
+                      <button
+                        onClick={() => {
+                          setShowApiMenu(false)
+                          if (window.confirm('Reset API key? You will need to enter it again.'))
+                            onResetKey()
+                        }}
+                        className="text-red-400 hover:text-red-300 transition-colors"
+                      >
+                        Reset key
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
             <p className={`text-sm mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
