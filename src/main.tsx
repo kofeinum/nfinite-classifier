@@ -6,7 +6,7 @@ import './index.css'
 
 function Root() {
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('gemini-api-key') || '')
-  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark')
+  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') !== 'light')
 
   const toggleTheme = () => {
     const next = !isDark

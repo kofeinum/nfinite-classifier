@@ -10,27 +10,62 @@ interface ClassificationResult {
   pivot: string
 }
 
+// --- DYNAMIC BLUR BASED ON FACE ORIENTATION ---
+
+const FACE_NORMALS: Record<string, [number, number, number]> = {
+  front:  [0,  0,  1],
+  back:   [0,  0, -1],
+  right:  [1,  0,  0],
+  left:   [-1, 0,  0],
+  top:    [0, -1,  0], // CSS Y-down: "up" = -Y
+  bottom: [0,  1,  0],
+}
+
+function getFaceBlur(face: string, rxDeg: number, ryDeg: number, maxBlur = 2.0): number {
+  const rx = (rxDeg * Math.PI) / 180
+  const ry = (ryDeg * Math.PI) / 180
+  const [nx, ny, nz] = FACE_NORMALS[face] ?? [0, 0, 1]
+  // apply rotateX(rx)
+  const ny1 = ny * Math.cos(rx) - nz * Math.sin(rx)
+  const nz1 = ny * Math.sin(rx) + nz * Math.cos(rx)
+  // apply rotateY(ry) — only need z component (dot with view dir)
+  const nz2 = -nx * Math.sin(ry) + nz1 * Math.cos(ry)
+  return Math.max(0, -nz2) * maxBlur
+}
+
 // --- PIVOT CUBE VISUALIZATION ---
 
-type FacePos = { face: string; x: string; y: string; half?: 'top' | 'bottom' | 'left' | 'right' }
+type FacePos = { face: string; x: string; y: string; half?: 'top' | 'bottom' | 'left' | 'right' | 'cornerTR' | 'cornerTL' | 'cornerBR' | 'cornerBL' }
 
 const halfStyles: Record<string, React.CSSProperties> = {
-  top:    { height: 10, borderRadius: '10px 10px 0 0', transform: 'translate(-50%, -100%)' },
-  bottom: { height: 10, borderRadius: '0 0 10px 10px', transform: 'translate(-50%, 0%)'    },
-  left:   { width:  10, borderRadius: '0 10px 10px 0', transform: 'translate(0%, -50%)'    },
-  right:  { width:  10, borderRadius: '10px 0 0 10px', transform: 'translate(-100%, -50%)' },
+  top:      { height: 10, borderRadius: '10px 10px 0 0', transform: 'translate(-50%, -100%)' },
+  bottom:   { height: 10, borderRadius: '0 0 10px 10px', transform: 'translate(-50%, 0%)'    },
+  left:     { width:  10, borderRadius: '0 10px 10px 0', transform: 'translate(0%, -50%)'    },
+  right:    { width:  10, borderRadius: '10px 0 0 10px', transform: 'translate(-100%, -50%)' },
+  // quarter circles for cube corners — extend toward face interior
+  cornerTR: { width: 10, height: 10, borderRadius: '0 10px 0 0', transform: 'translate(0%, -100%)'    }, // right+up
+  cornerTL: { width: 10, height: 10, borderRadius: '10px 0 0 0', transform: 'translate(-100%, -100%)' }, // left+up
+  cornerBR: { width: 10, height: 10, borderRadius: '0 0 10px 0', transform: 'translate(0%, 0%)'       }, // right+down
+  cornerBL: { width: 10, height: 10, borderRadius: '0 0 0 10px', transform: 'translate(-100%, 0%)'    }, // left+down
 }
 
 const pivotCodeMap: Record<string, FacePos[]> = {
   'A':   [{ face: 'front',  x: '50%', y: '50%'  }],
-  'C1':  [{ face: 'bottom', x: '0%',  y: '100%' }],
-  'C2':  [{ face: 'bottom', x: '100%',y: '100%' }],
-  'C3':  [{ face: 'bottom', x: '100%',y: '0%'   }],
-  'C4':  [{ face: 'bottom', x: '0%',  y: '0%'   }],
-  'C5':  [{ face: 'top',    x: '0%',  y: '100%' }],
-  'C6':  [{ face: 'top',    x: '100%',y: '100%' }],
-  'C7':  [{ face: 'top',    x: '100%',y: '0%'   }],
-  'C8':  [{ face: 'top',    x: '0%',  y: '0%'   }],
+  // Corners — marker wraps across all 3 meeting faces
+  // Face coord systems (derived from E1/E3/E11):
+  //   front/back: x=0%=left*, y=0%=top, y=100%=bottom  (*back x is mirrored in world, same in local)
+  //   top/bottom: x=0%=left, x=100%=right, y=0%=back, y=100%=front
+  //   right: x=0%=front, x=100%=back, y=0%=top, y=100%=bottom
+  //   left:  x=0%=back,  x=100%=front, y=0%=top, y=100%=bottom
+  // Quarter rule: at (0%,?)=cornerTR/BR, at (100%,?)=cornerTL/BL; at (?,0%)=cornerBR/BL, at (?,100%)=cornerTR/TL
+  'C1':  [{ face: 'bottom', x: '0%',   y: '100%', half: 'cornerTR' }, { face: 'front',  x: '0%',   y: '100%', half: 'cornerTR' }, { face: 'left',  x: '100%', y: '100%', half: 'cornerTL' }],
+  'C2':  [{ face: 'bottom', x: '100%', y: '100%', half: 'cornerTL' }, { face: 'front',  x: '100%', y: '100%', half: 'cornerTL' }, { face: 'right', x: '0%',   y: '100%', half: 'cornerTR' }],
+  'C3':  [{ face: 'bottom', x: '100%', y: '0%',   half: 'cornerBL' }, { face: 'back',   x: '0%',   y: '100%', half: 'cornerTR' }, { face: 'right', x: '100%', y: '100%', half: 'cornerTL' }],
+  'C4':  [{ face: 'bottom', x: '0%',   y: '0%',   half: 'cornerBR' }, { face: 'back',   x: '100%', y: '100%', half: 'cornerTL' }, { face: 'left',  x: '0%',   y: '100%', half: 'cornerTR' }],
+  'C5':  [{ face: 'top',    x: '0%',   y: '100%', half: 'cornerTR' }, { face: 'front',  x: '0%',   y: '0%',   half: 'cornerBR' }, { face: 'left',  x: '100%', y: '0%',   half: 'cornerBL' }],
+  'C6':  [{ face: 'top',    x: '100%', y: '100%', half: 'cornerTL' }, { face: 'front',  x: '100%', y: '0%',   half: 'cornerBL' }, { face: 'right', x: '0%',   y: '0%',   half: 'cornerBR' }],
+  'C7':  [{ face: 'top',    x: '100%', y: '0%',   half: 'cornerBL' }, { face: 'back',   x: '0%',   y: '0%',   half: 'cornerBR' }, { face: 'right', x: '100%', y: '0%',   half: 'cornerBL' }],
+  'C8':  [{ face: 'top',    x: '0%',   y: '0%',   half: 'cornerBR' }, { face: 'back',   x: '100%', y: '0%',   half: 'cornerBL' }, { face: 'left',  x: '0%',   y: '0%',   half: 'cornerBR' }],
   'E1':  [
     { face: 'bottom', x: '50%', y: '100%', half: 'top'    },
     { face: 'front',  x: '50%', y: '100%', half: 'top'    },
@@ -131,7 +166,11 @@ const PivotCube = ({ pivot, isDark }: { pivot: string; isDark: boolean }) => {
           }}
         >
           {faces.map(({ name, label }) => (
-            <div key={name} className={`cube-face ${name}`}>
+            <div
+              key={name}
+              className={`cube-face ${name}`}
+              style={{ filter: `blur(${getFaceBlur(name, rotation.x, rotation.y).toFixed(2)}px)` }}
+            >
               {label}
               {positions.filter(p => p.face === name).map((p, i) => (
                 <div
@@ -440,7 +479,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
           <div className="w-[536px] shrink-0 min-h-[656px]">
             {/* Title row */}
             <div className="flex items-center justify-between mb-3">
-              <h1 className={`text-2xl font-bold ${isDark ? 'text-gray-100' : 'text-gray-800'}`}>
+              <h1 className={`text-2xl font-bold ${isDark ? '' : 'text-gray-800'}`} style={isDark ? { color: '#c8963c' } : undefined}>
                 Nfinite category classifier
               </h1>
               <div className="flex items-center gap-1">
@@ -508,11 +547,14 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
             <button
               onClick={handleClassify}
               disabled={!imageFile || loadingStage > 0}
-              className="mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              className={`mt-6 w-full font-bold py-3 px-4 rounded-lg disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-opacity-50 ${isDark ? 'text-black focus:ring-[#c8963c]' : 'text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500'}`}
+              style={isDark ? { backgroundColor: '#c8963c' } : undefined}
+              onMouseEnter={e => { if (isDark) (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#b07e2e' }}
+              onMouseLeave={e => { if (isDark) (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#c8963c' }}
             >
               {loadingStage > 0
                 ? stageLabels[loadingStage]
-                : selectedCategory ? `Classify in ${selectedCategory}` : 'Classify Image'}
+                : selectedCategory ? `Classify in ${selectedCategory}` : 'CLASSIFY IMAGE'}
             </button>
 
             {/* Category filter chips */}
@@ -521,11 +563,12 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
               <div className="flex flex-wrap gap-1.5">
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
+                  className={`flex-1 px-2.5 py-1 rounded text-xs font-medium transition-colors ${
                     selectedCategory === null
-                      ? 'bg-amber-600/80 text-white'
-                      : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
+                      ? isDark ? 'text-black' : 'bg-amber-600/80 text-white'
+                      : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
                   }`}
+                  style={isDark && selectedCategory === null ? { backgroundColor: '#c8963c' } : undefined}
                 >
                   ALL
                 </button>
@@ -533,11 +576,12 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
-                    className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
+                    className={`flex-1 px-2.5 py-1 rounded text-xs font-medium transition-colors ${
                       selectedCategory === cat
-                        ? 'bg-blue-600 text-white'
-                        : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                        ? isDark ? 'text-black' : 'bg-blue-600 text-white'
+                        : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-300 text-gray-800 hover:bg-gray-400'
                     }`}
+                    style={isDark && selectedCategory === cat ? { backgroundColor: '#c8963c' } : undefined}
                   >
                     {cat}
                   </button>
