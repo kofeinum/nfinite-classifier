@@ -516,7 +516,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
               <div className="flex flex-wrap gap-1.5">
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
+                  className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
                     selectedCategory === null
                       ? 'bg-amber-600/80 text-white'
                       : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
@@ -528,7 +528,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
-                    className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
+                    className={`px-2.5 py-1 rounded text-xs font-medium transition-colors ${
                       selectedCategory === cat
                         ? 'bg-blue-600 text-white'
                         : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
