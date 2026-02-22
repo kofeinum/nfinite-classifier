@@ -454,13 +454,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ARCHITECTURE",
     "subcategory": "STREET_FURNITURE",
     "type": "TABLETOP_OUTDOOR_FOUNTAIN",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "ARCHITECTURE",
     "subcategory": "STREET_FURNITURE",
     "type": "TABLETOP_OUT_FOUNTAIN",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "ARCHITECTURE",
@@ -718,7 +718,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ARCHITECTURE",
     "subcategory": "STRUCTURES",
     "type": "FOLDING_ARM_AWNING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ARCHITECTURE",
@@ -730,7 +730,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ARCHITECTURE",
     "subcategory": "STRUCTURES",
     "type": "GARDEN_ARCH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "ARCHITECTURE",
@@ -742,7 +742,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ARCHITECTURE",
     "subcategory": "STRUCTURES",
     "type": "GARDEN_UMBRELLA",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ARCHITECTURE",
@@ -772,7 +772,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ARCHITECTURE",
     "subcategory": "STRUCTURES",
     "type": "HANGING_SHADE_SAIL",
-    "pivot": "S1"
+    "pivot": "S6"
   },
   {
     "category": "ARCHITECTURE",
@@ -862,7 +862,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ARCHITECTURE",
     "subcategory": "STRUCTURES",
     "type": "PATIO_UMBRELLA",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ARCHITECTURE",
@@ -916,7 +916,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ARCHITECTURE",
     "subcategory": "STRUCTURES",
     "type": "WALL_CHICKEN_ENCLOSURE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "ARCHITECTURE",
@@ -928,7 +928,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ARCHITECTURE",
     "subcategory": "STRUCTURES",
     "type": "WALL_GARDEN_SHED",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "ARCHITECTURE",
@@ -1096,7 +1096,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "AUTOMOBILES",
     "subcategory": "MOTORCYCLES",
     "type": "3_WHEELS_SCOOTER",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "AUTOMOBILES",
@@ -1144,7 +1144,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BAGS_LUGGAGE",
     "subcategory": "MEN",
     "type": "MESSENGER_BAG",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BAGS_LUGGAGE",
@@ -1156,25 +1156,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BAGS_LUGGAGE",
     "subcategory": "TRAVEL",
     "type": "DRAWSTRING_BAG",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "BAGS_LUGGAGE",
     "subcategory": "TRAVEL",
     "type": "GARMENT_BAG",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BAGS_LUGGAGE",
     "subcategory": "TRAVEL",
     "type": "SPACE_SAVER_BAG",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BAGS_LUGGAGE",
     "subcategory": "TRAVEL",
     "type": "STORAGE_BAG",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "BAGS_LUGGAGE",
@@ -1192,13 +1192,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BAGS_LUGGAGE",
     "subcategory": "TRAVEL",
     "type": "TRAVEL_BAG",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BAGS_LUGGAGE",
     "subcategory": "TRAVEL",
     "type": "TRAVEL_BAG_WHEELS",
-    "pivot": "C1"
+    "pivot": "C4"
   },
   {
     "category": "BAGS_LUGGAGE",
@@ -1222,7 +1222,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BAGS_LUGGAGE",
     "subcategory": "WOMEN",
     "type": "SHOE_BAG",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1246,7 +1246,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "BODY_CREAM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1270,73 +1270,73 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "CLEANSER_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "COSMETIC_PRODUCT_SET",
-    "pivot": "S4"
+    "pivot": "S1"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEODORANT_CREAM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEODORANT_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEODORANT_ROLL_ON",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEODORANT_SPRAY",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEODORANT_STICK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEO_CREAM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEO_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEO_ROLL_ON",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEO_SPRAY",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "DEO_STICK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1354,43 +1354,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "ELECTRIC_FACIAL_BRUSH",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "ELECTRIC_FACIAL_CLEANSING_BRUSH",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "ELECTRIC_NAIL_BUFFER",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "ELECTRIC_NAIL_FILE",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "ELECTRIC_NAIL_SANDER",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "FACE_CREAM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "FACE_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1402,37 +1402,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "FEET_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "FOOT_FILE",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "FOOT_SCRAPER",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "HAND_CREAM_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "HAND_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "HORIZONTAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1444,13 +1444,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "LIPS_BALM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "MAKEUP_BRUSH",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1468,13 +1468,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "NAIL_BRUSH",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "NAIL_DRYER",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1492,7 +1492,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "POCKET_MIRROR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1522,25 +1522,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "STAND_FACIAL_BRUSH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "STAND_FACIAL_CLEANSING_BRUSH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "STAND_SKIN_SCRUBBER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "STAND_ULTRASONIC_SKIN_CLEANER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1552,7 +1552,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "SUN_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1564,7 +1564,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "BODY",
     "type": "WASH_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1582,7 +1582,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "BODY_CREAM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1606,73 +1606,73 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "CLEANSER_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "COSMETIC_PRODUCT_SET",
-    "pivot": "S4"
+    "pivot": "S1"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEODORANT_CREAM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEODORANT_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEODORANT_ROLL_ON",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEODORANT_SPRAY",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEODORANT_STICK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEO_CREAM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEO_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEO_ROLL_ON",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEO_SPRAY",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "DEO_STICK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1690,43 +1690,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "ELECTRIC_FACIAL_BRUSH",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "ELECTRIC_FACIAL_CLEANSING_BRUSH",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "ELECTRIC_NAIL_BUFFER",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "ELECTRIC_NAIL_FILE",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "ELECTRIC_NAIL_SANDER",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "FACE_CREAM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "FACE_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1738,37 +1738,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "FEET_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "FOOT_FILE",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "FOOT_SCRAPER",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "HAND_CREAM_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "HAND_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "HORIZONTAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1780,13 +1780,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "LIPS_BALM_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "MAKEUP_BRUSH",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1804,13 +1804,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "NAIL_BRUSH",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "NAIL_DRYER",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1828,7 +1828,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "POCKET_MIRROR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1858,25 +1858,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "STAND_FACIAL_BRUSH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "STAND_FACIAL_CLEANSING_BRUSH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "STAND_SKIN_SCRUBBER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "STAND_ULTRASONIC_SKIN_CLEANER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1888,7 +1888,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "SUN_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1900,7 +1900,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "FACE",
     "type": "WASH_CREAM_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1912,13 +1912,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "CLAW_CLIP",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "CLAW_HAIR_CLIP",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1930,19 +1930,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "DOOR_HAIR_DRYER_HOLDER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "DOOR_HAIR_DRYER_STAND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "FOLDED_HAIR_DRYER",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1966,25 +1966,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "HAIR_CLIP",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "HAIR_DRYER",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "HAIR_TRIMMER",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "HARD_HEADBAND",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -1996,31 +1996,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "NOVELTY_HEADPIECE",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "SOFT_HEADBAND",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "STAND_HAIR_TRIMMER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "WALL_HAIR_DRYER_HOLDER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HAIR",
     "type": "WALL_HAIR_DRYER_STAND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2032,7 +2032,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "BABY_BATH_RING",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2044,7 +2044,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "BACK_BRUSH",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2056,13 +2056,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "BATHROOM_BASKET",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "BATHTUB_HANDLE",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2074,7 +2074,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "BATH_BRUSH",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2092,73 +2092,73 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "BODY_WASH_VERTICAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "CLEANING_BRUSH_DOWNWARD",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "CLEANING_BRUSH_UPWARD",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "CREAM_BODY_SOAP_WRAP",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "CREAM_SOAP_PUMP",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "DECORATIVE_HANDKERCHIEF_BOX",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "DECORATIVE_JAR",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "DOOR_MIRROR",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "DOWN_WINDOW_CLEANER",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "ELECTRIC_SHAVER",
-    "pivot": "S1"
-  },
-  {
-    "category": "BEAUTY_HEALTH",
-    "subcategory": "HYGIENE",
-    "type": "ELECTRIC_TOOTHBRUSH",
     "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
+    "type": "CLEANING_BRUSH_UPWARD",
+    "pivot": "C2"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
+    "type": "CREAM_BODY_SOAP_WRAP",
+    "pivot": "C4"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
+    "type": "CREAM_SOAP_PUMP",
+    "pivot": "C4"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
+    "type": "DECORATIVE_HANDKERCHIEF_BOX",
+    "pivot": "C4"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
+    "type": "DECORATIVE_JAR",
+    "pivot": "C4"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
+    "type": "DOOR_MIRROR",
+    "pivot": "A"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
+    "type": "DOWN_WINDOW_CLEANER",
+    "pivot": "C4"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
+    "type": "ELECTRIC_SHAVER",
+    "pivot": "C2"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
+    "type": "ELECTRIC_TOOTHBRUSH",
+    "pivot": "A"
+  },
+  {
+    "category": "BEAUTY_HEALTH",
+    "subcategory": "HYGIENE",
     "type": "ESSENTIAL_OIL",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2170,25 +2170,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "FLOOR_HAND_DRYER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "FOAM_SOAP_CANISTER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "FOAM_SOAP_JUG",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "FOAM_SOAP_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2200,49 +2200,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "GEL_SOAP_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "GRAP_BAR",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "HANGING_BACK_BRUSH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "HANGING_BATH_BRUSH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "HOOK_TOILET_PAPER_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "HOOK_TOILET_PAPER_HOLDER",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "HOOK_TOILET_PAPER_RACK",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "HOUSEHOLD_PRODUCTS",
-    "pivot": "S4"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2254,19 +2254,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "LIQUID_BODY_SOAP_ROLLER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "LIQUID_SOAP_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "LIQUID_SOAP_SPOUT_POUCH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2278,13 +2278,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "PASTE_BODY_SOAP_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "PLUNGER_UNBLOCKER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2302,7 +2302,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SCRUBBING_BRUSH_DOWNWARD",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2314,7 +2314,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SHOWER_BASKET",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2332,43 +2332,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SHOWER_GEL_VERTICAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SINK_PLUNGER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SOAP_DISH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SOAP_DISPENSER",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SOAP_ON_ROPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SOAP_TIN",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "SOAP_WRAP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2380,31 +2380,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "STANDING_MIRROR",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "STANDING_WINDOW_CLEANER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "STAND_ELECTRIC_SHAVER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "STAND_ELECTRIC_TOOTHBRUSH",
-    "pivot": "C2"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOILETRY_BAG",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2422,19 +2422,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOILET_PAPER_HOLDER_STAND",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOILET_PAPER_ROLL",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOILET_PAPER_ROLL_HOLDER",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2446,19 +2446,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOILET_PAPER_ROLL_STAND",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOILET_PAPER_STAND",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOILET_PLUNGER",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2470,43 +2470,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOOTHBRUSH_CUP",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOOTHBRUSH_HOLDER",
-    "pivot": "C2"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOOTHPASTE_HORIZONTAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOOTHPASTE_LYING_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOOTHPASTE_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOOTHPASTE_STANDING_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "TOOTHPASTE_VERTICAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2518,49 +2518,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "UNPACKED_SOAP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_AUTOMATIC_HAND_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_DOWN_HAND_DRYER",
-    "pivot": "S1"
+    "pivot": "E11"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_FOLDING_MIRROR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_HAND_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_MIRROR",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_SOAP_DISH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_SOAP_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2578,19 +2578,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_TOILET_PAPER_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_TOILET_PAPER_HOLDER",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_TOILET_PAPER_RACK",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2602,37 +2602,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_TOOTHBRUSH_HOLDER",
-    "pivot": "C2"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_TOOTHBRUSH_STAND",
-    "pivot": "C2"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_TOUCHE_FREE_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_UP_HAND_DRYER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_WC_BRUSH_HOLDER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WALL_WC_BRUSH_STAND",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "BEAUTY_HEALTH",
@@ -2650,13 +2650,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WC_ROLL_HOLDER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BEAUTY_HEALTH",
     "subcategory": "HYGIENE",
     "type": "WC_ROLL_STAND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -2686,7 +2686,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "BALLOONS_AND_STRINGS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -2698,19 +2698,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "BALLOON_AND_STRING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "BALLOON_WITH_STRING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "BOARD_GAME_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -2770,7 +2770,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "GAME_CONTROLLER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -2848,7 +2848,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "PORTABLE_GAME_CONSOLE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -2866,7 +2866,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "TABLETOP_POOL_TABLE",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -2890,25 +2890,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "VIDEO_GAME",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "BOARD_GAMES",
     "type": "WALL_GAME_TARGET",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "2_HOLE_PUNCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "4_HOLE_PUNCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -2956,7 +2956,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CALENDAR_BASE",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -2980,31 +2980,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CLIP_MEMO_HOLDER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CLIP_MEMO_STAND",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CLIP_PHOTO_HOLDER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CLIP_PHOTO_STAND",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CLIP_STAND",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3016,19 +3016,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "COLORED_PENCILS_PACK",
-    "pivot": "C3"
+    "pivot": "C1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "COMPASS_TOOL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CORRECTION_FLUID",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3040,31 +3040,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CORRECTION_ROLLER",
-    "pivot": "S1"
-  },
-  {
-    "category": "BOOKS_MEDIA",
-    "subcategory": "STATIONERY",
-    "type": "CORRECTION_TAPE",
-    "pivot": "S1"
-  },
-  {
-    "category": "BOOKS_MEDIA",
-    "subcategory": "STATIONERY",
-    "type": "COUNTER_PEN",
     "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
+    "type": "CORRECTION_TAPE",
+    "pivot": "C3"
+  },
+  {
+    "category": "BOOKS_MEDIA",
+    "subcategory": "STATIONERY",
+    "type": "COUNTER_PEN",
+    "pivot": "A"
+  },
+  {
+    "category": "BOOKS_MEDIA",
+    "subcategory": "STATIONERY",
     "type": "CRAFT_HOLE_PUNCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "CRAFT_PUNCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3076,13 +3076,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "DIGITAL_STYLUS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "DOWN_RETRACTABLE_TAPE_MEASURE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3130,7 +3130,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "FELT_PENS_PACK",
-    "pivot": "C3"
+    "pivot": "C1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3142,7 +3142,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "FELT_PEN_SET",
-    "pivot": "C3"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3166,31 +3166,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "GIFT_PAPER_ROLL",
-    "pivot": "C1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "GIFT_PAPER_ROLLS_SET",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "GIFT_WRAP_ROLL",
-    "pivot": "C1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "GIFT_WRAP_ROLLS_SET",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "GLUE_BOTTLE",
-    "pivot": "C4"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3202,13 +3202,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "GLUE_STICK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "GLUE_TUBE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3226,13 +3226,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "HALF_ROLLED_GIFT_PAPER",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "HALF_ROLLED_GIFT_WRAP",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3286,13 +3286,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "OFFICE_HOLE_PUNCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "OFFICE_PUNCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3304,37 +3304,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "OPEN_BINDER",
-    "pivot": "C3"
+    "pivot": "E1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "OPEN_BOOK",
-    "pivot": "C3"
+    "pivot": "E1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "OPEN_BRIEFCASE",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "OPEN_LEVER_ARCH_FILE",
-    "pivot": "C3"
+    "pivot": "E1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PACKAGED_COLORED_PENCILS",
-    "pivot": "C3"
+    "pivot": "C1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PACKAGED_FELT_PENS",
-    "pivot": "C3"
+    "pivot": "C1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3346,31 +3346,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PACKED_GIFT_PAPER_ROLL",
-    "pivot": "C1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PACKED_GIFT_WRAP_ROLL",
-    "pivot": "C1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PACKED_WALLPAPER_ROLL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PACKED_WRAPPING_PAPER_ROLL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PAGE_UP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3424,7 +3424,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PENCIL_CUP",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3442,7 +3442,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PENCIL_SET",
-    "pivot": "C3"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3508,7 +3508,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "PEN_SET",
-    "pivot": "C3"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3544,13 +3544,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "RETRACTABLE_ERASER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "RETRACTABLE_GUM",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3592,7 +3592,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "SELF_STICK_NOTE_PAD_DISPENSER",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3640,7 +3640,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "STANDING_RETRACTABLE_TAPE_MEASURE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3652,7 +3652,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "STICKY_NOTE_DISPENSER",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3676,25 +3676,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "TABLETOP_DIPLOMA_FRAME",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "TABLETOP_DOCUMENT_FRAME",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "TABLETOP_FRAME",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "TABLETOP_PHOTO_FRAME",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3718,19 +3718,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "TELLER_PEN",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "TENT_CALENDAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "TRANSPARENT_TAPE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3748,13 +3748,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "WALL_PAPER_TOWEL_DISPENSER",
-    "pivot": "C3"
+    "pivot": "E3"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "WAX_CRAYON",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3778,13 +3778,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "WORLD_GLOBE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "BOOKS_MEDIA",
     "subcategory": "STATIONERY",
     "type": "WRAPPING_PAPER_ROLL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "BOOKS_MEDIA",
@@ -3856,13 +3856,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "BATTERY_CHARGER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "BATTERY_PACK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "CONSTRUCTION",
@@ -3874,7 +3874,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "ELECTRICAL_CABINET",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "CONSTRUCTION",
@@ -3886,19 +3886,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "ELECTRICAL_MOUNTING_SUPPORT",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "ELECTRICAL_OUTLET_FRAME",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "ELECTRICAL_SWITCH_FRAME",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
@@ -3910,7 +3910,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "FIX_IN_FLOOR_ELECTRICAL_OUTLET",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -3928,7 +3928,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "FIX_IN_WALL_ELECTRICAL_OUTLET",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -3940,49 +3940,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "FIX_ON_ELECTRICAL_OUTLET",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "FIX_ON_SWITCH",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "HANGING_ELECTRICAL_CABINET",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "HANGING_ELECTRICAL_ENCLOSURE",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "HANGING_ELEC_CABINET",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "HANGING_SWITCHGEAR_CABINET",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "MULTI_OUTLET_BLOCK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "POWER_STATION",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "CONSTRUCTION",
@@ -3994,7 +3994,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "PROGRAMMABLE_OUTLET",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -4036,7 +4036,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "WALL_ADJACENT_ELECTRICAL_ENCLOSURE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "CONSTRUCTION",
@@ -4054,7 +4054,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "ELECTRICAL",
     "type": "WALL_MOUNTED_ELEC_CABINET",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
@@ -4462,7 +4462,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "HARDWARE",
     "type": "WALL_CONTROL_PLATE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -4480,19 +4480,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "1_WALL_SHOWER_CABIN",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "1_WALL_SHOWER_CUBICLE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "1_WALL_SHOWER_STALL",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -4528,7 +4528,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "BATHTUB_MAT",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "CONSTRUCTION",
@@ -4606,25 +4606,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "CORNER_OPENING_SHOWER_CABIN",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "CORNER_OPENING_SHOWER_CUBICLE",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "CORNER_OPENING_SHOWER_STALL",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "CORNER_SHOWER_SHELF",
-    "pivot": "E3"
+    "pivot": "E8"
   },
   {
     "category": "CONSTRUCTION",
@@ -4636,7 +4636,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "DROP_IN_BATHTUB",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -4654,7 +4654,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "FAUCET_ISLAND_BATHTUB_KIT",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -4672,7 +4672,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "FLOOR_URINAL",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "CONSTRUCTION",
@@ -4726,7 +4726,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "ISLAND_BATHTUB_KIT",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -4744,7 +4744,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LAID_1/4_ROUND_SHOWER_BASE",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -4756,13 +4756,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LAID_CORNER_SHOWER_BASE",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LAID_CORNER_SHOWER_PAN",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -4774,19 +4774,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LAID_SHOWER_BASE",
-    "pivot": "A"
+    "pivot": "E3"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LAID_SHOWER_PAN",
-    "pivot": "A"
+    "pivot": "E3"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LAID_SHOWER_TRAY",
-    "pivot": "C4"
+    "pivot": "E3"
   },
   {
     "category": "CONSTRUCTION",
@@ -4804,19 +4804,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LEFT_PIVOT_DOOR_SHOWER_CABIN",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LEFT_PIVOT_DOOR_SHOWER_CUBICLE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "LEFT_PIVOT_DOOR_SHOWER_STALL",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -4840,7 +4840,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "NON_SLIP_BATHTUB_MAT",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "CONSTRUCTION",
@@ -4864,7 +4864,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "PEDESTAL_WASHBASIN",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "CONSTRUCTION",
@@ -4900,7 +4900,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "RECESSED_BATHTUB",
-    "pivot": "E3"
+    "pivot": "S6"
   },
   {
     "category": "CONSTRUCTION",
@@ -4924,19 +4924,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "RIGHT_PIVOT_DOOR_SHOWER_CABIN",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "RIGHT_PIVOT_DOOR_SHOWER_CUBICLE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "RIGHT_PIVOT_DOOR_SHOWER_STALL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "CONSTRUCTION",
@@ -4954,13 +4954,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "SEMI_RECESSED_BATHTUB",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "SEMI_RECESSED_HANDS_WASHBASIN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -4978,7 +4978,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "SEMI_RECESSED_SHOWER_TRAY",
-    "pivot": "C4"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -4996,19 +4996,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "SHOWER_COLUMN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "SHOWER_SCREEN_BASKET",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "SHOWER_SHELF",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5020,7 +5020,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "SLIDING_SHOWER_SCREEN",
-    "pivot": "S1"
+    "pivot": "none"
   },
   {
     "category": "CONSTRUCTION",
@@ -5044,7 +5044,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "TOILET_CONTOUR_MAT",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -5080,7 +5080,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "UNDERMOUNT_BATHTUB",
-    "pivot": "E3"
+    "pivot": "S6"
   },
   {
     "category": "CONSTRUCTION",
@@ -5110,7 +5110,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WALL_BIDET",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "CONSTRUCTION",
@@ -5134,25 +5134,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WALL_FLUSH_BUTTON",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WALL_HAND_WASHBASIN_CABINET",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WALL_SHOWER_BASKET",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WALL_SHOWER_PANELS_LEFT_CORNER",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5164,13 +5164,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WALL_TOILET",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WALL_URINAL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -5194,13 +5194,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WALL_WC",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WASHBASIN_COLUMN_CONTOUR_MAT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
@@ -5218,13 +5218,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "PLUMBING",
     "type": "WC_CONTOUR_MAT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "AIR_CONDITIONER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5248,13 +5248,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "CORNER_ACOUSTIC_PANEL",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "ELECTRICAL_PANEL",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5278,73 +5278,73 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "FLOOR_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_LEFT_DOOR",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_LEFT_REBATED_DOOR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_LEFT_WINDOW",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_MIDDLE_DOORS",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_MIDDLE_REBATED_DOOR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_MIDDLE_REB_DOOR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_MIDDLE_WINDOW",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_RIGHT_DOOR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_RIGHT_REBATED_DOOR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "HANDLE_RIGHT_WINDOW",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "LARGE_FORMAT_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5356,7 +5356,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "MOBILE_ACOUSTIC_PANEL",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "CONSTRUCTION",
@@ -5368,19 +5368,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "MODUL_CEILING",
-    "pivot": "S1"
+    "pivot": "C8"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "MODUL_FLOOR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "MODUL_WALL",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5392,7 +5392,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "PANEL_FOOTBOARD",
-    "pivot": "A"
+    "pivot": "E3"
   },
   {
     "category": "CONSTRUCTION",
@@ -5404,13 +5404,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "PORCELAIN_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "SOFT_WALL_PANEL",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5446,25 +5446,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "WALL_ACCESS_PANEL",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "WALL_ACOUSTIC_PANEL",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "WALL_CONTROL_PANEL",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "WALL_EARTHENWARE_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5476,31 +5476,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "WALL_HEATER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "WALL_SERVICE_HATCH",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "WALL_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_FINISHING",
     "type": "WALL_VENT_PANEL",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "AIR_CONDITIONER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5524,13 +5524,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "CORNER_ACOUSTIC_PANEL",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "ELECTRICAL_PANEL",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5554,73 +5554,73 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "FLOOR_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_LEFT_DOOR",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_LEFT_REBATED_DOOR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_LEFT_WINDOW",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_MIDDLE_DOORS",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_MIDDLE_REBATED_DOOR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_MIDDLE_REB_DOOR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_MIDDLE_WINDOW",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_RIGHT_DOOR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_RIGHT_REBATED_DOOR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "HANDLE_RIGHT_WINDOW",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "LARGE_FORMAT_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5632,7 +5632,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "MOBILE_ACOUSTIC_PANEL",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "CONSTRUCTION",
@@ -5644,19 +5644,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "MODUL_CEILING",
-    "pivot": "S1"
+    "pivot": "C8"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "MODUL_FLOOR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "MODUL_WALL",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5668,7 +5668,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "PANEL_FOOTBOARD",
-    "pivot": "A"
+    "pivot": "E3"
   },
   {
     "category": "CONSTRUCTION",
@@ -5680,13 +5680,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "PORCELAIN_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "SOFT_WALL_PANEL",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5722,25 +5722,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "WALL_ACCESS_PANEL",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "WALL_ACOUSTIC_PANEL",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "WALL_CONTROL_PANEL",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "WALL_EARTHENWARE_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
@@ -5752,25 +5752,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "WALL_HEATER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "WALL_SERVICE_HATCH",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "WALL_TILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "CONSTRUCTION",
     "subcategory": "WALL_MATERIALS",
     "type": "WALL_VENT_PANEL",
-    "pivot": "A"
+    "pivot": "S4"
   },
   {
     "category": "COOKWARE",
@@ -5782,7 +5782,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "BAKEWARE",
     "type": "AU_GRATIN_PAN",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -5830,7 +5830,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "BAKEWARE",
     "type": "CAKE_BOARD",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -5872,7 +5872,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "BAKEWARE",
     "type": "CUPCAKE_STAND",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -5926,7 +5926,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "BAKEWARE",
     "type": "LASAGNA_PAN",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -5980,7 +5980,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "BAKEWARE",
     "type": "PASTRY_SERVER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -5992,7 +5992,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "BAKEWARE",
     "type": "PIE_SERVER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -6076,13 +6076,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "CUTLERY",
     "type": "BERRY_SPOON",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
     "subcategory": "CUTLERY",
     "type": "BUFFET_FORK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -6106,7 +6106,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "CUTLERY",
     "type": "COLD_MEAT_FORK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -6238,7 +6238,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "CUTLERY",
     "type": "SERVING_SPOON",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -6454,19 +6454,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "CUP_SAUCER",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "DECORATIVE_BOTTLE",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "DRINKING_JAR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "COOKWARE",
@@ -6514,7 +6514,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "HIP_FLASK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -6562,7 +6562,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "IRISH_COFFEE_GLASS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "COOKWARE",
@@ -6592,7 +6592,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "KIDDUSH_CUP",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -6622,7 +6622,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "LIQUOR_FLASK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -6640,7 +6640,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "MINT_JULEP_CUP",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -6694,13 +6694,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "SAKE_CUP",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "SELTZER_BOTTLE",
-    "pivot": "C4"
+    "pivot": "A"
   },
   {
     "category": "COOKWARE",
@@ -6724,7 +6724,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "SPORT_FLASK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -6778,7 +6778,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "TRAVEL_FLASK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -6814,7 +6814,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "VACUUM_FLASK",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -6832,7 +6832,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "GLASSWARE",
     "type": "WATER_FLASK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -6928,7 +6928,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "KNIVES",
     "type": "CHEESE_KNIFE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -7408,7 +7408,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "APERITIF_TRAY",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -7420,13 +7420,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "ASPARAGUS_SERVER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "BEVERAGE_DISPENSER",
-    "pivot": "C3"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -7450,7 +7450,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "BREAD_BASKET",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -7462,7 +7462,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "BUTTER_DISH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -7480,7 +7480,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "CAKE_SERVER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -7516,13 +7516,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "CHEESE_SERVER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "COVER_PLATE",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "COOKWARE",
@@ -7570,13 +7570,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "DIVIDED_PLATTER",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "DIVIDED_TRAY",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -7588,7 +7588,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "FISH_SERVER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -7618,7 +7618,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "GRAVY_BOAT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "COOKWARE",
@@ -7666,7 +7666,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "NAPKINS_STAND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "COOKWARE",
@@ -7726,7 +7726,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "PLATE_TREE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "COOKWARE",
@@ -7762,7 +7762,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "RICE_SERVER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -7780,13 +7780,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "SALAD_SERVER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "SAUCE_BOAT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "COOKWARE",
@@ -7864,7 +7864,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "SUGAR_BOWL",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "COOKWARE",
@@ -7882,13 +7882,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "TIERED_PLATTER",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "TIERED_TRAY",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -7918,7 +7918,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "WALL_MOUNTED_PLATE_TREE",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "COOKWARE",
@@ -7930,7 +7930,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "WALL_PLATE_TREE",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "COOKWARE",
@@ -7942,7 +7942,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "TABLEWARE",
     "type": "WEIGHT_PLATE_TREE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "COOKWARE",
@@ -7978,7 +7978,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "BUFFET_TONGS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -8038,7 +8038,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "CREAM_LADLE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -8062,7 +8062,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "EGG_CUP",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "COOKWARE",
@@ -8080,7 +8080,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "FISH_SLICE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -8134,7 +8134,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "GRAVY_LADLE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -8182,7 +8182,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "ICE_TONGS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -8296,7 +8296,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "PEPPER_MILL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "COOKWARE",
@@ -8344,7 +8344,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "PUNCH_LADLE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -8362,13 +8362,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "SALAD_TONGS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "SALT_MILL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "COOKWARE",
@@ -8380,7 +8380,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "SAUCE_LADLE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -8440,7 +8440,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "SUGAR_TONGS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "COOKWARE",
@@ -8512,7 +8512,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "COOKWARE",
     "subcategory": "UTENSILS",
     "type": "WALL_TRASH_CAN",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "COOKWARE",
@@ -8530,13 +8530,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "BALL_MOBILE_SPEAKER",
-    "pivot": "E3"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "BALL_PORTABLE_SPEAKER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
@@ -8548,19 +8548,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "CEILING_PROJECTOR",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "CEILING_SPEAKER",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "CEILING_VIDEO_PROJECTOR",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
@@ -8584,7 +8584,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "FLOOR_FRAME",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
@@ -8602,7 +8602,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "IN_CEILING_SPEAKER",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
@@ -8614,7 +8614,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "LAID_GARDEN_SPEAKER",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "ELECTRONICS",
@@ -8626,7 +8626,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "LAID_OUTDOOR_SPEAKER",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "ELECTRONICS",
@@ -8644,37 +8644,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "MOBILE_SPEAKER",
-    "pivot": "E3"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "ON_EAR",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "ON_EAR_HEADPHONES",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "OVER_EAR",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "OVER_EAR_HEADPHONES",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "PORTABLE_SPEAKER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
@@ -8704,31 +8704,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "ROCK_SPEAKER",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "ROUND_MOBILE_SPEAKER",
-    "pivot": "E3"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "ROUND_PORTABLE_SPEAKER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "SOUND_BAR",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "SOUND_TOWER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
@@ -8752,25 +8752,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "SPEAKER_WITH_STAND",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "SPIKE_GARDEN_SPEAKER",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "SPIKE_LANDSCAPE_SPEAKER",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "SPIKE_OUTDOOR_SPEAKER",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
@@ -8782,7 +8782,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "VINYL_RECORD",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "ELECTRONICS",
@@ -8794,103 +8794,103 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "WALL_PROJECTION_SCREEN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "AUDIO",
     "type": "WALL_SOUND_BAR",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "ALL_IN_ONE_COMPUTER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "ALL_IN_ONE_DESKTOP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "ALL_IN_ONE_PC",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "BUSINESS_CARD_SCANNER",
-    "pivot": "S1"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "CELL_PHONE",
-    "pivot": "S1"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "CELL_PHONE_CASE",
-    "pivot": "C4"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "COMPUTER_MOUSE",
-    "pivot": "S1"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "COMPUTER_SCREEN",
-    "pivot": "S1"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "COMPUTER_SYSTEM_UNIT",
-    "pivot": "S1"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "COMPUTER_TOWER",
-    "pivot": "S1"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "CORDLESS_PHONE",
-    "pivot": "S1"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "CORDLESS_TELEPHONE",
-    "pivot": "S1"
-  },
-  {
-    "category": "ELECTRONICS",
-    "subcategory": "COMPUTERS",
-    "type": "CORNER_TV_CABINET",
     "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
+    "type": "CELL_PHONE",
+    "pivot": "C1"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
+    "type": "CELL_PHONE_CASE",
+    "pivot": "C1"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
+    "type": "COMPUTER_MOUSE",
+    "pivot": "C1"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
+    "type": "COMPUTER_SCREEN",
+    "pivot": "E3"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
+    "type": "COMPUTER_SYSTEM_UNIT",
+    "pivot": "E1"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
+    "type": "COMPUTER_TOWER",
+    "pivot": "E1"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
+    "type": "CORDLESS_PHONE",
+    "pivot": "A"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
+    "type": "CORDLESS_TELEPHONE",
+    "pivot": "A"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
+    "type": "CORNER_TV_CABINET",
+    "pivot": "C4"
+  },
+  {
+    "category": "ELECTRONICS",
+    "subcategory": "COMPUTERS",
     "type": "DESKTOP_TOWER",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "DOCUMENT_SCANNER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
@@ -8902,37 +8902,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "EBOOK_READER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "EXTERNAL_HARD_DRIVE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "EXTERNAL_HDD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "EXTERNAL_SOLID_STATE_DRIVE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "EXTERNAL_SSD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "EXTERNAL_ZIP_DRIVE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
@@ -8944,37 +8944,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "FLATBED_SCANNER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "FLOPPY_DRIVE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "INTERNAL_HARD_DRIVE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "INTERNAL_HDD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "INTERNAL_SOLID_STATE_DRIVE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "INTERNAL_SSD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
@@ -8992,55 +8992,55 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "LANDLINE_PHONE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "LANDLINE_TELEPHONE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "LAPTOP_BAG",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "LAPTOP_CASE",
-    "pivot": "C4"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "LAPTOP_COMPUTER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "LAPTOP_STAND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "MINI_COMPUTER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "MINI_DESKTOP",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "MINI_PC",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
@@ -9052,37 +9052,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "NEGATIVE_SCANNER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "PC_MOUSE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "PHONE_STAND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "PHOTO_SCANNER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "REMOTE_CONTROL",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "SLIDE_SCANNER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
@@ -9094,37 +9094,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "TAPE_DRIVE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "TAPE_LIBRAIRY",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "TELEPHONE_STAND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "TENT_MODE_2_IN_1_LAPTOP",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "TENT_MODE_2_IN_1_PC",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "TENT_MODE_CONVERTIBLE_LAPTOP",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
@@ -9148,91 +9148,91 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "UNIVERSEL_REMOTE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "USB_FLASH_DRIVE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "WALL_TV",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "COMPUTERS",
     "type": "WALL_TV_CABINET",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "ACCESS_POINT",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "BLUETOOTH_ADAPTER",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "BLUETOOTH_NETWORK_ADAPTER",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "COMPUTER_ANTENNA",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "COMPUTER_NETWORK_ANTENNA",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "DESKTOP_DOCUMENT_STAND",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "DESKTOP_PHOTO_PRINTER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "DESKTOP_PLOTTER_PRINTER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "DESKTOP_WIDE_FORMAT_PRINTER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "DEVICE_SERVER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "DOT_MATRIX_PRINTER",
-    "pivot": "S4"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
@@ -9244,31 +9244,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "INKJET_PRINTER",
-    "pivot": "S4"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "LABEL_PRINTER",
-    "pivot": "S4"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "LASER_PRINTER",
-    "pivot": "S4"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "MESH_WI_FI",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "MESH_WI_FI_SYSTEM",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
@@ -9280,7 +9280,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "MODEM_ROUTER_COMBO",
-    "pivot": "C2"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
@@ -9298,7 +9298,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "NETWORK_REPEATER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
@@ -9310,55 +9310,55 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "NETWORK_SWITCH",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "NETWORK_TRANSCEIVER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "PLOTTER_PRINTER",
-    "pivot": "S4"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "PORTABLE_PHOTO_PRINTER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "POWERLINE_ADAPTER",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "POWERLINE_NETWORK_ADAPTER",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "PRINT_SERVER",
-    "pivot": "S4"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "RACK_COMPUTER_SERVER",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "RACK_SERVER",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "ELECTRONICS",
@@ -9370,25 +9370,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "TOWER_COMPUTER_SERVER",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "TOWER_SERVER",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "USB_ADAPTER",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "USB_NETWORK_ADAPTER",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "ELECTRONICS",
@@ -9406,13 +9406,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "WIDE_FORMAT_PRINTER",
-    "pivot": "S4"
+    "pivot": "E3"
   },
   {
     "category": "ELECTRONICS",
     "subcategory": "PERIPHERALS",
     "type": "WIRELESS_ACCESS_POINT",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "FOOD",
@@ -9760,7 +9760,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FOOD",
     "subcategory": "FRESH",
     "type": "BREAD_PROOFING_BASKET",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FOOD",
@@ -10000,7 +10000,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FOOD",
     "subcategory": "GROCERIES",
     "type": "CARD_ENVELOPE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "FOOD",
@@ -10012,13 +10012,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FOOD",
     "subcategory": "GROCERIES",
     "type": "CARD_RACK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FOOD",
     "subcategory": "GROCERIES",
     "type": "CARD_SUPPORT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FOOD",
@@ -10138,13 +10138,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FOOD",
     "subcategory": "GROCERIES",
     "type": "GIFT_CARD_SLEEVES_SET",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FOOD",
     "subcategory": "GROCERIES",
     "type": "GREETING_CARD_ENVELOPE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "FOOD",
@@ -10264,7 +10264,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FOOD",
     "subcategory": "GROCERIES",
     "type": "POSTCARD_ENVELOPE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "FOOD",
@@ -10306,13 +10306,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FOOD",
     "subcategory": "GROCERIES",
     "type": "SOAP_CARDBOARD_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FOOD",
     "subcategory": "GROCERIES",
     "type": "SOAP_CARTON",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FOOD",
@@ -10492,115 +10492,115 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "BED_DRAWER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "BED_FRAME",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "BED_LEG",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "BOX_SPRINGS",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "BUNKIE_BOARD",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "BUNK_BED_LEFT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "BUNK_BED_RIGHT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "CANOPY_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "CEILING_BED_CANOPY",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "DAY_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "DAY_BED_LEFT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "DAY_BED_RIGHT",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "DOUBLE_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "DRAWER_BED_LEFT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "DRAWER_BED_OPEN_LEFT",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "DRAWER_BED_OPEN_RIGHT",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "DRAWER_BED_RIGHT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "FOLDING_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "FOLDING_BED_FOLDED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -10642,7 +10642,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "KID_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -10654,13 +10654,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "LOFT_BED_LEFT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "LOFT_BED_RIGHT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -10672,19 +10672,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "RELAXATION_BEDDING",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "SINGLE_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "SLATTED_FRAMES",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -10696,25 +10696,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "TRUNDLE_BED_LEFT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "TRUNDLE_BED_OPEN_LEFT",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "TRUNDLE_BED_OPEN_RIGHT",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "BEDS",
     "type": "TRUNDLE_BED_RIGHT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -10732,7 +10732,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "ACOUSTIC_CABIN",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -10750,7 +10750,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "BED_BRIDGE_CLOSET",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -10774,7 +10774,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "BOOKCASE_ON_WHEELS",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -10786,7 +10786,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "BOOKSHELF_ON_WHEELS",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -10816,7 +10816,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "COAT_RACK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -10828,25 +10828,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "CORNER_COUNTERTOP_SHELF",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "CORNER_COUNTER_SHELF",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "CORNER_SHELF",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "CORNER_WORKTOP_SHELF",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
@@ -10864,7 +10864,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "DOOR_MIRROR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
@@ -10888,7 +10888,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "FLOATING_SHELF",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "FURNITURE",
@@ -10900,19 +10900,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "FREESTANDING_COPY_STAND",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "HANGING_CLOSET_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "HANGING_SHELVES_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
@@ -10930,13 +10930,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "MAGAZINE_HOLDER",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "MAGAZINE_RACK",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -10948,19 +10948,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "MOBILE_ACOUSTIC_BENCH",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "MULTI_SIDED_BOOKCASE",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "MULTI_SIDED_BOOKSHELF",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -11008,7 +11008,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "SHELVING_2_WHEELS",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -11026,7 +11026,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "STANDING_MIRROR",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -11080,7 +11080,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "TOP_CABINET",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "FURNITURE",
@@ -11098,7 +11098,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "VALET_STAND",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -11110,25 +11110,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "WALL_FOLDING_MIRROR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "WALL_MIRROR",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "WALL_NIGHTSTAND",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "WALL_SHELF",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "FURNITURE",
@@ -11140,13 +11140,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "WALL_STORAGE",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CABINET",
     "type": "WALL_TOWER_CABINET",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "FURNITURE",
@@ -11206,7 +11206,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CHAIRS",
     "type": "CEILING_HANGING_CHAIR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
@@ -11218,7 +11218,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CHAIRS",
     "type": "CHAIR_COVER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -11278,7 +11278,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CHAIRS",
     "type": "CONVERTIBLE_ARMCHAIR_OPEN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
@@ -11296,13 +11296,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CHAIRS",
     "type": "DOCKING_CHAIR_CUSHION",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CHAIRS",
     "type": "FLOOR_HANGING_CHAIR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
@@ -11314,7 +11314,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CHAIRS",
     "type": "FOLDING_CHAIR_FOLDED",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
@@ -11404,7 +11404,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CHILDREN",
     "type": "BABY_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -11428,7 +11428,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CHILDREN",
     "type": "CLOSED_CO_SLEEPING_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -11458,37 +11458,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "CHILDREN",
     "type": "PORTABLE_CRIB",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CHILDREN",
     "type": "TODDLER_BED_LEFT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CHILDREN",
     "type": "TODDLER_BED_RIGHT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CHILDREN",
     "type": "TRAVEL_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "CHILDREN",
     "type": "TRAVEL_COT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "GARDEN",
     "type": "CEILING_HANGING_BENCH",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
@@ -11512,7 +11512,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "GARDEN",
     "type": "FIRE_RING",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -11536,19 +11536,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "GARDEN",
     "type": "GARDEN_LOVESEAT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "GARDEN",
     "type": "GARDEN_SWING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "GARDEN",
     "type": "OUTDOOR_CONVERSATION_BENCH",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -11560,7 +11560,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "GARDEN",
     "type": "OUTDOOR_CONV_BENCH",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -11572,49 +11572,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "GARDEN",
     "type": "OUTDOOR_LOVESEAT",
-    "pivot": "S1"
-  },
-  {
-    "category": "FURNITURE",
-    "subcategory": "GARDEN",
-    "type": "PATIO_LOVESEAT",
-    "pivot": "S1"
-  },
-  {
-    "category": "FURNITURE",
-    "subcategory": "GARDEN",
-    "type": "PATIO_SWING",
-    "pivot": "S1"
-  },
-  {
-    "category": "FURNITURE",
-    "subcategory": "GARDEN",
-    "type": "PORCH_SWING",
-    "pivot": "S1"
-  },
-  {
-    "category": "FURNITURE",
-    "subcategory": "GARDEN",
-    "type": "PROPANE_BARBECUE",
-    "pivot": "A"
-  },
-  {
-    "category": "FURNITURE",
-    "subcategory": "GARDEN",
-    "type": "PROPANE_GRILL",
-    "pivot": "A"
-  },
-  {
-    "category": "FURNITURE",
-    "subcategory": "GARDEN",
-    "type": "SWING_BENCH",
     "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "GARDEN",
-    "type": "WALL_OUTDOOR_THERMOMETER",
+    "type": "PATIO_LOVESEAT",
+    "pivot": "E3"
+  },
+  {
+    "category": "FURNITURE",
+    "subcategory": "GARDEN",
+    "type": "PATIO_SWING",
+    "pivot": "A"
+  },
+  {
+    "category": "FURNITURE",
+    "subcategory": "GARDEN",
+    "type": "PORCH_SWING",
+    "pivot": "A"
+  },
+  {
+    "category": "FURNITURE",
+    "subcategory": "GARDEN",
+    "type": "PROPANE_BARBECUE",
     "pivot": "S1"
+  },
+  {
+    "category": "FURNITURE",
+    "subcategory": "GARDEN",
+    "type": "PROPANE_GRILL",
+    "pivot": "S1"
+  },
+  {
+    "category": "FURNITURE",
+    "subcategory": "GARDEN",
+    "type": "SWING_BENCH",
+    "pivot": "A"
+  },
+  {
+    "category": "FURNITURE",
+    "subcategory": "GARDEN",
+    "type": "WALL_OUTDOOR_THERMOMETER",
+    "pivot": "S4"
   },
   {
     "category": "FURNITURE",
@@ -11662,7 +11662,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "KITCHEN",
     "type": "WALL_TOWER_CABINET",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "FURNITURE",
@@ -11674,13 +11674,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CLOSED_RELAX_CORNER_SOFA_LEFT",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CLOSED_RELAX_CORNER_SOFA_RIGHT",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
@@ -11692,13 +11692,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CONVERTIBLE_SOFA_LEFT_CORNER",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CONVERTIBLE_SOFA_RIGHT_CORNER",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
@@ -11710,61 +11710,61 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_GARDEN_SOFA_LEFT",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_GARDEN_SOFA_RIGHT",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_OUTDOOR_SOFA_LEFT",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_OUTDOOR_SOFA_RIGHT",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_OUT_SOFA_LEFT",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_OUT_SOFA_RIGHT",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_PATIO_SOFA_LEFT",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_PATIO_SOFA_RIGHT",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_SOFA_LEFT",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "CORNER_SOFA_RIGHT",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
@@ -11788,13 +11788,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "OPEN_RELAX_CORNER_SOFA_LEFT",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "SOFT",
     "type": "OPEN_RELAX_CORNER_SOFA_RIGHT",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
@@ -11878,19 +11878,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "BAR_TABLE_LEFT",
-    "pivot": "S1"
+    "pivot": "E4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "BAR_TABLE_RIGHT",
-    "pivot": "S1"
+    "pivot": "E2"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "BEDSIDE_TABLE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -11908,7 +11908,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "CHANGING_TABLE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -11938,7 +11938,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "CHILDREN_TABLETOP_EASEL",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -11968,7 +11968,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "CHILD_TABLETOP_EASEL",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
@@ -11986,31 +11986,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "CORNER_CABINET",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "CORNER_DESK_LEFT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "CORNER_DESK_RIGHT",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "CORNER_DESK_SHELF",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "CORNER_RECEPTION_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12022,73 +12022,73 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_DIVIDER_BRACKETS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_DOCUMENT_STAND",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_FAN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_LAMP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_LEFT_SHELF",
-    "pivot": "S1"
+    "pivot": "E4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_PARTITION_BRACKETS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_RIGHT_SHELF",
-    "pivot": "S1"
+    "pivot": "E2"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_SEPARATING_BRACKETS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_SHELF",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "DESK_STAPLER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "END_TABLE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12112,7 +12112,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "FOLDED_IRONING_TABLE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12124,13 +12124,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "FREESTANDING_DESK_DIVIDER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "FREESTANDING_DESK_SEPARATING",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12148,7 +12148,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "HORIZONTAL_DESKTOP_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
@@ -12166,31 +12166,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "KIDS_TABLETOP_DOUBLE_SIDED_EASEL",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "KIDS_TABLETOP_EASEL",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "KIDS_TABLETOP_MAGNETIC_EASEL",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "LAPTOP_TABLE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "L_SHAPE_RECEPTION_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12220,13 +12220,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "RECEPTION_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "SHELVES_TROLLEY",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12244,7 +12244,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "SIDE_TABLE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12262,7 +12262,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "STORAGE_TROLLEY",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12274,13 +12274,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "SWIVEL_BAR_TABLE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "SWIVEL_TABLETOP_CABINET",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
@@ -12298,19 +12298,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "TABLE_MIRROR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "TABLE_TENNIS_NET",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "TABLE_WREATH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "FURNITURE",
@@ -12322,7 +12322,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "TAPE_DISPENSER_DESK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "FURNITURE",
@@ -12334,13 +12334,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "VANITY_TABLE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WALL_CHILDREN_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
@@ -12358,43 +12358,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WALL_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WALL_KIDS_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WALL_STANDING_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WALL_TABLE_LEFT",
-    "pivot": "S1"
+    "pivot": "E4"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WALL_TABLE_RIGHT",
-    "pivot": "S1"
+    "pivot": "E2"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WALL_TALL_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WALL_VANITY_TABLE",
-    "pivot": "S1"
+    "pivot": "E11"
   },
   {
     "category": "FURNITURE",
@@ -12406,7 +12406,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "FURNITURE",
     "subcategory": "TABLES",
     "type": "WORK_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
@@ -12478,25 +12478,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "CHRISTMAS_TREE_HANGING_ORNAMENT",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "CHRISTMAS_TREE_HANGING_ORNAMENT_SET",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "CHRISTMAS_TREE_ORNAMENT",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "CHRISTMAS_TREE_ORNAMENT_SET",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
@@ -12508,7 +12508,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "CLOSED_BOOK",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "GARDEN",
@@ -12562,7 +12562,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "HALL_TREE",
-    "pivot": "A"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
@@ -12586,49 +12586,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "HEAD_SCULPTURE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "INCENSE_BURNER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "INCENSE_HOLDER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "INCENSE_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "INCENSE_STICKS_HOLDER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "INCENSE_STICKS_SUPPORT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "INCENSE_SUPPORT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "INSECT_STUDY_BOX",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -12646,19 +12646,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "KIDS_GARDEN_BAG",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "KIDS_GARDEN_TOTE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "KIDS_INSECT_OBSERVATION_BOX",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -12718,7 +12718,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "PARTY_BALLOON",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -12742,7 +12742,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "REED_DIFFUSER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -12754,7 +12754,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "SCENTED_STICKS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -12778,13 +12778,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "TREE_HANGING_ORNAMENT",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "TREE_HANGING_ORNAMENT_SET",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
@@ -12814,13 +12814,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_BOOK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_CANDLESTICK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -12832,79 +12832,79 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_CHRISTMAS_WREATH",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_COLLAGE_FRAME",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_DECOR",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_DECORATION",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_DIPLOMA_FRAME",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_DOCUMENT_FRAME",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_DRAWING",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_FRAME",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_GALLERY_FRAME",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_HANGABLE",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_PAINTING",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_PHOTO_FRAME",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "DECOR",
     "type": "WALL_SCULPTURE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -12928,7 +12928,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "FURNITURE",
     "type": "CEILING_HANGING_BENCH",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -12952,7 +12952,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "FURNITURE",
     "type": "FIRE_RING",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
@@ -12976,19 +12976,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "FURNITURE",
     "type": "GARDEN_LOVESEAT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "FURNITURE",
     "type": "GARDEN_SWING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "FURNITURE",
     "type": "OUTDOOR_CONVERSATION_BENCH",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
@@ -13000,7 +13000,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "FURNITURE",
     "type": "OUTDOOR_CONV_BENCH",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "GARDEN",
@@ -13012,49 +13012,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "FURNITURE",
     "type": "OUTDOOR_LOVESEAT",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "FURNITURE",
-    "type": "PATIO_LOVESEAT",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "FURNITURE",
-    "type": "PATIO_SWING",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "FURNITURE",
-    "type": "PORCH_SWING",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "FURNITURE",
-    "type": "PROPANE_BARBECUE",
-    "pivot": "A"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "FURNITURE",
-    "type": "PROPANE_GRILL",
-    "pivot": "A"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "FURNITURE",
-    "type": "SWING_BENCH",
     "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "FURNITURE",
-    "type": "WALL_OUTDOOR_THERMOMETER",
+    "type": "PATIO_LOVESEAT",
+    "pivot": "E3"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "FURNITURE",
+    "type": "PATIO_SWING",
+    "pivot": "A"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "FURNITURE",
+    "type": "PORCH_SWING",
+    "pivot": "A"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "FURNITURE",
+    "type": "PROPANE_BARBECUE",
     "pivot": "S1"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "FURNITURE",
+    "type": "PROPANE_GRILL",
+    "pivot": "S1"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "FURNITURE",
+    "type": "SWING_BENCH",
+    "pivot": "A"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "FURNITURE",
+    "type": "WALL_OUTDOOR_THERMOMETER",
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
@@ -13180,7 +13180,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "GREENHOUSES",
     "type": "FOLDING_ARM_AWNING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -13192,7 +13192,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "GREENHOUSES",
     "type": "GARDEN_ARCH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "GARDEN",
@@ -13204,7 +13204,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "GREENHOUSES",
     "type": "GARDEN_UMBRELLA",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -13234,7 +13234,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "GREENHOUSES",
     "type": "HANGING_SHADE_SAIL",
-    "pivot": "S1"
+    "pivot": "S6"
   },
   {
     "category": "GARDEN",
@@ -13324,7 +13324,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "GREENHOUSES",
     "type": "PATIO_UMBRELLA",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -13378,7 +13378,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "GREENHOUSES",
     "type": "WALL_CHICKEN_ENCLOSURE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "GARDEN",
@@ -13390,7 +13390,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "GREENHOUSES",
     "type": "WALL_GARDEN_SHED",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "GARDEN",
@@ -13486,7 +13486,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "BASIC_DOG_LEASH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "GARDEN",
@@ -13504,7 +13504,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "BULB_PLANTER",
-    "pivot": "A"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
@@ -13516,31 +13516,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "CAT_CARRIER",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "TOOLS",
-    "type": "CAT_TREE",
     "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
-    "type": "CEILING_HANGABLE",
+    "type": "CAT_TREE",
     "pivot": "S1"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "TOOLS",
+    "type": "CEILING_HANGABLE",
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "CEILING_HUNG_DECORATION",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "CHILD_PAINTING",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
@@ -13558,7 +13558,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "CUTTER_MATTOCK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
@@ -13576,13 +13576,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "DOG_CARRIER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "DOG_LEASH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "GARDEN",
@@ -13606,7 +13606,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "FLOWER_SHOVEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
@@ -13624,91 +13624,91 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "GARDEN_SOIL_BAG",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "GARDEN_SOIL_BULK_BAG",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "GARDEN_TROWEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "GRAIN_SHOVEL",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "TOOLS",
-    "type": "HALF_MOON_EDGER",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "TOOLS",
-    "type": "HAND_BULB_PLANTER",
-    "pivot": "A"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "TOOLS",
-    "type": "HAND_FORK",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "TOOLS",
-    "type": "HAND_GARDEN_CULTIVATOR",
-    "pivot": "S1"
-  },
-  {
-    "category": "GARDEN",
-    "subcategory": "TOOLS",
-    "type": "HAND_PICKAXE",
     "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
+    "type": "HALF_MOON_EDGER",
+    "pivot": "E3"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "TOOLS",
+    "type": "HAND_BULB_PLANTER",
+    "pivot": "C3"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "TOOLS",
+    "type": "HAND_FORK",
+    "pivot": "C3"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "TOOLS",
+    "type": "HAND_GARDEN_CULTIVATOR",
+    "pivot": "C3"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "TOOLS",
+    "type": "HAND_PICKAXE",
+    "pivot": "C3"
+  },
+  {
+    "category": "GARDEN",
+    "subcategory": "TOOLS",
     "type": "HAND_PICK_MATTOCK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "HAND_PRONG",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "HAND_RAKE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "HAND_SHOVEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "HAND_TROWEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "HAND_WEEDING_FORK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
@@ -13732,7 +13732,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "INFUSION_BAG_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "GARDEN",
@@ -13744,25 +13744,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "MANUAL_POLE_HEDGE_TRIMMER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "MINI_PICKAXE",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "MINI_PICK_MATTOCK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "PET_CARRIER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
@@ -13774,49 +13774,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "PICK_MATTOCK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "POTTING_HAND_SHOVEL",
-    "pivot": "A"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "POTTING_SOIL_BAG",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "POTTING_SOIL_BULK_BAG",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "ROOT_CUTTER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "ROOT_CUTTING_SPADE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "ROOT_SHOVEL",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "SCOOP_SHOVEL",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
@@ -13828,7 +13828,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "SCYTHE_BLADE",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
@@ -13840,25 +13840,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "SNOW_SHOVEL",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "SNOW_SHOVEL_PUSHER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "SOIL_BAG",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "SOIL_BULK_BAG",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "GARDEN",
@@ -13870,61 +13870,61 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "TRANSPLANT_TROWEL",
-    "pivot": "A"
+    "pivot": "C3"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "WALL_CLOCK",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "WALL_DOG_LEASH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "WATERING_CAN",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "GARDEN",
     "subcategory": "TOOLS",
     "type": "WEEDING_RAKE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "HOME_APPLIANCES",
     "subcategory": "CLIMATE",
     "type": "CEILING_FAN",
-    "pivot": "S1"
+    "pivot": "S6"
   },
   {
     "category": "HOME_APPLIANCES",
     "subcategory": "CLIMATE",
     "type": "CLIP_ON_FAN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOME_APPLIANCES",
     "subcategory": "CLIMATE",
     "type": "FLOOR_FAN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOME_APPLIANCES",
     "subcategory": "CLIMATE",
     "type": "PEDESTAL_FAN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOME_APPLIANCES",
     "subcategory": "CLIMATE",
     "type": "TABLE_FAN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOME_APPLIANCES",
@@ -13936,7 +13936,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOME_APPLIANCES",
     "subcategory": "LARGE",
     "type": "TUMBLE_DRYER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "HOME_APPLIANCES",
@@ -13954,7 +13954,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOME_APPLIANCES",
     "subcategory": "LARGE",
     "type": "WASHING_MACHINE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "HOME_APPLIANCES",
@@ -14194,25 +14194,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "BODY_WASH_VERTICAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "CREAM_BODY_SOAP_WRAP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "CREAM_SOAP_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "ESSENTIAL_OIL",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14224,19 +14224,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "FOAM_SOAP_CANISTER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "FOAM_SOAP_JUG",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "FOAM_SOAP_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14248,13 +14248,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "GEL_SOAP_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "HOOK_TOILET_PAPER_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14266,25 +14266,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "LIQUID_BODY_SOAP_ROLLER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "LIQUID_SOAP_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "LIQUID_SOAP_SPOUT_POUCH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "PASTE_BODY_SOAP_JAR",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14302,109 +14302,109 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "SHOWER_GEL_VERTICAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "SOAP_DISH",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "SOAP_DISPENSER",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "SOAP_ON_ROPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "SOAP_TIN",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "SOAP_WRAP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "TOOTHPASTE_HORIZONTAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "TOOTHPASTE_LYING_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "TOOTHPASTE_PUMP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "TOOTHPASTE_STANDING_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "TOOTHPASTE_VERTICAL_TUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "UNPACKED_SOAP",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "WALL_AUTOMATIC_HAND_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "WALL_HAND_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "WALL_SOAP_DISH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "WALL_SOAP_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "WALL_TOILET_PAPER_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "HOME_HYGIENE",
     "type": "WALL_TOUCHE_FREE_DISPENSER",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14422,25 +14422,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "BASKET_CUBE_STORAGE",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "BASKET_DRAWER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "CEILING_AIRER",
-    "pivot": "S1"
+    "pivot": "S6"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "CENTER_WALL_TOWELS_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14458,43 +14458,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "CLOTHES_FOLDING_BOARD",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "COAT_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "DOOR_AIRER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "DOOR_COAT_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "DOOR_COAT_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "HANGING_AIRER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "HEATED_TOWEL_RAIL",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14506,31 +14506,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "LEFT_WALL_TOWELS_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "OUTLET_HEATED_TOWEL_RAIL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "OUTLET_TOWEL_WARMER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "OUTLET_WALL_ELECTRICAL_TOWEL_DRYER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "RADIATOR_AIRER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14542,7 +14542,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "RIGHT_WALL_TOWELS_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14554,13 +14554,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "TOP_CABINET",
-    "pivot": "E3"
+    "pivot": "E11"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "TOWEL_RACKS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14572,13 +14572,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "TOWEL_RING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "TOWEL_WARMER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14590,13 +14590,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "WALL_AIRER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "WALL_COAT_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14608,19 +14608,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "WALL_ELECTRICAL_TOWEL_DRYER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "LAUNDRY",
     "type": "WALL_NEON_FIXATURE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "SUPPLIES",
     "type": "DETERGENT_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14656,13 +14656,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "SUPPLIES",
     "type": "FABRIC_SOFTENER_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
     "subcategory": "SUPPLIES",
     "type": "HANDKERCHIEF_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "HOUSEHOLD_CHEMICALS",
@@ -14794,19 +14794,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "JEWELRY",
     "subcategory": "EYEWEAR",
     "type": "FOLDED_GLASSES",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "JEWELRY",
     "subcategory": "EYEWEAR",
     "type": "FOLDED_SUNGLASSES",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "JEWELRY",
     "subcategory": "EYEWEAR",
     "type": "GLASSES_CASE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "JEWELRY",
@@ -14818,31 +14818,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "JEWELRY",
     "subcategory": "EYEWEAR",
     "type": "SPECTACLE_CASE",
-    "pivot": "C4"
+    "pivot": "C1"
   },
   {
     "category": "JEWELRY",
     "subcategory": "EYEWEAR",
     "type": "UNFOLDED_GLASSES_DOWNWARD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "JEWELRY",
     "subcategory": "EYEWEAR",
     "type": "UNFOLDED_GLASSES_UPWARD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "JEWELRY",
     "subcategory": "EYEWEAR",
     "type": "UNFOLDED_SUNGLASSES_DOWNWARD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "JEWELRY",
     "subcategory": "EYEWEAR",
     "type": "UNFOLDED_SUNGLASSES_UPWARD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "JEWELRY",
@@ -14860,7 +14860,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "JEWELRY",
     "subcategory": "ITEMS",
     "type": "JEWELRY_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "JEWELRY",
@@ -14932,7 +14932,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "HYGIENE",
     "type": "BABY_BATH_RING",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "KIDS",
@@ -14944,13 +14944,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "HYGIENE",
     "type": "DIAPER_BAG",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "BABY_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
@@ -14980,7 +14980,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "CLOSED_CO_SLEEPING_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
@@ -15004,13 +15004,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "MOSES_BASKET",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "MOSES_BASKET_ON_STAND",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
@@ -15022,31 +15022,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "PORTABLE_CRIB",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "TODDLER_BED_LEFT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "TODDLER_BED_RIGHT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "TRAVEL_BED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
     "subcategory": "NURSERY",
     "type": "TRAVEL_COT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
@@ -15124,7 +15124,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "ACTIVITY_TREE",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "KIDS",
@@ -15166,13 +15166,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "BABY_DOLL_PRAM",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "BABY_DOLL_STROLLER",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "KIDS",
@@ -15196,7 +15196,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "BALLOONS_AND_STRINGS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "KIDS",
@@ -15208,19 +15208,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "BALLOON_AND_STRING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "BALLOON_WITH_STRING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "BOARD_GAME_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "KIDS",
@@ -15310,7 +15310,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "DISGUISE_OUTFIT",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
@@ -15334,7 +15334,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "DOORWAY_PUPPET_THEATER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "KIDS",
@@ -15346,7 +15346,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "DRAWING_PROJECTOR",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "KIDS",
@@ -15400,7 +15400,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "GAME_CONTROLLER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "KIDS",
@@ -15442,7 +15442,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "HUNG_PUPPET_THEATER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "KIDS",
@@ -15532,7 +15532,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "MASQUERADE_COSTUME",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
@@ -15682,7 +15682,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "PORTABLE_GAME_CONSOLE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "KIDS",
@@ -15790,7 +15790,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "TABLETOP_POOL_TABLE",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "KIDS",
@@ -15868,7 +15868,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "TOY_CRANE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "KIDS",
@@ -15916,7 +15916,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "TOY_PRAM",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "KIDS",
@@ -15934,13 +15934,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "TOY_STROLLER",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "TOY_TOWER_CRANE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "KIDS",
@@ -15970,25 +15970,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "VIDEO_GAME",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "WALL_CHILDREN_PLAY_KITCHEN",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "WALL_GAME_TARGET",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "KIDS",
     "subcategory": "TOYS",
     "type": "WALL_KIDS_PLAY_KITCHEN",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "KIDS",
@@ -16000,7 +16000,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "CHANDELIERS",
     "type": "CEILING_FAN_LIGHT",
-    "pivot": "S1"
+    "pivot": "S6"
   },
   {
     "category": "LIGHTING",
@@ -16024,7 +16024,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "CHANDELIERS",
     "type": "LIGHT_GARLAND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
@@ -16054,7 +16054,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "CHANDELIERS",
     "type": "PENDANT_LIGHT",
-    "pivot": "C3"
+    "pivot": "S6"
   },
   {
     "category": "LIGHTING",
@@ -16132,19 +16132,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "DECORATIVE",
     "type": "HIGHLIGHTER_CASE",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "LIGHTING",
     "subcategory": "DECORATIVE",
     "type": "TORCH_LIGHT",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "LIGHTING",
     "subcategory": "DECORATIVE",
     "type": "TRIPOD_WORK_LIGHT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
@@ -16156,7 +16156,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "DECORATIVE",
     "type": "WORK_SPOTLIGHT",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "LIGHTING",
@@ -16168,55 +16168,55 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "CEILING_LAMP",
-    "pivot": "S1"
+    "pivot": "S6"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "CLIP_ON_LAMP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "FLOOR_LAMP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "HAND_CLAMP",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "HANGING_LANTERN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "LAMP_FOOT_DIMMER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "LAMP_FOOT_SWITCH",
-    "pivot": "A"
+    "pivot": "S1"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "LAMP_HAND_SWITCH",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "NAIL_LAMP",
-    "pivot": "C3"
+    "pivot": "C2"
   },
   {
     "category": "LIGHTING",
@@ -16234,13 +16234,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "TABLE_LAMP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
     "subcategory": "FIXTURES",
     "type": "WALL_LAMP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
@@ -16264,13 +16264,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "OUTDOOR",
     "type": "IN_GROUND_GARDEN_LIGHT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
     "subcategory": "OUTDOOR",
     "type": "IN_GROUND_PATH_LIGHT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
@@ -16282,19 +16282,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "OUTDOOR",
     "type": "OUTDOOR_WALL_LIGHT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
     "subcategory": "OUTDOOR",
     "type": "SPIKE_GARDEN_LIGHT",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
     "subcategory": "OUTDOOR",
     "type": "SPIKE_PATH_LIGHT",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "LIGHTING",
@@ -16330,13 +16330,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "LIGHTING",
     "subcategory": "OUTDOOR",
     "type": "WALL_LIGHT_INDICATOR",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "LIGHTING",
     "subcategory": "OUTDOOR",
     "type": "WALL_POST_LIGHT",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
@@ -16360,31 +16360,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "COMPOUND_BINOCULAR_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "COMPOUND_BINO_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "COMPOUND_MONOCULAR_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "COMPOUND_TRINOCULAR_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "COMPOUND_TRINO_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
@@ -16444,13 +16444,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "MONOCULAR_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "MONO_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
@@ -16462,7 +16462,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "STEREO_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
@@ -16480,7 +16480,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "MEDICAL_EQUIPMENT",
     "subcategory": "DIAGNOSTIC",
     "type": "USB_MICROSCOPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MEDICAL_EQUIPMENT",
@@ -16510,25 +16510,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "MISCELLANEOUS",
     "subcategory": "ACCESSORIES",
     "type": "UMBRELLA_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "MISCELLANEOUS",
     "subcategory": "ACCESSORIES",
     "type": "UMBRELLA_RACK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "MISCELLANEOUS",
     "subcategory": "ACCESSORIES",
     "type": "UMBRELLA_STAND",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "MISCELLANEOUS",
     "subcategory": "ACCESSORIES",
     "type": "WALL_CLOSED_UMBRELLA",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "MUSICAL_INSTRUMENTS",
@@ -17836,7 +17836,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "MUSICAL_INSTRUMENTS",
     "subcategory": "STRINGS",
     "type": "HANGING_GUITAR",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "MUSICAL_INSTRUMENTS",
@@ -18376,7 +18376,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "BINDER_PUNCH",
-    "pivot": "C4"
+    "pivot": "C3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18388,7 +18388,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "BINDING_PUNCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18406,13 +18406,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "BOX_FILE_HOLDER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "BOX_FILE_RACK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18424,13 +18424,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "DOWN_BINDER",
-    "pivot": "C4"
+    "pivot": "C1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "DOWN_LEVER_ARCH_FILE",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18442,31 +18442,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "FILE_HOLDER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "FILE_RACK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "FLAT_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "HIGH_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "HORIZONTAL_OFFICE_SORTER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18478,19 +18478,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "LETTER_HOLDER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "LETTER_RACK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "LETTER_SORTER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18508,7 +18508,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "LEVER_ARCH_FILE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18520,13 +18520,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "MEMO_PAD_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "MEMO_PAD_CUBE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18538,19 +18538,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "OFFICE_PAPER_STACK",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "PACKAGED_OFFICE_PAPER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "PACKAGED_REAM_PAPER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18568,19 +18568,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "PAPER_CLIP_CONTAINER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "PAPER_CLIP_DISPENSER",
-    "pivot": "C3"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "PAPER_CLIP_HOLDER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18598,61 +18598,61 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "REAM_PAPER",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "SELF_STICK_NOTES_PAD",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "SELF_STICK_NOTE_PAD_HOLDER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "SHEET_NOTE_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "STICKY_NOTES_PAD",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "STICKY_NOTE_HOLDER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "VERTICAL_FILING_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "VERTICAL_LETTER_RACK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_EQUIPMENT",
     "type": "VERTICAL_OFFICE_SORTER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "ACOUSTIC_CABIN",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18664,7 +18664,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "BOOKCASE_ON_WHEELS",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18676,7 +18676,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "BOOKSHELF_ON_WHEELS",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18712,43 +18712,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "CORNER_COUNTERTOP_SHELF",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "CORNER_COUNTER_SHELF",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "CORNER_DESK_LEFT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "CORNER_DESK_RIGHT",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "CORNER_DESK_SHELF",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "CORNER_RECEPTION_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "CORNER_WORKTOP_SHELF",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18772,67 +18772,67 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_DIVIDER_BRACKETS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_DOCUMENT_STAND",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_FAN",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_LAMP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_LEFT_SHELF",
-    "pivot": "S1"
+    "pivot": "E4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_PARTITION_BRACKETS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_RIGHT_SHELF",
-    "pivot": "S1"
+    "pivot": "E2"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_SEPARATING_BRACKETS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_SHELF",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "DESK_STAPLER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18844,7 +18844,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "FLOATING_SHELF",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18856,7 +18856,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "FREESTANDING_COPY_STAND",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18868,19 +18868,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "FREESTANDING_DESK_DIVIDER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "FREESTANDING_DESK_SEPARATING",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "HORIZONTAL_DESKTOP_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18892,43 +18892,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "L_SHAPE_RECEPTION_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "MAGAZINE_HOLDER",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "MAGAZINE_RACK",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "MOBILE_ACOUSTIC_BENCH",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "MULTI_SIDED_BOOKCASE",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "MULTI_SIDED_BOOKSHELF",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "RECEPTION_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -18964,7 +18964,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "SHELVING_2_WHEELS",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -19006,7 +19006,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "TAPE_DISPENSER_DESK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -19018,7 +19018,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "WALL_CHILDREN_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -19036,19 +19036,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "WALL_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "WALL_KIDS_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "WALL_SHELF",
-    "pivot": "E3"
+    "pivot": "S4"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -19060,13 +19060,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "WALL_STANDING_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "WALL_TALL_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "OFFICE_BUSINESS",
@@ -19090,13 +19090,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "OFFICE_BUSINESS",
     "subcategory": "OFFICE_FURNITURE",
     "type": "WORK_DESK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "PET_SUPPLIES",
     "subcategory": "DOGS",
     "type": "RETRACTABLE_DOG_LEASH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "RELIGIOUS",
@@ -19516,7 +19516,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "CYCLING",
     "type": "BIKE_ON_STAND",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -19552,13 +19552,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "CYCLING",
     "type": "RC_CAR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
     "subcategory": "CYCLING",
     "type": "REMOTE_CONTROLLED_CAR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
@@ -19570,7 +19570,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "CYCLING",
     "type": "WALL_BIKE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -19582,7 +19582,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "BICYCLE_ON_STAND",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -19600,13 +19600,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "DUMBBELL_RACK",
-    "pivot": "C4"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "DUMBBELL_SUPPORT",
-    "pivot": "C4"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
@@ -19618,7 +19618,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "EXERCISE_BLOCK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -19630,7 +19630,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "EXERCISE_RING",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "SPORTS",
@@ -19648,13 +19648,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "FITNESS_RING",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "FITNESS_STEPPER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -19666,43 +19666,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "FOAM_ROLLER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "FOLDED_EXERCISE_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "FOLDED_FITNESS_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "FOLDED_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "FOLDED_WORKOUT_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "FOLDED_YOGA_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "GYMNASTICS_MAT",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "SPORTS",
@@ -19714,7 +19714,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "GYM_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
@@ -19750,7 +19750,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "HANGING_JUMP_ROPE",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
@@ -19762,7 +19762,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "KETTLEBELL_RACK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
@@ -19798,31 +19798,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "RHYTHMIC_GYMNASTICS_HOOP",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "ROLLED_EXERCISE_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "ROLLED_FITNESS_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "ROLLED_WORKOUT_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "ROLLED_YOGA_MAT",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -19840,7 +19840,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "STEP_PLATFORM",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -19858,7 +19858,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "FITNESS",
     "type": "WALL_BICYCLE",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -19900,7 +19900,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "BALL_RACK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
@@ -19912,31 +19912,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "BASKETBALL_GOAL_ON_WHEELS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "BASKETBALL_HOOP_ON_WHEELS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "FLOOR_SCOREBOARD_TIMER",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "GYM_HOOP_RACK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "GYM_STALL_BARS",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
@@ -19954,7 +19954,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "HANGING_MAT_STORAGE_ON_WHEELS",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "SPORTS",
@@ -19966,13 +19966,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "HOOP_RACK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "IN_GROUND_BASKETBALL_GOAL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
@@ -19990,13 +19990,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "PORTABLE_BASKETBALL_GOAL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "PORTABLE_BASKETBALL_HOOP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
@@ -20008,7 +20008,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "SCOREBOARD_WITH_TIMER",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
@@ -20020,13 +20020,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "SOCCER_GOAL",
-    "pivot": "S1"
+    "pivot": "E1"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "SPORT_EQUIPMENT_ORGANIZER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
@@ -20038,19 +20038,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "STALL_BARS",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "STAND_SCOREBOARD_TIMER",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "SWEDISH_STALL_BARS",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
@@ -20074,49 +20074,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "WALL_BASKETBALL_GOAL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "WALL_BASKETBALL_HOOP",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "WALL_HOOP",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "WALL_HOOP_RACK",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "WALL_MAT_RACK",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "WALL_MOUNTED_MAT_RACK",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "SPORTS",
     "subcategory": "TEAM",
     "type": "WALL_SCOREBOARD_TIMER",
-    "pivot": "C1"
+    "pivot": "S4"
   },
   {
     "category": "SPORTS",
     "subcategory": "WINTER",
     "type": "BALANCE_BOARD",
-    "pivot": "C1"
+    "pivot": "C4"
   },
   {
     "category": "SPORTS",
@@ -20200,7 +20200,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "BEDDING",
     "type": "BED_LINEN_UNFOLDED",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TEXTILES",
@@ -20230,7 +20230,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "BEDDING",
     "type": "LIQUID_SOAP_PILLOW_PACK",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TEXTILES",
@@ -20260,7 +20260,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "BEDDING",
     "type": "WALL_PILLOW",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TEXTILES",
@@ -20284,7 +20284,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "BEDSPREADS",
     "type": "WALL_CUSHION",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TEXTILES",
@@ -20314,7 +20314,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "CARPETS",
     "type": "ROLLED_CARPET",
-    "pivot": "S1"
+    "pivot": "C2"
   },
   {
     "category": "TEXTILES",
@@ -20326,7 +20326,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "CARPETS",
     "type": "SEMI_CIRCLE_CARPET",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TEXTILES",
@@ -20350,7 +20350,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "CLOTHES_DUST_COVER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TEXTILES",
@@ -20362,7 +20362,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "COAT_HANGER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
@@ -20386,7 +20386,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "GARMENT_COVER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TEXTILES",
@@ -20398,19 +20398,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "HANGING_WASHCLOTH",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "HORIZONTAL_BLIND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "ROD_FINIAL",
-    "pivot": "S4"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
@@ -20422,25 +20422,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "SHOWER_CURTAIN_LEFT",
-    "pivot": "A"
+    "pivot": "C8"
   },
   {
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "VENETIAN_BLIND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "VERTICAL_BLIND",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "CURTAINS",
     "type": "VERTICAL_LOUVER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
@@ -20470,7 +20470,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "CENTER_WALL_TOWELS_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
@@ -20482,43 +20482,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "HANGING_TOWEL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "HEATED_TOWEL_RAIL",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "LEFT_WALL_TOWELS_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "OUTLET_HEATED_TOWEL_RAIL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "OUTLET_TOWEL_WARMER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "OUTLET_WALL_ELECTRICAL_TOWEL_DRYER",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "RIGHT_WALL_TOWELS_RACK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
@@ -20530,7 +20530,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "TOWEL_RACKS",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
@@ -20542,19 +20542,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "TOWEL_RING",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "TOWEL_WARMER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "TEXTILES",
     "subcategory": "TOWELS",
     "type": "WALL_ELECTRICAL_TOWEL_DRYER",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "TOOLS",
@@ -20566,7 +20566,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "BUBBLE_LEVEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -20578,7 +20578,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "CONSTRUCTION_DRAWING_ROLL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -20590,37 +20590,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "DISTANCE_METER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "DOWN_ROLL_UP_TAPE_MEASURE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "FACE_SHIELD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "FLAT_NAIL_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "FLAT_SPIKE_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "GRIDWALL_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -20644,7 +20644,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "PEGBOARD_HOOK",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -20656,7 +20656,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "ROLLED_CONSTRUCTION_DRAWING",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -20674,37 +20674,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "STANDING_ROLL_UP_TAPE_MEASURE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "TOOL_HOLDER_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "TOOL_RACK_VERTICAL_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "TRACKWALL_TOOL_HOOK",
-    "pivot": "S4"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "TRACK_TOOL_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "CONSUMABLES",
     "type": "WALL_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -20716,13 +20716,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "BULB_PLANTER",
-    "pivot": "A"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "CUTTER_MATTOCK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -20746,7 +20746,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "FLOWER_SHOVEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -20764,91 +20764,91 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "GARDEN_SOIL_BAG",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "GARDEN_SOIL_BULK_BAG",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "GARDEN_TROWEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "GRAIN_SHOVEL",
-    "pivot": "S1"
-  },
-  {
-    "category": "TOOLS",
-    "subcategory": "GARDEN_TOOLS",
-    "type": "HALF_MOON_EDGER",
-    "pivot": "S1"
-  },
-  {
-    "category": "TOOLS",
-    "subcategory": "GARDEN_TOOLS",
-    "type": "HAND_BULB_PLANTER",
-    "pivot": "A"
-  },
-  {
-    "category": "TOOLS",
-    "subcategory": "GARDEN_TOOLS",
-    "type": "HAND_FORK",
-    "pivot": "S1"
-  },
-  {
-    "category": "TOOLS",
-    "subcategory": "GARDEN_TOOLS",
-    "type": "HAND_GARDEN_CULTIVATOR",
-    "pivot": "S1"
-  },
-  {
-    "category": "TOOLS",
-    "subcategory": "GARDEN_TOOLS",
-    "type": "HAND_PICKAXE",
     "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
+    "type": "HALF_MOON_EDGER",
+    "pivot": "E3"
+  },
+  {
+    "category": "TOOLS",
+    "subcategory": "GARDEN_TOOLS",
+    "type": "HAND_BULB_PLANTER",
+    "pivot": "C3"
+  },
+  {
+    "category": "TOOLS",
+    "subcategory": "GARDEN_TOOLS",
+    "type": "HAND_FORK",
+    "pivot": "C3"
+  },
+  {
+    "category": "TOOLS",
+    "subcategory": "GARDEN_TOOLS",
+    "type": "HAND_GARDEN_CULTIVATOR",
+    "pivot": "C3"
+  },
+  {
+    "category": "TOOLS",
+    "subcategory": "GARDEN_TOOLS",
+    "type": "HAND_PICKAXE",
+    "pivot": "C3"
+  },
+  {
+    "category": "TOOLS",
+    "subcategory": "GARDEN_TOOLS",
     "type": "HAND_PICK_MATTOCK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "HAND_PRONG",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "HAND_RAKE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "HAND_SHOVEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "HAND_TROWEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "HAND_WEEDING_FORK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -20866,19 +20866,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "MANUAL_POLE_HEDGE_TRIMMER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "MINI_PICKAXE",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "MINI_PICK_MATTOCK",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -20890,49 +20890,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "PICK_MATTOCK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "POTTING_HAND_SHOVEL",
-    "pivot": "A"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "POTTING_SOIL_BAG",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "POTTING_SOIL_BULK_BAG",
-    "pivot": "A"
+    "pivot": "C1"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "ROOT_CUTTER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "ROOT_CUTTING_SPADE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "ROOT_SHOVEL",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "SCOOP_SHOVEL",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -20944,7 +20944,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "SCYTHE_BLADE",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -20956,49 +20956,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "SNOW_SHOVEL",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "SNOW_SHOVEL_PUSHER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
     "type": "SOIL_BAG",
-    "pivot": "S1"
-  },
-  {
-    "category": "TOOLS",
-    "subcategory": "GARDEN_TOOLS",
-    "type": "SOIL_BULK_BAG",
-    "pivot": "S1"
-  },
-  {
-    "category": "TOOLS",
-    "subcategory": "GARDEN_TOOLS",
-    "type": "TRANSPLANT_TROWEL",
-    "pivot": "A"
-  },
-  {
-    "category": "TOOLS",
-    "subcategory": "GARDEN_TOOLS",
-    "type": "WATERING_CAN",
     "pivot": "C1"
   },
   {
     "category": "TOOLS",
     "subcategory": "GARDEN_TOOLS",
+    "type": "SOIL_BULK_BAG",
+    "pivot": "C1"
+  },
+  {
+    "category": "TOOLS",
+    "subcategory": "GARDEN_TOOLS",
+    "type": "TRANSPLANT_TROWEL",
+    "pivot": "C3"
+  },
+  {
+    "category": "TOOLS",
+    "subcategory": "GARDEN_TOOLS",
+    "type": "WATERING_CAN",
+    "pivot": "A"
+  },
+  {
+    "category": "TOOLS",
+    "subcategory": "GARDEN_TOOLS",
     "type": "WEEDING_RAKE",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "ADJUSTABLE_WRENCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21010,13 +21010,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "BOARDS_STACK",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "BOW_SAW_BLADE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21034,13 +21034,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "CABLE_REEL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "CAR_BATTERY_CHARGER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21052,7 +21052,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "CHANNEL_LOCK_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21070,7 +21070,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "CLOSED_TOOLBOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
@@ -21088,7 +21088,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "COMBINATION_WRENCH",
-    "pivot": "C2"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21100,7 +21100,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "CUTTER_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21112,25 +21112,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "FEELING_AXE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "FIBERGLASS_BATT_KNIFE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "FIBERGLASS_INSULATION_KNIFE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "FLAT_NOSE_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21142,7 +21142,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "FLAT_WRENCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21160,49 +21160,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "FOLDED_TARP",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "FRAMING_HAMMER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "GLASS_WOOL_KNIFE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "GLUE_POT",
-    "pivot": "A"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "HALF_ROUND_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "HAND_BRUSH_DOWNWARD",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "HAND_BRUSH_UPWARD",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "HAND_SAW",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21214,7 +21214,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "HANGING_SPOUT_TRAY",
-    "pivot": "C4"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21232,7 +21232,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "LABELLED_GLOVE(S)",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21244,19 +21244,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "METAL_JACK_PLANE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "MOTOR_OIL_CAN",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "MULTI_GRIPS_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21274,7 +21274,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "OPEN_CANTILEVER_TOOLBOX",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21292,25 +21292,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "OPEN_TOOLBOX",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "OPEN_TOOL_CASE",
-    "pivot": "C3"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "PAINT_CAN",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "PAINT_POT",
-    "pivot": "A"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
@@ -21334,13 +21334,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "PLANKS_STACK",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "PORTABLE_POWER_STATION",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21382,7 +21382,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "ROUND_NOSE_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21394,7 +21394,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "SPRING_CLAMP",
-    "pivot": "C1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21424,7 +21424,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "TONGUE_AND_GROOVE_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21442,7 +21442,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "TOOL_BAG",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
@@ -21454,13 +21454,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "UNIVERSAL_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "VIBRATORY_PLATE_COMPACTOR",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -21478,19 +21478,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "WALL_WHEEL",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "WATER_PUMP_PLIERS",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "WELDING_HELMET",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "TOOLS",
@@ -21508,7 +21508,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "WOODEN_BOARDS_STACK",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21520,7 +21520,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "HAND_TOOLS",
     "type": "WOODEN_PLANKS_STACK",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21538,7 +21538,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "BUBBLE_LEVEL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21550,7 +21550,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "CONSTRUCTION_DRAWING_ROLL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21562,37 +21562,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "DISTANCE_METER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "DOWN_ROLL_UP_TAPE_MEASURE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "FACE_SHIELD",
-    "pivot": "S1"
+    "pivot": "C1"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "FLAT_NAIL_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "FLAT_SPIKE_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "GRIDWALL_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21616,7 +21616,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "PEGBOARD_HOOK",
-    "pivot": "E3"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21628,7 +21628,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "ROLLED_CONSTRUCTION_DRAWING",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21646,37 +21646,37 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "STANDING_ROLL_UP_TAPE_MEASURE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "TOOL_HOLDER_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "TOOL_RACK_VERTICAL_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "TRACKWALL_TOOL_HOOK",
-    "pivot": "S4"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "TRACK_TOOL_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "MEASURING",
     "type": "WALL_HOOK",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21688,7 +21688,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "BOARDS_STACK",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -21718,49 +21718,49 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDED_AIR_COMPRESSOR",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDED_DRILL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDED_HAMMER_DRILL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDED_IMPACT_DRILL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDED_IMPACT_WRENCH",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDED_ORBITAL_SANDER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDED_RANDOM_ORBITAL_SANDER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDED_ROTARY_HAMMER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21772,25 +21772,25 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_CHAINSAW",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_CIRCULAR_SAW",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_CIRCULAR_SAW_LEFT_HANDLE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_DRILL",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21808,13 +21808,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_HAND_LEAF_BLOWER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_ORBITAL_SANDER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21826,13 +21826,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_PNEUMATIC_NAILER_ON_MAGAZINE",
-    "pivot": "C1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_POLE_SAW",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21844,7 +21844,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_RANDOM_ORBITAL_SANDER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21856,7 +21856,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "CORDLESS_STRING_TIMMER",
-    "pivot": "C1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21886,7 +21886,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "DOWN_CORDLESS_ANGLE_GRINDER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21904,19 +21904,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "FOLDED_TARP",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "HANGING_SPOUT_TRAY",
-    "pivot": "C4"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "INCLINED_CORDLESS_JIGSAW",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21928,13 +21928,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "MINI_CORDLESS_CIRCULAR_SAW_LEFT_HANDLE",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "MINI_CORDLESS_CIRCULAR_SAW_ON_CRANKCASE_LEFT_HANDLE",
-    "pivot": "C4"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -21946,7 +21946,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "MOTOR_OIL_CAN",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
@@ -21958,7 +21958,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "PAINT_CAN",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
@@ -21976,7 +21976,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "PLANKS_STACK",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -22006,7 +22006,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "SLIDING_MITRE_SAW",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -22036,13 +22036,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "STANDING_CORDLESS_ANGLE_GRINDER",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "STANDING_CORDLESS_JIGSAW",
-    "pivot": "S1"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -22078,19 +22078,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "VIBRATORY_PLATE_COMPACTOR",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "WALL_CORDLESS_STRING_TIMMER",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "WALL_CORDLESS_STR_TIMMER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22102,7 +22102,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "WALL_WHEEL",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22120,7 +22120,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "WOODEN_BOARDS_STACK",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -22132,7 +22132,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "POWER_TOOLS",
     "type": "WOODEN_PLANKS_STACK",
-    "pivot": "C1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -22144,7 +22144,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "ARCHIVE_BOX",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
@@ -22162,13 +22162,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "BALL_SHELF_CART",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "BALL_STORAGE_CART",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "TOOLS",
@@ -22204,31 +22204,31 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "COOLER_BOX",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "CORK_BOARD",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "CORK_NOTICE_BOARD",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "CORNER_WORKBENCH_LEFT",
-    "pivot": "E3"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "CORNER_WORKBENCH_RIGHT",
-    "pivot": "E3"
+    "pivot": "C3"
   },
   {
     "category": "TOOLS",
@@ -22246,19 +22246,19 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "ELECTRIC_SCOOTER",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "FLOOR_JACK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "FOLDED_IRONING_BOARD",
-    "pivot": "C4"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22270,13 +22270,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "FURNITURE_DOG_CRATE",
-    "pivot": "C4"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "FURNITURE_STYLE_DOG_CRATE",
-    "pivot": "C4"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22288,7 +22288,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "GYM_STORAGE_CART",
-    "pivot": "E3"
+    "pivot": "S1"
   },
   {
     "category": "TOOLS",
@@ -22306,13 +22306,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "HAND_PALLET_TRUCK",
-    "pivot": "C1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "HAND_TRUCK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22324,7 +22324,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "INSULATED_BAG",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
@@ -22336,7 +22336,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "IRONING_BOARD",
-    "pivot": "C4"
+    "pivot": "S1"
   },
   {
     "category": "TOOLS",
@@ -22384,7 +22384,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "PLATFORM_CART",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22408,7 +22408,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "ROBOT_VACUUM_STATION",
-    "pivot": "A"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22438,7 +22438,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "SNOW_BLOWER",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22528,43 +22528,43 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "VERTICAL_SHEET_RACK",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "WALL_BROOM",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "WALL_CHALKBOARD",
-    "pivot": "C3"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "WALL_GARDEN_HOSE_REEL",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "WALL_MAILBOX",
-    "pivot": "S1"
+    "pivot": "S4"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "WALL_MOP_WITH_BROOM",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TOOLS",
     "subcategory": "WORKBENCHES",
     "type": "WALL_TOOL_TROLLEY",
-    "pivot": "S1"
+    "pivot": "E3"
   },
   {
     "category": "TOOLS",
@@ -22606,7 +22606,7 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TRANSPORT",
     "subcategory": "OFF_ROAD",
     "type": "BIKE_ON_STAND",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TRANSPORT",
@@ -22642,13 +22642,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TRANSPORT",
     "subcategory": "OFF_ROAD",
     "type": "RC_CAR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TRANSPORT",
     "subcategory": "OFF_ROAD",
     "type": "REMOTE_CONTROLLED_CAR",
-    "pivot": "S1"
+    "pivot": "A"
   },
   {
     "category": "TRANSPORT",
@@ -22660,13 +22660,13 @@ export const CATEGORIES: CategoryEntry[] = [
     "category": "TRANSPORT",
     "subcategory": "OFF_ROAD",
     "type": "WALL_BIKE",
-    "pivot": "S1"
+    "pivot": "C4"
   },
   {
     "category": "TRANSPORT",
     "subcategory": "SPECIAL_VEHICLES",
     "type": "3_WHEELS_SCOOTER",
-    "pivot": "C1"
+    "pivot": "S1"
   },
   {
     "category": "TRANSPORT",
