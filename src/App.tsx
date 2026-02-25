@@ -76,10 +76,10 @@ const pivotCodeMap: Record<string, FacePos[]> = {
     { face: 'back',   x: '50%', y: '100%', half: 'top'    },
   ],
   'E4':  [{ face: 'bottom', x: '0%', y: '50%' }],
-  'E5':  [{ face: 'front',  x: '100%', y: '50%' }],
-  'E6':  [{ face: 'right',  x: '50%',  y: '100%' }],
-  'E7':  [{ face: 'back',   x: '100%', y: '50%' }],
-  'E8':  [{ face: 'left',   x: '50%',  y: '100%' }],
+  'E5':  [{ face: 'front',  x: '0%',   y: '50%', half: 'left'  }, { face: 'left',   x: '100%', y: '50%', half: 'right' }],
+  'E6':  [{ face: 'front',  x: '100%', y: '50%', half: 'right' }, { face: 'right',  x: '0%',   y: '50%', half: 'left'  }],
+  'E7':  [{ face: 'back',   x: '0%',   y: '50%', half: 'left'  }, { face: 'right',  x: '100%', y: '50%', half: 'right' }],
+  'E8':  [{ face: 'back',   x: '100%', y: '50%', half: 'right' }, { face: 'left',   x: '0%',   y: '50%', half: 'left'  }],
   'E9':  [{ face: 'front',  x: '50%',  y: '0%'  }],
   'E10': [{ face: 'right',  x: '50%',  y: '0%'  }],
   'E11': [
@@ -93,10 +93,11 @@ const pivotCodeMap: Record<string, FacePos[]> = {
   'S4':  [{ face: 'back',   x: '50%', y: '50%'  }],
   'S5':  [{ face: 'left',   x: '50%', y: '50%'  }],
   'S6':  [{ face: 'top',    x: '50%', y: '50%'  }],
+  'M':   [{ face: 'front',  x: '50%', y: '50%'  }, { face: 'back',   x: '50%', y: '50%'  }, { face: 'right',  x: '50%', y: '50%'  }, { face: 'left',   x: '50%', y: '50%'  }, { face: 'top',    x: '50%', y: '50%'  }, { face: 'bottom', x: '50%', y: '50%'  }],
 }
 
 const parsePivotPositions = (pivot: string): FacePos[] => {
-  if (!pivot) return []
+  if (!pivot || pivot === 'A') return []
   // Direct code lookup (new format: "S1", "E3", "C4", "A")
   if (pivotCodeMap[pivot]) return pivotCodeMap[pivot]
   // Legacy: code in parentheses "(E3)"
@@ -596,7 +597,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
               <div className="flex flex-wrap gap-1.5">
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className={`flex-1 px-2.5 py-1 rounded text-xs font-medium transition-colors ${
+                  className={`flex-auto px-2.5 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
                     selectedCategory === null
                       ? isDark ? 'text-black' : 'bg-amber-600/80 text-white'
                       : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
@@ -609,14 +610,14 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
-                    className={`flex-1 px-2.5 py-1 rounded text-xs font-medium transition-colors ${
+                    className={`flex-auto px-2.5 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
                       selectedCategory === cat
                         ? isDark ? 'text-black' : 'bg-blue-600 text-white'
                         : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-300 text-gray-800 hover:bg-gray-400'
                     }`}
                     style={isDark && selectedCategory === cat ? { backgroundColor: '#c8963c' } : undefined}
                   >
-                    {cat}
+                    {cat.toUpperCase()}
                   </button>
                 ))}
               </div>
