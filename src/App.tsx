@@ -266,7 +266,10 @@ function ResultDisplay({
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && onSelectResult(index)}
             >
-              <span className="font-mono text-xs truncate mr-2">{result.type}</span>
+              <div className="flex flex-col min-w-0 mr-2">
+                <span className="font-mono text-xs truncate">{result.type}</span>
+                {result.category && <span className={`text-[10px] truncate ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{result.category.toUpperCase()}</span>}
+              </div>
               <div className="flex items-center space-x-1.5 flex-shrink-0">
                 <span className={`text-xs font-semibold px-1.5 py-0.5 rounded-full ${isDark ? 'text-blue-400 bg-blue-900/30' : 'text-blue-700 bg-blue-100'}`}>
                   {Math.round(result.confidence * 100)}%
@@ -300,13 +303,14 @@ function ResultDisplay({
 // --- MAIN APP ---
 
 interface AppProps {
-  apiKey: string
+  apiKeys: string[]
   isDark: boolean
   onToggleTheme: () => void
-  onResetKey: () => void
+  onAddKey: (key: string) => void
+  onRemoveKey: (index: number) => void
 }
 
-export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
+export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: AppProps) {
   const [imageFile, setImageFile] = useState<File | null>(null)
   const [imageUrl, setImageUrl] = useState<string | null>(null)
   const [loadingStage, setLoadingStage] = useState<0 | 1 | 2 | 3>(0)
@@ -318,17 +322,29 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
   const [selectedResultIndex, setSelectedResultIndex] = useState<number | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [usedModel, setUsedModel] = useState<string | null>(null)
+  const [activeKeyIndex, setActiveKeyIndex] = useState(0)
   const [everExpanded, setEverExpanded] = useState(false)
   const [showApiMenu, setShowApiMenu] = useState(false)
+  const [newKeyInput, setNewKeyInput] = useState('')
 
   async function fileToGenerativePart(file: File) {
-    const base64EncodedDataPromise = new Promise<string>((resolve) => {
-      const reader = new FileReader()
-      reader.onloadend = () => resolve((reader.result as string).split(',')[1])
-      reader.readAsDataURL(file)
+    const MAX_PX = 1024
+    const base64 = await new Promise<string>((resolve) => {
+      const img = new Image()
+      img.onload = () => {
+        const scale = Math.min(1, MAX_PX / Math.max(img.width, img.height))
+        const w = Math.round(img.width * scale)
+        const h = Math.round(img.height * scale)
+        const canvas = document.createElement('canvas')
+        canvas.width = w
+        canvas.height = h
+        canvas.getContext('2d')!.drawImage(img, 0, 0, w, h)
+        resolve(canvas.toDataURL('image/jpeg', 0.85).split(',')[1])
+      }
+      img.src = URL.createObjectURL(file)
     })
     return {
-      inlineData: { data: await base64EncodedDataPromise, mimeType: file.type },
+      inlineData: { data: base64, mimeType: 'image/jpeg' },
     }
   }
 
@@ -399,11 +415,11 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
     setUsedModel(null)
 
     try {
-      const ai = new GoogleGenAI({ apiKey })
       const imagePart = await fileToGenerativePart(imageFile)
 
       const pool = selectedCategory ? CATEGORIES.filter(c => c.category === selectedCategory) : CATEGORIES
       const pivotMap = new Map(pool.map(item => [item.type, item.pivot]))
+      const categoryMap = new Map(pool.map(item => [item.type, item.category]))
       const typeList = pool.map(c => c.type).join('\n')
 
       const prompt = `Analyze the image and identify all objects shown. From the following list of types, select all that apply. For each match provide a confidence score (0–1). Order results from most to least confident. If nothing matches, return an empty array.\n\nTypes:\n${typeList}`
@@ -429,23 +445,29 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
 
       const models = ['gemini-2.5-flash', 'gemini-2.0-flash']
       let response = null
-      let activeModel = models[0]
-      for (const model of models) {
-        try {
-          response = await ai.models.generateContent({
-            model,
-            contents: { parts: [imagePart, { text: prompt }] },
-            config: schema,
-          })
-          activeModel = model
-          break
-        } catch (err) {
-          const is429 = err instanceof Error && err.message.includes('429')
-          if (is429 && model !== models[models.length - 1]) continue
-          throw err
+      let usedKeyIdx = activeKeyIndex
+
+      outer: for (let keyIdx = activeKeyIndex; keyIdx < apiKeys.length; keyIdx++) {
+        const ai = new GoogleGenAI({ apiKey: apiKeys[keyIdx] })
+        for (const model of models) {
+          try {
+            response = await ai.models.generateContent({
+              model,
+              contents: { parts: [imagePart, { text: prompt }] },
+              config: schema,
+            })
+            usedKeyIdx = keyIdx
+            setUsedModel(model)
+            break outer
+          } catch (err) {
+            const is429 = err instanceof Error && (err.message.includes('429') || err.message.includes('quota'))
+            if (!is429) throw err
+            if (model !== models[models.length - 1]) continue // try next model
+            // this key exhausted — try next key
+          }
         }
       }
-      setUsedModel(activeModel)
+      setActiveKeyIndex(usedKeyIdx)
 
       const parsed = JSON.parse(response!.text ?? '{}')
       const typeResults: { type: string; confidence: number }[] = parsed.results ?? []
@@ -456,7 +478,7 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       }
 
       const finalResults: ClassificationResult[] = typeResults.map(r => ({
-        category: '',
+        category: categoryMap.get(r.type) ?? '',
         subcategory: '',
         type: r.type,
         confidence: r.confidence,
@@ -470,9 +492,9 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
       const msg = err instanceof Error ? err.message : ''
       if (msg.includes('429') || msg.includes('quota') || msg.includes('limit')) {
         setError(
-          selectedCategory === null
-            ? 'Daily token quota exceeded. Select a specific category (not ALL) to reduce token usage, or try again after midnight Pacific Time.'
-            : 'Daily token quota exceeded. Try again after midnight Pacific Time.'
+          apiKeys.length > 1
+            ? 'All API keys quota exceeded. Try again after midnight Pacific Time.'
+            : 'Daily token quota exceeded. Add more API keys or try again after midnight Pacific Time.'
         )
       } else {
         setError(`Error: ${msg || 'An unexpected error occurred.'}`)
@@ -514,31 +536,43 @@ export function App({ apiKey, isDark, onToggleTheme, onResetKey }: AppProps) {
                     onClick={(e) => { e.stopPropagation(); setShowApiMenu(v => !v) }}
                     className={`text-xs underline px-1 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
                   >
-                    API key
+                    API keys ({apiKeys.length})
                   </button>
                   {showApiMenu && (
                     <div
                       onClick={(e) => e.stopPropagation()}
-                      className={`absolute right-0 top-6 z-50 w-64 rounded-lg shadow-xl p-3 text-xs ${isDark ? 'bg-[#2a2a2a] border border-gray-700 text-gray-300' : 'bg-white border border-gray-200 text-gray-700'}`}
+                      className={`absolute right-0 top-6 z-50 w-72 rounded-lg shadow-xl p-3 text-xs ${isDark ? 'bg-[#2a2a2a] border border-gray-700 text-gray-300' : 'bg-white border border-gray-200 text-gray-700'}`}
                     >
-                      <p className="font-semibold mb-2">How to get a Gemini API key</p>
-                      <ol className={`space-y-1 mb-2 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <li>1. Open <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">aistudio.google.com/apikey</a></li>
-                        <li>2. Sign in with your Google account</li>
-                        <li>3. Click <span className={`font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>"Create API key"</span></li>
-                        <li>4. Copy the key and paste it here</li>
-                      </ol>
-                      <hr className={`my-2 ${isDark ? 'border-gray-700' : 'border-gray-200'}`} />
-                      <button
-                        onClick={() => {
-                          setShowApiMenu(false)
-                          if (window.confirm('Reset API key? You will need to enter it again.'))
-                            onResetKey()
-                        }}
-                        className="text-red-400 hover:text-red-300 transition-colors"
-                      >
-                        Reset key
-                      </button>
+                      <p className="font-semibold mb-2">API Keys</p>
+                      <ul className="space-y-1 mb-3">
+                        {apiKeys.map((k, i) => (
+                          <li key={i} className="flex items-center justify-between gap-2">
+                            <span className={`font-mono ${i === activeKeyIndex ? (isDark ? 'text-green-400' : 'text-green-600') : ''}`}>
+                              {i === activeKeyIndex ? '● ' : '○ '}{k.slice(0, 6)}…{k.slice(-4)}
+                            </span>
+                            <button
+                              onClick={() => onRemoveKey(i)}
+                              className="text-red-400 hover:text-red-300 flex-shrink-0"
+                            >✕</button>
+                          </li>
+                        ))}
+                      </ul>
+                      <hr className={`mb-2 ${isDark ? 'border-gray-700' : 'border-gray-200'}`} />
+                      <p className={`mb-1 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Add key from another Google account:</p>
+                      <div className="flex gap-1">
+                        <input
+                          type="password"
+                          value={newKeyInput}
+                          onChange={e => setNewKeyInput(e.target.value)}
+                          placeholder="AIza..."
+                          className={`flex-1 min-w-0 border rounded px-2 py-1 font-mono ${isDark ? 'bg-[#333] border-gray-600 text-gray-100 placeholder-gray-600' : 'border-gray-300'}`}
+                        />
+                        <button
+                          onClick={() => { if (newKeyInput.trim()) { onAddKey(newKeyInput.trim()); setNewKeyInput('') } }}
+                          disabled={!newKeyInput.trim()}
+                          className="px-2 py-1 bg-blue-600 text-white rounded disabled:opacity-40"
+                        >Add</button>
+                      </div>
                     </div>
                   )}
                 </div>

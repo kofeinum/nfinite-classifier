@@ -4,8 +4,23 @@ import { App } from './App'
 import { ApiKeySetup } from './ApiKeySetup'
 import './index.css'
 
+function loadKeys(): string[] {
+  try {
+    const stored = localStorage.getItem('gemini-api-keys')
+    if (stored) return JSON.parse(stored)
+  } catch {}
+  // migrate old single key
+  const old = localStorage.getItem('gemini-api-key')
+  if (old) { saveKeys([old]); return [old] }
+  return []
+}
+
+function saveKeys(keys: string[]) {
+  localStorage.setItem('gemini-api-keys', JSON.stringify(keys))
+}
+
 function Root() {
-  const [apiKey, setApiKey] = useState(() => localStorage.getItem('gemini-api-key') || '')
+  const [apiKeys, setApiKeys] = useState<string[]>(loadKeys)
   const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') !== 'light')
 
   const toggleTheme = () => {
@@ -14,28 +29,29 @@ function Root() {
     localStorage.setItem('theme', next ? 'dark' : 'light')
   }
 
-  if (!apiKey) {
-    return (
-      <ApiKeySetup
-        isDark={isDark}
-        onToggleTheme={toggleTheme}
-        onKeySet={(key) => {
-          localStorage.setItem('gemini-api-key', key)
-          setApiKey(key)
-        }}
-      />
-    )
+  const addKey = (key: string) => {
+    const next = [...apiKeys, key]
+    setApiKeys(next)
+    saveKeys(next)
+  }
+
+  const removeKey = (index: number) => {
+    const next = apiKeys.filter((_, i) => i !== index)
+    setApiKeys(next)
+    saveKeys(next)
+  }
+
+  if (apiKeys.length === 0) {
+    return <ApiKeySetup isDark={isDark} onToggleTheme={toggleTheme} onKeySet={addKey} />
   }
 
   return (
     <App
-      apiKey={apiKey}
+      apiKeys={apiKeys}
       isDark={isDark}
       onToggleTheme={toggleTheme}
-      onResetKey={() => {
-        localStorage.removeItem('gemini-api-key')
-        setApiKey('')
-      }}
+      onAddKey={addKey}
+      onRemoveKey={removeKey}
     />
   )
 }
