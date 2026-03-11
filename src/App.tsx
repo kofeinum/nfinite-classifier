@@ -97,7 +97,7 @@ const pivotCodeMap: Record<string, FacePos[]> = {
 }
 
 const parsePivotPositions = (pivot: string): FacePos[] => {
-  if (!pivot || pivot === 'A') return []
+  if (!pivot || pivot === 'A' || pivot === 'null') return []
   // Direct code lookup (new format: "S1", "E3", "C4", "A")
   if (pivotCodeMap[pivot]) return pivotCodeMap[pivot]
   // Legacy: code in parentheses "(E3)"
@@ -420,9 +420,10 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
       const pool = selectedCategory ? CATEGORIES.filter(c => c.category === selectedCategory) : CATEGORIES
       const pivotMap = new Map(pool.map(item => [item.type, item.pivot]))
       const categoryMap = new Map(pool.map(item => [item.type, item.category]))
-      const typeList = pool.map(c => c.type).join('\n')
+      const searchNameToTypeMap = new Map(pool.map(item => [item.searchName, item.type]))
+      const searchList = pool.map(c => c.searchName).join('\n')
 
-      const prompt = `Analyze the image and identify all objects shown. From the following list of types, select all that apply. For each match provide a confidence score (0–1). Order results from most to least confident. If nothing matches, return an empty array.\n\nTypes:\n${typeList}`
+      const prompt = `Analyze the image and identify all objects shown. From the following list of items, select all that apply. For each match provide a confidence score (0–1). Order results from most to least confident. If nothing matches, return an empty array.\n\nItems:\n${searchList}`
       const schema = {
         responseMimeType: 'application/json',
         responseSchema: {
@@ -470,20 +471,23 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
       setActiveKeyIndex(usedKeyIdx)
 
       const parsed = JSON.parse(response!.text ?? '{}')
-      const typeResults: { type: string; confidence: number }[] = parsed.results ?? []
+      const itemResults: { type: string; confidence: number }[] = parsed.results ?? []
 
-      if (typeResults.length === 0) {
+      if (itemResults.length === 0) {
         setNotFound(true)
         return
       }
 
-      const finalResults: ClassificationResult[] = typeResults.map(r => ({
-        category: categoryMap.get(r.type) ?? '',
-        subcategory: '',
-        type: r.type,
-        confidence: r.confidence,
-        pivot: pivotMap.get(r.type) ?? 'S1',
-      }))
+      const finalResults: ClassificationResult[] = itemResults.map(r => {
+        const actualType = searchNameToTypeMap.get(r.type) || r.type
+        return {
+          category: categoryMap.get(actualType) ?? '',
+          subcategory: '',
+          type: actualType,
+          confidence: r.confidence,
+          pivot: pivotMap.get(actualType) ?? 'S1',
+        }
+      })
 
       setResults(finalResults)
       setSelectedResultIndex(0)
@@ -515,7 +519,8 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
               <h1 className={`text-2xl font-bold ${isDark ? '' : 'text-gray-800'}`} style={isDark ? { color: '#c8963c' } : undefined}>
                 Nfinite category classifier
               </h1>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
+                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.02</span>
                 <button
                   onClick={onToggleTheme}
                   className={`p-2 rounded-lg transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
