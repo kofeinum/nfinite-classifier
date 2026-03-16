@@ -520,7 +520,7 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
                 Nfinite category classifier
               </h1>
               <div className="flex items-center gap-2">
-                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.02</span>
+                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.03</span>
                 <button
                   onClick={onToggleTheme}
                   className={`p-2 rounded-lg transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
