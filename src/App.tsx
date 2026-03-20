@@ -417,65 +417,13 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
     try {
       const imagePart = await fileToGenerativePart(imageFile)
 
-      const models = ['gemini-2.5-flash', 'gemini-2.0-flash']
-      let usedKeyIdx = activeKeyIndex
-
-      const callGemini = async (prompt: string, config: object) => {
-        let response = null
-        outer: for (let keyIdx = usedKeyIdx; keyIdx < apiKeys.length; keyIdx++) {
-          const ai = new GoogleGenAI({ apiKey: apiKeys[keyIdx] })
-          for (const model of models) {
-            try {
-              response = await ai.models.generateContent({
-                model,
-                contents: { parts: [imagePart, { text: prompt }] },
-                config,
-              })
-              usedKeyIdx = keyIdx
-              setUsedModel(model)
-              break outer
-            } catch (err) {
-              const is429 = err instanceof Error && (err.message.includes('429') || err.message.includes('quota'))
-              if (!is429) throw err
-              if (model !== models[models.length - 1]) continue
-            }
-          }
-        }
-        return response
-      }
-
-      // Pass 1: detect category (only when no manual filter selected)
-      let pool = selectedCategory ? CATEGORIES.filter(c => c.category === selectedCategory) : CATEGORIES
-      if (!selectedCategory) {
-        const uniqueCategories = [...new Set(CATEGORIES.map(c => c.category))]
-        const categoryPrompt = `Identify the main object in the image. From the following list of product categories, return the single best matching category name exactly as written.
-
-Categories:
-${uniqueCategories.join('\n')}`
-        const categoryConfig = {
-          responseMimeType: 'application/json',
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: { category: { type: Type.STRING } },
-            required: ['category'],
-          },
-        }
-        const categoryResponse = await callGemini(categoryPrompt, categoryConfig)
-        const categoryParsed = JSON.parse(categoryResponse!.text ?? '{}')
-        const detectedCategory: string = categoryParsed.category ?? ''
-        if (detectedCategory && uniqueCategories.includes(detectedCategory)) {
-          pool = CATEGORIES.filter(c => c.category === detectedCategory)
-        }
-        setLoadingStage(2)
-      }
-
-      // Pass 2: classify specific types within the pool
+      const pool = selectedCategory ? CATEGORIES.filter(c => c.category === selectedCategory) : CATEGORIES
       const pivotMap = new Map(pool.map(item => [item.type, item.pivot]))
       const categoryMap = new Map(pool.map(item => [item.type, item.category]))
       const searchNameToTypeMap = new Map(pool.map(item => [item.searchName, item.type]))
       const searchList = pool.map(c => c.searchName).join('\n')
 
-      const typePrompt = `Analyze the image and identify the object(s) shown. From the following list of items, select all that apply.
+      const prompt = `Analyze the image and identify the object(s) shown. From the following list of items, select all that apply.
 
 Instructions:
 1. Identify the object in the image.
@@ -492,7 +440,7 @@ Instructions:
 
 Items:
 ${searchList}`
-      const typeConfig = {
+      const schema = {
         responseMimeType: 'application/json',
         responseSchema: {
           type: Type.OBJECT,
@@ -512,7 +460,29 @@ ${searchList}`
         },
       }
 
-      const response = await callGemini(typePrompt, typeConfig)
+      const models = ['gemini-2.5-flash', 'gemini-2.0-flash']
+      let response = null
+      let usedKeyIdx = activeKeyIndex
+
+      outer: for (let keyIdx = activeKeyIndex; keyIdx < apiKeys.length; keyIdx++) {
+        const ai = new GoogleGenAI({ apiKey: apiKeys[keyIdx] })
+        for (const model of models) {
+          try {
+            response = await ai.models.generateContent({
+              model,
+              contents: { parts: [imagePart, { text: prompt }] },
+              config: schema,
+            })
+            usedKeyIdx = keyIdx
+            setUsedModel(model)
+            break outer
+          } catch (err) {
+            const is429 = err instanceof Error && (err.message.includes('429') || err.message.includes('quota'))
+            if (!is429) throw err
+            if (model !== models[models.length - 1]) continue
+          }
+        }
+      }
       setActiveKeyIndex(usedKeyIdx)
 
       const parsed = JSON.parse(response!.text ?? '{}')
