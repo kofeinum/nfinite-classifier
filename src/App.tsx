@@ -423,7 +423,23 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
       const searchNameToTypeMap = new Map(pool.map(item => [item.searchName, item.type]))
       const searchList = pool.map(c => c.searchName).join('\n')
 
-      const prompt = `Analyze the image and identify all objects shown. From the following list of items, select all that apply. For each match provide a confidence score (0–1). Order results from most to least confident. If nothing matches, return an empty array.\n\nItems:\n${searchList}`
+      const prompt = `Analyze the image and identify the object(s) shown. From the following list of items, select all that apply.
+
+Instructions:
+1. Identify the object in the image.
+2. Match it to as many relevant items from the provided list as possible.
+3. Provide a comprehensive list of potential matches, including:
+   - The exact item match.
+   - Related or similar items that might apply with lower confidence.
+   - Alternative names or closely related product types.
+4. Aim to provide at least 5 to 10 items if they have any relevance (even low confidence).
+5. If the object is a synonym or variant of an item in the list, select that item.
+6. For each match, return the item name exactly as written in the list, and a confidence score (0-1).
+7. Order results from most to least confident.
+8. If none of the items apply, return an empty array.
+
+Items:
+${searchList}`
       const schema = {
         responseMimeType: 'application/json',
         responseSchema: {
