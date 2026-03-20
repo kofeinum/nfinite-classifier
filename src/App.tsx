@@ -485,7 +485,9 @@ ${searchList}`
       }
       setActiveKeyIndex(usedKeyIdx)
 
-      const parsed = JSON.parse(response!.text ?? '{}')
+      if (!response) throw new Error('429: All API keys quota exceeded.')
+
+      const parsed = JSON.parse(response.text ?? '{}')
       const itemResults: { type: string; confidence: number }[] = parsed.results ?? []
 
       if (itemResults.length === 0) {
