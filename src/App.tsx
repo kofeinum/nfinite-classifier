@@ -423,20 +423,15 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
       const searchNameToTypeMap = new Map(pool.map(item => [item.searchName, item.type]))
       const searchList = pool.map(c => c.searchName).join('\n')
 
-      const prompt = `Analyze the image and identify the object(s) shown. From the following list of items, select all that apply.
+      const prompt = `You are a product classifier. Identify the object(s) in the image and match them to items from the list below.
 
-Instructions:
-1. Identify the object in the image.
-2. Match it to as many relevant items from the provided list as possible.
-3. Provide a comprehensive list of potential matches, including:
-   - The exact item match.
-   - Related or similar items that might apply with lower confidence.
-   - Alternative names or closely related product types.
-4. Aim to provide at least 5 to 10 items if they have any relevance (even low confidence).
-5. If the object is a synonym or variant of an item in the list, select that item.
-6. For each match, return the item name exactly as written in the list, and a confidence score (0-1).
-7. Order results from most to least confident.
-8. If none of the items apply, return an empty array.
+      Rules:
+      - Return ONLY items that genuinely match the image
+      - Include synonyms and close variants
+      - Return exact item names from the list
+      - Confidence: 1.0 = exact match, 0.5 = possible match
+      - Minimum confidence to include: 0.4
+      - If no match found, return empty array
 
 Items:
 ${searchList}`
@@ -537,7 +532,7 @@ ${searchList}`
                 Nfinite category classifier
               </h1>
               <div className="flex items-center gap-2">
-                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.04</span>
+                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.05</span>
                 <button
                   onClick={onToggleTheme}
                   className={`p-2 rounded-lg transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
