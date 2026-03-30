@@ -423,15 +423,19 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
       const searchNameToTypeMap = new Map(pool.map(item => [item.searchName, item.type]))
       const searchList = pool.map(c => c.searchName).join('\n')
 
-      const prompt = `You are a product classifier. Identify the object(s) in the image and match them to items from the list below.
+      const prompt = `Analyze the image and identify the object(s) shown. From the following list of items, select all that apply.
 
-      Rules:
-      - Return ONLY items that genuinely match the image
-      - Include synonyms and close variants
-      - Return exact item names from the list
-      - Confidence: 1.0 = exact match, 0.5 = possible match
-      - Minimum confidence to include: 0.4
-      - If no match found, return empty array
+  Instructions:
+  1. Identify the object(s) in the image.
+  2. Match them to as many relevant items from the provided list as possible, including:
+     - Exact matches.
+     - Synonyms, alternative names, and closely related product types.
+     - Similar or related items that might apply with lower confidence.
+  3. Aim to provide at least 5 to 10 items if they have any relevance.
+  4. Return each item name exactly as written in the list, along with a confidence score (0–1).
+  5. Only include items with a confidence score of 0.4 or higher.
+  6. Order results from most to least confident.
+  7. If no items meet the threshold, return an empty array.
 
 Items:
 ${searchList}`
