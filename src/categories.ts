@@ -300,6 +300,7 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'buildings & structures', subcategory: 'buildings', type: 'WALL_LIGHT_INDICATOR', pivot: 'S4', searchName: "wall light indicators" },
   { category: 'buildings & structures', subcategory: 'buildings', type: 'WAREHOUSE', pivot: 'S1', searchName: "warehouses" },
   { category: 'buildings & structures', subcategory: 'buildings', type: 'WORKSTATION_FRAME', pivot: 'A', searchName: "workstation frames" },
+  { category: 'buildings & structures', subcategory: 'buildings', type: 'TRUSS_FRAME', pivot: 'A', searchName: "truss frame" },
   { category: 'buildings & structures', subcategory: 'construction and public works', type: 'SCAFFOLDING', pivot: 'C4', searchName: "scaffoldings" },
   { category: 'buildings & structures', subcategory: 'cranes', type: 'OVERHEAD_CRANE', pivot: 'A', searchName: "bridge cranes " },
   { category: 'buildings & structures', subcategory: 'energy & fuels', type: 'OIL_BARREL', pivot: 'C4', searchName: "oil barrels" },
@@ -634,6 +635,7 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'decor', subcategory: 'tabletop frames', type: 'TABLETOP_FRAME', pivot: 'S1', searchName: "tabletop frames" },
   { category: 'decor', subcategory: 'tapestries', type: 'TAPESTRY', pivot: 'S4', searchName: "tapestries" },
   { category: 'decor', subcategory: 'wall decorations', type: 'WALL_DECORATION', pivot: 'S4', searchName: "wall decorations" },
+  { category: 'decor', subcategory: 'wall decorations', type: 'WALL_STICKERS', pivot: 'S4', searchName: "wall_stickers" },
   { category: 'decor', subcategory: 'wall hangables', type: 'WALL_HANGABLE', pivot: 'S4', searchName: "wall hangables" },
   { category: 'decor', subcategory: 'window treatments', type: 'CURTAIN', pivot: 'A', searchName: "curtains" },
   { category: 'decor', subcategory: 'window treatments', type: 'HORIZONTAL_BLIND', pivot: 'A', searchName: "horizontal blinds" },
@@ -2677,11 +2679,3 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'windows', subcategory: 'window accessories', type: 'SLIDE_2_LEAF_SHUTTER', pivot: 'A', searchName: "2 leaf sliding shutters" },
   { category: 'windows', subcategory: 'windows', type: 'WINDOW', pivot: 'A', searchName: "windows" },
 ]
-
-
-
-retail & markets
-
-
-TRUSS_FRAME	A
-WALL_STICKERS	S4
