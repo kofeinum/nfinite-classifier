@@ -48,6 +48,21 @@
 .top    { transform: rotateX(90deg)   translateZ(90px); }
 .bottom { transform: rotateX(-90deg)  translateZ(90px) rotateZ(180deg) scaleX(-1); }
 
+.lookup-list::-webkit-scrollbar {
+    width: 10px;
+}
+.lookup-list::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 0 6px 6px 0;
+}
+.lookup-list::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+.lookup-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .pivot-point {
     position: absolute;
     width: 20px;
