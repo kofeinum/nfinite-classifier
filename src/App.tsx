@@ -531,7 +531,7 @@ ${searchList}`
                 Nfinite category classifier
               </h1>
               <div className="flex items-center gap-2">
-                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.09</span>
+                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.10</span>
                 <a
                   href="./pivot.html"
                   className={`text-xs underline px-1 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
