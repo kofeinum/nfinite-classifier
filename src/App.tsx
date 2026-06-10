@@ -300,48 +300,16 @@ function ResultDisplay({
   return null
 }
 
-// --- TYPE → PIVOT LOOKUP HOOK ---
-
-function useTypePivotLookup() {
-  const [input, setInput] = useState('')
-  const [open, setOpen] = useState(false)
-  const [highlighted, setHighlighted] = useState(0)
-
-  const query = input.toUpperCase().trim()
-  const exactEntry = CATEGORIES.find(c => c.type === query)
-  const suggestions = query.length >= 1
-    ? CATEGORIES.filter(c => c.type.includes(query) && c.type !== query)
-    : []
-
-  useEffect(() => { setHighlighted(0) }, [input])
-
-  const select = (type: string) => {
-    setInput(type)
-    setOpen(false)
-  }
-
-  const onKeyDown = (e: React.KeyboardEvent) => {
-    if (!open || suggestions.length === 0) return
-    if (e.key === 'ArrowDown') { e.preventDefault(); setHighlighted(h => Math.min(h + 1, suggestions.length - 1)) }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); setHighlighted(h => Math.max(h - 1, 0)) }
-    else if (e.key === 'Enter') { e.preventDefault(); select(suggestions[highlighted].type) }
-    else if (e.key === 'Escape') setOpen(false)
-  }
-
-  return { input, setInput, open, setOpen, suggestions, highlighted, setHighlighted, exactEntry, select, onKeyDown }
-}
-
 // --- MAIN APP ---
 
 interface AppProps {
   apiKeys: string[]
   isDark: boolean
-  onToggleTheme: () => void
   onAddKey: (key: string) => void
   onRemoveKey: (index: number) => void
 }
 
-export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: AppProps) {
+export function App({ apiKeys, isDark, onAddKey, onRemoveKey }: AppProps) {
   const [imageFile, setImageFile] = useState<File | null>(null)
   const [imageUrl, setImageUrl] = useState<string | null>(null)
   const [loadingStage, setLoadingStage] = useState<0 | 1 | 2 | 3>(0)
@@ -357,7 +325,6 @@ export function App({ apiKeys, isDark, onToggleTheme, onAddKey, onRemoveKey }: A
   const [everExpanded, setEverExpanded] = useState(false)
   const [showApiMenu, setShowApiMenu] = useState(false)
   const [newKeyInput, setNewKeyInput] = useState('')
-  const lookup = useTypePivotLookup()
 
   async function fileToGenerativePart(file: File) {
     const MAX_PX = 1024
@@ -554,10 +521,10 @@ ${searchList}`
 
   return (
     <div className={`min-h-screen flex flex-col items-center justify-center p-4 md:p-8 ${isDark ? 'bg-[#282828]' : 'bg-gray-100'}`}>
-      <div className={`p-8 rounded-2xl shadow-xl w-full mx-auto min-h-[810px] ${everExpanded ? 'transition-[max-width] duration-700 ease-out' : ''} ${imageUrl ? 'max-w-6xl' : 'max-w-[600px]'} ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
+      <div className={`p-8 rounded-2xl shadow-xl w-full mx-auto min-h-[720px] ${everExpanded ? 'transition-[max-width] duration-500 ease-out' : ''} ${imageUrl ? 'max-w-6xl' : 'max-w-[600px]'} ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
         <div className="flex gap-8 items-start">
           {/* Left: Title + Uploader — fixed width, never reflows */}
-          <div className="w-[536px] shrink-0 min-h-[746px] flex flex-col">
+          <div className="w-[536px] shrink-0 min-h-[656px]">
             {/* Title row */}
             <div className="flex items-center justify-between mb-3">
               <h1 className={`text-2xl font-bold ${isDark ? '' : 'text-gray-800'}`} style={isDark ? { color: '#c8963c' } : undefined}>
@@ -565,21 +532,12 @@ ${searchList}`
               </h1>
               <div className="flex items-center gap-2">
                 <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.09</span>
-                <button
-                  onClick={onToggleTheme}
-                  className={`p-2 rounded-lg transition-colors ${isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-[#444]' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}
-                  title={isDark ? 'Light theme' : 'Dark theme'}
+                <a
+                  href="./pivot.html"
+                  className={`text-xs underline px-1 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
                 >
-                  {isDark ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364-.707.707M6.343 17.657l-.707.707m12.728 0-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
-                    </svg>
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                  )}
-                </button>
+                  Pivot lookup
+                </a>
                 <div className="relative">
                   <button
                     onClick={(e) => { e.stopPropagation(); setShowApiMenu(v => !v) }}
@@ -674,99 +632,42 @@ ${searchList}`
                 : selectedCategory ? `Classify in ${selectedCategory}` : 'CLASSIFY IMAGE'}
             </button>
 
-            {/* Shared area: chips ↔ suggestions (fixed height, no layout shift) */}
-            <div className="flex-1 relative mt-4 min-h-0">
-              {/* Слой чипов */}
-              <div className={`absolute inset-0 transition-opacity duration-700 ${lookup.open ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Filter by category:</p>
-                <div className="flex flex-wrap gap-1.5">
-                  <button
-                    onClick={() => setSelectedCategory(null)}
-                    className={`flex-auto px-2.5 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
-                      selectedCategory === null
-                        ? isDark ? 'text-black' : 'bg-amber-600/80 text-white'
-                        : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
-                    }`}
-                    style={isDark && selectedCategory === null ? { backgroundColor: '#c8963c' } : undefined}
-                  >
-                    ALL
-                  </button>
-                  {CATEGORY_LIST.map(cat => (
-                    <button
-                      key={cat}
-                      onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
-                      className={`flex-auto px-2.5 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
-                        selectedCategory === cat
-                          ? isDark ? 'text-black' : 'bg-blue-600 text-white'
-                          : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-300 text-gray-800 hover:bg-gray-400'
-                      }`}
-                      style={isDark && selectedCategory === cat ? { backgroundColor: '#c8963c' } : undefined}
-                    >
-                      {cat.toUpperCase()}
-                    </button>
-                  ))}
-                </div>
-                {selectedCategory === null && (
-                  <p className={`mt-4 text-sm font-medium ${isDark ? 'text-amber-500/80' : 'text-amber-700'}`}>
-                    ⚠ Select a category to save tokens
-                  </p>
-                )}
-              </div>
-
-              {/* Слой подсказок */}
-              <div className={`absolute inset-0 transition-opacity duration-700 ${lookup.open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
-                  {lookup.suggestions.length > 0 ? `${lookup.suggestions.length} matches` : 'No matches'}
-                </p>
-                <ul className={`lookup-list h-[calc(100%-22px)] overflow-y-auto rounded-lg border text-sm font-mono ${
-                  isDark ? 'bg-[#262626] border-gray-700 text-gray-200' : 'bg-[#ebebeb] border-gray-300 text-gray-800'
-                }`}>
-                  {lookup.suggestions.map((s, i) => (
-                    <li
-                      key={s.type}
-                      onMouseDown={() => lookup.select(s.type)}
-                      onMouseEnter={() => lookup.setHighlighted(i)}
-                      className={`px-3 py-px cursor-pointer flex justify-between items-center transition-colors duration-100 ${
-                        i === lookup.highlighted
-                          ? isDark ? 'bg-[#323232]' : 'bg-[#d8d8d8]'
-                          : ''
-                      }`}
-                    >
-                      <span className="text-lg font-normal" style={{ color: 'rgb(120, 175, 230)' }}>{s.type}</span>
-                      <span className={`text-lg ml-2 shrink-0 font-bold ${isDark ? 'text-[#c8963c]' : 'text-blue-600'}`}>{s.pivot}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Поле поиска — всегда внизу */}
-            <div className="pt-4">
-              <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Lookup pivot by type:</p>
-              <div className="flex gap-2 items-stretch">
-                <input
-                  type="text"
-                  value={lookup.input}
-                  onChange={e => { lookup.setInput(e.target.value.toUpperCase()); lookup.setOpen(true) }}
-                  onFocus={() => { if (lookup.input.length >= 1) lookup.setOpen(true) }}
-                  onBlur={() => setTimeout(() => lookup.setOpen(false), 150)}
-                  onKeyDown={lookup.onKeyDown}
-                  placeholder="FOLDED_SUNGLASSES"
-                  autoComplete="off"
-                  style={{ color: 'rgb(120, 175, 230)' }}
-                  className={`flex-1 min-w-0 border rounded-lg px-3 h-[36px] text-lg font-normal font-mono focus:outline-none focus:ring-2 ${
-                    isDark
-                      ? 'bg-[#262626] border-gray-600 placeholder-gray-600 focus:ring-[#c8963c]'
-                      : 'bg-[#ebebeb] border-gray-300 placeholder-gray-400 focus:ring-blue-400'
+            {/* Category filter chips */}
+            <div className="mt-4">
+              <p className={`text-xs mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Filter by category:</p>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  onClick={() => setSelectedCategory(null)}
+                  className={`flex-auto px-2.5 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
+                    selectedCategory === null
+                      ? isDark ? 'text-black' : 'bg-amber-600/80 text-white'
+                      : isDark ? 'bg-[#444] text-gray-500 hover:bg-[#555]' : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
                   }`}
-                />
-                <div className={`w-20 shrink-0 border rounded-lg px-3 h-[36px] flex items-center justify-center text-xl font-mono font-bold transition-colors duration-300 ${
-                  isDark ? 'bg-[#262626] border-gray-600' : 'bg-[#ebebeb] border-gray-300'
-                } ${lookup.exactEntry ? (isDark ? 'text-[#c8963c]' : 'text-blue-700') : (isDark ? 'text-gray-600' : 'text-gray-400')}`}>
-                  {lookup.exactEntry?.pivot ?? '—'}
-                </div>
+                  style={isDark && selectedCategory === null ? { backgroundColor: '#c8963c' } : undefined}
+                >
+                  ALL
+                </button>
+                {CATEGORY_LIST.map(cat => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat === selectedCategory ? null : cat)}
+                    className={`flex-auto px-2.5 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
+                      selectedCategory === cat
+                        ? isDark ? 'text-black' : 'bg-blue-600 text-white'
+                        : isDark ? 'bg-[#444] text-gray-300 hover:bg-[#555]' : 'bg-gray-300 text-gray-800 hover:bg-gray-400'
+                    }`}
+                    style={isDark && selectedCategory === cat ? { backgroundColor: '#c8963c' } : undefined}
+                  >
+                    {cat.toUpperCase()}
+                  </button>
+                ))}
               </div>
             </div>
+            {selectedCategory === null && (
+              <p className={`mt-4 text-sm font-medium ${isDark ? 'text-amber-500/80' : 'text-amber-700'}`}>
+                ⚠ Select a category to save tokens
+              </p>
+            )}
           </div>
 
           {/* Right: Results and Cube — appears when image is selected */}

@@ -21,13 +21,7 @@ function saveKeys(keys: string[]) {
 
 function Root() {
   const [apiKeys, setApiKeys] = useState<string[]>(loadKeys)
-  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') !== 'light')
-
-  const toggleTheme = () => {
-    const next = !isDark
-    setIsDark(next)
-    localStorage.setItem('theme', next ? 'dark' : 'light')
-  }
+  const isDark = true
 
   const addKey = (key: string) => {
     const next = [...apiKeys, key]
@@ -42,14 +36,13 @@ function Root() {
   }
 
   if (apiKeys.length === 0) {
-    return <ApiKeySetup isDark={isDark} onToggleTheme={toggleTheme} onKeySet={addKey} />
+    return <ApiKeySetup isDark={isDark} onKeySet={addKey} />
   }
 
   return (
     <App
       apiKeys={apiKeys}
       isDark={isDark}
-      onToggleTheme={toggleTheme}
       onAddKey={addKey}
       onRemoveKey={removeKey}
     />

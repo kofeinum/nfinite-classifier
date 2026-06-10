@@ -1,0 +1,104 @@
+import React, { useState, useEffect } from 'react'
+import { CATEGORIES } from './categories'
+
+// --- TYPE → PIVOT LOOKUP HOOK ---
+
+function useTypePivotLookup() {
+  const [input, setInput] = useState('')
+  const [open, setOpen] = useState(false)
+  const [highlighted, setHighlighted] = useState(0)
+
+  const query = input.toUpperCase().trim()
+  const exactEntry = CATEGORIES.find(c => c.type === query)
+  const suggestions = query.length >= 1
+    ? CATEGORIES.filter(c => c.type.includes(query) && c.type !== query)
+    : []
+
+  useEffect(() => { setHighlighted(0) }, [input])
+
+  const select = (type: string) => {
+    setInput(type)
+    setOpen(false)
+  }
+
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    if (!open || suggestions.length === 0) return
+    if (e.key === 'ArrowDown') { e.preventDefault(); setHighlighted(h => Math.min(h + 1, suggestions.length - 1)) }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setHighlighted(h => Math.max(h - 1, 0)) }
+    else if (e.key === 'Enter') { e.preventDefault(); select(suggestions[highlighted].type) }
+    else if (e.key === 'Escape') setOpen(false)
+  }
+
+  return { input, setInput, open, setOpen, suggestions, highlighted, setHighlighted, exactEntry, select, onKeyDown }
+}
+
+// --- PAGE ---
+
+interface PivotPageProps {
+  isDark: boolean
+}
+
+export function PivotPage({ isDark }: PivotPageProps) {
+  const lookup = useTypePivotLookup()
+
+  return (
+    <div className={`min-h-screen flex items-center justify-center p-4 ${isDark ? 'bg-[#282828]' : 'bg-gray-100'}`}>
+      <div className={`p-8 rounded-2xl shadow-xl w-full max-w-[548px] ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
+        <div className="flex items-center justify-between mb-6">
+          <h1 className={`text-2xl font-bold ${isDark ? '' : 'text-gray-800'}`} style={isDark ? { color: '#c8963c' } : undefined}>
+            Pivot lookup
+          </h1>
+        </div>
+
+        <div className="relative">
+          <div className="flex gap-2 items-stretch">
+            <input
+              type="text"
+              value={lookup.input}
+              onChange={e => { lookup.setInput(e.target.value.toUpperCase()); lookup.setOpen(true) }}
+              onFocus={() => { if (lookup.input.length >= 1) lookup.setOpen(true) }}
+              onBlur={() => setTimeout(() => lookup.setOpen(false), 150)}
+              onKeyDown={lookup.onKeyDown}
+              placeholder="PRODUCT_CATEGORY"
+              autoComplete="off"
+              autoFocus
+              style={{ color: /[^\x00-\x7F]/.test(lookup.input) ? '#ef4444' : 'rgb(120, 175, 230)' }}
+              className={`flex-1 min-w-0 border rounded-lg px-3 h-[36px] text-lg font-normal font-mono focus:outline-none focus:ring-2 ${
+                isDark
+                  ? 'bg-[#262626] border-gray-600 placeholder-gray-600 focus:ring-[#c8963c]'
+                  : 'bg-[#ebebeb] border-gray-300 placeholder-gray-400 focus:ring-blue-400'
+              }`}
+            />
+            <div className={`w-20 shrink-0 border rounded-lg px-3 h-[36px] flex items-center justify-center text-xl font-mono font-bold transition-colors duration-300 ${
+              isDark ? 'bg-[#262626] border-gray-600' : 'bg-[#ebebeb] border-gray-300'
+            } ${lookup.exactEntry ? (isDark ? 'text-[#c8963c]' : 'text-blue-700') : (isDark ? 'text-gray-600' : 'text-gray-400')}`}>
+              {lookup.exactEntry?.pivot ?? '—'}
+            </div>
+          </div>
+
+          {lookup.open && lookup.suggestions.length > 0 && (
+            <ul className={`lookup-list absolute z-10 left-0 right-[88px] mt-1 max-h-72 overflow-y-auto rounded-lg border text-sm font-mono ${
+              isDark ? 'bg-[#262626] border-gray-700 text-gray-200' : 'bg-[#ebebeb] border-gray-300 text-gray-800'
+            }`}>
+              {lookup.suggestions.map((s, i) => (
+                <li
+                  key={s.type}
+                  onMouseDown={() => lookup.select(s.type)}
+                  onMouseEnter={() => lookup.setHighlighted(i)}
+                  className={`px-3 py-px cursor-pointer flex justify-between items-center transition-colors duration-100 ${
+                    i === lookup.highlighted
+                      ? isDark ? 'bg-[#323232]' : 'bg-[#d8d8d8]'
+                      : ''
+                  }`}
+                >
+                  <span className="text-lg font-normal" style={{ color: 'rgb(120, 175, 230)' }}>{s.type}</span>
+                  <span className={`text-lg ml-2 shrink-0 font-bold ${isDark ? 'text-[#c8963c]' : 'text-blue-600'}`}>{s.pivot}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
