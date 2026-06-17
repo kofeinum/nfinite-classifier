@@ -133,6 +133,7 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'bathroom', subcategory: 'bathroom accessories', type: 'SHOWER_SQUEEGEE', pivot: 'C2', searchName: "shower squeegee" },
   { category: 'bathroom', subcategory: 'bathroom accessories', type: 'WALL_SHOWER_SQUEEGEE', pivot: 'A', searchName: "wall shower squeegee" },
   { category: 'bathroom', subcategory: 'bathroom accessories', type: 'HANGING_SHOWER_SQUEEGEE', pivot: 'A', searchName: "hanging shower squeegee" },
+  { category: 'bathroom', subcategory: 'bathroom accessories', type: 'FLOOR_URINAL_PARTITION', pivot: 'E3', searchName: "floor urinal partitions" },
   { category: 'bathroom', subcategory: 'bathtub accessories', type: 'BATHTUB_HANDLE', pivot: 'S4', searchName: "bathtub handle" },
   { category: 'bathroom', subcategory: 'bathtub accessories', type: 'TUB_STOPPER', pivot: 'S1', searchName: "tub stoppers" },
   { category: 'bathroom', subcategory: 'holders & dispensers', type: 'BATH_ACCESSORIES_SET', pivot: 'S1', searchName: "bath accessories set" },
@@ -241,6 +242,9 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'building materials', subcategory: 'construction materials', type: 'REBARS_STACK', pivot: 'C1', searchName: "rebars stack" },
   { category: 'building materials', subcategory: 'construction materials', type: 'STEEL_ANGLE', pivot: 'C1', searchName: "steel angles" },
   { category: 'building materials', subcategory: 'construction materials', type: 'METAL_BEAM', pivot: 'C1', searchName: "metal beam" },
+  { category: 'building materials', subcategory: 'construction materials', type: 'WOOD_BEAM', pivot: 'C1', searchName: "wood beams" },
+  { category: 'building materials', subcategory: 'construction materials', type: 'CONCRETE_COLUMN', pivot: 'A', searchName: "concrete columns" },
+  { category: 'building materials', subcategory: 'construction materials', type: 'ROOF_TRUSS', pivot: 'A', searchName: "roof trusses" },
   { category: 'building materials', subcategory: 'construction materials', type: 'STEEL_COIL', pivot: 'C1', searchName: "steel coils" },
   { category: 'building materials', subcategory: 'construction materials', type: 'ROUND_STEEL_BAR', pivot: 'C1', searchName: "round steel bars" },
   { category: 'building materials', subcategory: 'millwork', type: 'COLUMN', pivot: 'S1', searchName: "columns" },
@@ -322,6 +326,7 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'buildings & structures', subcategory: 'facility safety products', type: 'CEILING_SIGN', pivot: 'A', searchName: "ceiling signs" },
   { category: 'buildings & structures', subcategory: 'facility safety products', type: 'PORTABLE_SAFETY_BARRIER', pivot: 'S1', searchName: "portable safety barriers " },
   { category: 'buildings & structures', subcategory: 'facility safety products', type: 'ROPE_BARRIER', pivot: 'S1', searchName: "rope barrier" },
+  { category: 'buildings & structures', subcategory: 'facility safety products', type: 'CONCRETE_BARRIER', pivot: 'C4', searchName: "concrete barriers" },
   { category: 'buildings & structures', subcategory: 'facility safety products', type: 'TRAFFIC_CONE', pivot: 'S1', searchName: "traffic cones" },
   { category: 'buildings & structures', subcategory: 'facility safety products', type: 'WALL_FIRE_HORN', pivot: 'S4', searchName: "wall fire alarms sounder" },
   { category: 'buildings & structures', subcategory: 'facility safety products', type: 'WALL_FIRE_STROBE', pivot: 'S4', searchName: "wall fire alarms strobe" },
@@ -415,6 +420,13 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'buildings & structures', subcategory: 'public utilities', type: 'LIGHTNING_ROD', pivot: 'A', searchName: "lightning rods" },
   { category: 'buildings & structures', subcategory: 'public utilities', type: 'MANHOLE_COVER', pivot: 'S1', searchName: "manhole covers" },
   { category: 'buildings & structures', subcategory: 'public utilities', type: 'WIND_TURBINE', pivot: 'A', searchName: "wind turbines" },
+
+
+
+
+
+
+
   { category: 'buildings & structures', subcategory: 'retail & markets', type: 'BAR_COUNTER', pivot: 'E3', searchName: "bar counter" },
   { category: 'buildings & structures', subcategory: 'retail & markets', type: 'BUFFET_COUNTER', pivot: 'S1', searchName: "buffet counters" },
   { category: 'buildings & structures', subcategory: 'retail & markets', type: 'CHECKOUT_COUNTER', pivot: 'E3', searchName: "checkout counters" },
@@ -448,6 +460,11 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'buildings & structures', subcategory: 'retail & markets', type: 'ICE_CREAM_CONE_STAND', pivot: 'A', searchName: "ice cream cone stand" },
   { category: 'buildings & structures', subcategory: 'retail & markets', type: 'MOBILE_ICE_CREAM_MACHINE', pivot: 'S1', searchName: "mobile ice cream machine" },
   { category: 'buildings & structures', subcategory: 'retail & markets', type: 'CUP_SEALER', pivot: 'E3', searchName: "cup sealer" },
+
+  { category: 'buildings & structures', subcategory: 'retail & markets', type: 'BOOK_DISPLAY_ISLAND', pivot: 'S1', searchName: "book display islands" },
+  { category: 'buildings & structures', subcategory: 'retail & markets', type: 'SHOE_DISPLAY_STAND', pivot: 'A', searchName: "shoe display stands" },
+  { category: 'buildings & structures', subcategory: 'retail & markets', type: 'SELF_CHECKOUT', pivot: 'E3', searchName: "self checkouts" },
+  { category: 'buildings & structures', subcategory: 'retail & markets', type: 'TABLETOP_PRICE_SIGN', pivot: 'A', searchName: "tabletop price signs" },
   { category: 'buildings & structures', subcategory: 'signage & wayfinding', type: 'CEILING_EXIT_PANEL', pivot: 'S6', searchName: "ceiling exit panels" },
   { category: 'buildings & structures', subcategory: 'signage & wayfinding', type: 'ROAD_SIGN', pivot: 'A', searchName: "road signs" },
   { category: 'buildings & structures', subcategory: 'signage & wayfinding', type: 'STREET_SIGN', pivot: 'A', searchName: "street signs" },
@@ -1091,6 +1108,11 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'furniture', subcategory: 'seats', type: 'BEACH_SLING_CHAIR', pivot: 'S1', searchName: "sling chairs" },
   { category: 'furniture', subcategory: 'seats', type: 'BEAN_BAG', pivot: 'S1', searchName: "bean bags" },
   { category: 'furniture', subcategory: 'seats', type: 'BENCH', pivot: 'E3', searchName: "benches" },
+
+
+
+
+
   { category: 'furniture', subcategory: 'seats', type: 'CHAIR', pivot: 'S1', searchName: "chairs" },
   { category: 'furniture', subcategory: 'seats', type: 'CHAIR_COVER', pivot: 'E3', searchName: "chair covers" },
   { category: 'furniture', subcategory: 'seats', type: 'CHAIR_CUSHION', pivot: 'S1', searchName: "chair cushions" },
@@ -1135,6 +1157,7 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'furniture', subcategory: 'seats', type: 'SOFA', pivot: 'E3', searchName: "sofas" },
   { category: 'furniture', subcategory: 'seats', type: 'SOFA_BED_LEFT', pivot: 'E3', searchName: "left sofa bed" },
   { category: 'furniture', subcategory: 'seats', type: 'SOFA_BED_RIGHT', pivot: 'E3', searchName: "right sofa bed" },
+  { category: 'furniture', subcategory: 'seats', type: 'ISLAND_SOFA', pivot: 'S1', searchName: "island sofas" },
   { category: 'furniture', subcategory: 'seats', type: 'STACKABLE_CHAIR', pivot: 'S1', searchName: "stacking chairs" },
   { category: 'furniture', subcategory: 'seats', type: 'STOOL', pivot: 'S1', searchName: "stools" },
   { category: 'furniture', subcategory: 'seats', type: 'KICK_STOOL', pivot: 'C4', searchName: "kick stools" },
@@ -1812,6 +1835,8 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'lab equipment', subcategory: 'racks, stands & clamps', type: 'TEST_TUBES_ON_RACK', pivot: 'S1', searchName: "racks with test tubes" },
   { category: 'lab equipment', subcategory: 'racks, stands & clamps', type: 'LAB_STAND', pivot: 'A', searchName: "laboratory stand" },
   { category: 'lab equipment', subcategory: 'racks, stands & clamps', type: 'SAMPLE_TRANSPORT_CASE', pivot: 'C4', searchName: "sample transport cases" },
+  { category: 'lab equipment', subcategory: 'liquid handling', type: 'MOBILE_LAB_FUME_HOOD', pivot: 'S1', searchName: "mobile laboratory fume hoods" },
+  { category: 'lab equipment', subcategory: 'liquid handling', type: 'WALL_EMER_CALL_PANEL', pivot: 'S4', searchName: "wall emergency call panels" },
   // lawn & garden
   { category: 'lawn & garden', subcategory: 'gardening tools', type: 'BROADFORK', pivot: 'E3', searchName: "broadforks" },
   { category: 'lawn & garden', subcategory: 'gardening tools', type: 'BULB_PLANTER', pivot: 'C3', searchName: "bulb planters" },
@@ -2229,6 +2254,8 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'office', subcategory: 'holders & dispensers', type: 'LAPTOP_STAND', pivot: 'A', searchName: "laptop stands" },
   { category: 'office', subcategory: 'holders & dispensers', type: 'LETTER_RACK', pivot: 'C4', searchName: "letter racks" },
   { category: 'office', subcategory: 'holders & dispensers', type: 'MAGAZINE_RACK', pivot: 'S1', searchName: "magazine racks" },
+  { category: 'office', subcategory: 'holders & dispensers', type: 'WALL_MAGAZINE_RACK', pivot: 'S4', searchName: "wall magazine racks" },
+  { category: 'office', subcategory: 'holders & dispensers', type: 'WALL_BOOK_RACK', pivot: 'S4', searchName: "wall book racks" },
   { category: 'office', subcategory: 'holders & dispensers', type: 'MEMO_PAD_CUBE', pivot: 'C4', searchName: "memo pad cube" },
   { category: 'office', subcategory: 'holders & dispensers', type: 'PAGE_UP', pivot: 'C4', searchName: "page up" },
   { category: 'office', subcategory: 'holders & dispensers', type: 'PAPER_CLIP_CONTAINER', pivot: 'C4', searchName: "paper clip container" },
@@ -2505,6 +2532,7 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'tools', subcategory: 'measuring & layout tools', type: 'DOWN_RETRACTABLE_TAPE_MEASURE', pivot: 'C3', searchName: "down retractable tape measures" },
   { category: 'tools', subcategory: 'measuring & layout tools', type: 'PROTRACTOR', pivot: 'C3', searchName: "protractors" },
   { category: 'tools', subcategory: 'measuring & layout tools', type: 'RULER', pivot: 'C3', searchName: "rulers" },
+  { category: 'tools', subcategory: 'measuring & layout tools', type: 'ROLLED_MEASURING_TAPE', pivot: 'C3', searchName: "rolled measuring tapes" },
   { category: 'tools', subcategory: 'measuring & layout tools', type: 'SQUARE', pivot: 'C3', searchName: "squares" },
   { category: 'tools', subcategory: 'measuring & layout tools', type: 'STANDING_RETRACTABLE_TAPE_MEASURE', pivot: 'C3', searchName: "standing retractable tape measures" },
   { category: 'tools', subcategory: 'measuring & layout tools', type: 'OPTICAL_LEVEL', pivot: 'A', searchName: "optical level" },
@@ -2629,6 +2657,13 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'toys & games', subcategory: 'games & accessories', type: 'SHUFFLEBOARD_TABLE', pivot: 'E3', searchName: "shuffleboard tables" },
   { category: 'toys & games', subcategory: 'games & accessories', type: 'SKEE_BALL_MACHINE', pivot: 'E3', searchName: "skee-ball machine" },
   { category: 'toys & games', subcategory: 'games & accessories', type: 'TABLETOP_POOL_TABLE', pivot: 'S1', searchName: "tabletops pool table" },
+  { category: 'toys & games', subcategory: 'casino equipment', type: 'CASINO_CHIP', pivot: 'S1', searchName: "casino chips" },
+  { category: 'toys & games', subcategory: 'casino equipment', type: 'CASINO_CHIP_SET', pivot: 'S1', searchName: "casino chip sets" },
+  { category: 'toys & games', subcategory: 'casino equipment', type: 'POKER_CHIP', pivot: 'S1', searchName: "poker chips" },
+  { category: 'toys & games', subcategory: 'casino equipment', type: 'POKER_CHIP_SET', pivot: 'S1', searchName: "poker chip sets" },
+  { category: 'toys & games', subcategory: 'casino equipment', type: 'PLAYING_CARD', pivot: 'S1', searchName: "playing cards" },
+  { category: 'toys & games', subcategory: 'casino equipment', type: 'DECK_OF_PLAYING_CARDS', pivot: 'S1', searchName: "decks of playing cards" },
+  { category: 'toys & games', subcategory: 'casino equipment', type: 'SPREAD_PLAYING_CARDS', pivot: 'S1', searchName: "spread playing cards" },
   { category: 'toys & games', subcategory: 'learning & education', type: 'DRAWING_PROJECTOR', pivot: 'A', searchName: "drawing projectors" },
   { category: 'toys & games', subcategory: 'learning & education', type: 'KIDS_ABACUS', pivot: 'S1', searchName: "kids abacuses" },
   { category: 'toys & games', subcategory: 'learning & education', type: 'SHAPE_BOX', pivot: 'S1', searchName: "shape boxes" },
@@ -2693,6 +2728,7 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'toys & games', subcategory: 'tricycles, scooters & wagons', type: 'RIDE_ON_TOY', pivot: 'S1', searchName: "ride on toys" },
   { category: 'toys & games', subcategory: 'tricycles, scooters & wagons', type: 'TOY_WAGON', pivot: 'S1', searchName: "toy wagons" },
   { category: 'toys & games', subcategory: 'tricycles, scooters & wagons', type: 'TRICYCLE', pivot: 'S1', searchName: "tricycles" },
+  { category: 'toys & games', subcategory: 'tricycles, scooters & wagons', type: 'RIDE_ON_TOY_CAR', pivot: 'S1', searchName: "ride on toy cars" },
   // travel
   { category: 'travel', subcategory: 'accessories', type: 'COMPASS_TOOL', pivot: 'C3', searchName: "compasses" },
   { category: 'travel', subcategory: 'bags', type: 'BOTTLE_BAG', pivot: 'C4', searchName: "bottle bags" },
@@ -2723,6 +2759,7 @@ export const CATEGORIES: CategoryEntry[] = [
   { category: 'travel', subcategory: 'luggage', type: 'SUITCASE_WITHOUT_WHEELS', pivot: 'C4', searchName: "suitcases without wheels" },
   { category: 'travel', subcategory: 'luggage', type: 'BAG_AND_ITEMS_SET', pivot: 'S1', searchName: "bag and items set" },
   { category: 'travel', subcategory: 'luggage', type: 'BACKPACK', pivot: 'A', searchName: "backpacks" },
+  { category: 'travel', subcategory: 'luggage', type: 'HOTEL_LUGGAGE_CART', pivot: 'S1', searchName: "hotel luggage carts" },
   // vehicles
   { category: 'vehicles', subcategory: 'air vehicles', type: 'AIRPLANE', pivot: 'S1', searchName: "airplanes" },
   { category: 'vehicles', subcategory: 'air vehicles', type: 'DRONE', pivot: 'S1', searchName: "drones" },
