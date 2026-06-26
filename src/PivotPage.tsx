@@ -3,15 +3,15 @@ import { CATEGORIES } from './categories'
 
 // --- TYPE → PIVOT LOOKUP HOOK ---
 
-function useTypePivotLookup() {
+function useTypePivotLookup(categories: { type: string; pivot: string }[]) {
   const [input, setInput] = useState('')
   const [open, setOpen] = useState(false)
   const [highlighted, setHighlighted] = useState(0)
 
   const query = input.toUpperCase().trim()
-  const exactEntry = CATEGORIES.find(c => c.type === query)
+  const exactEntry = categories.find(c => c.type === query)
   const suggestions = query.length >= 1
-    ? CATEGORIES.filter(c => c.type.includes(query) && c.type !== query)
+    ? categories.filter(c => c.type.includes(query) && c.type !== query)
     : []
 
   useEffect(() => { setHighlighted(0) }, [input])
@@ -39,7 +39,22 @@ interface PivotPageProps {
 }
 
 export function PivotPage({ isDark }: PivotPageProps) {
-  const lookup = useTypePivotLookup()
+  // Начальные данные — статический CATEGORIES (мгновенно). При загрузке страницы
+  // тихо заменяются свежими данными из pivot-data.json (генерируется GitHub Actions).
+  const [categories, setCategories] = useState<{ type: string; pivot: string }[]>(CATEGORIES)
+
+  useEffect(() => {
+    fetch('./pivot-data.json')
+      .then(r => r.json())
+      .then((map: Record<string, string>) => {
+        const entries = Object.entries(map)
+        if (entries.length > 0)
+          setCategories(entries.map(([type, pivot]) => ({ type, pivot })))
+      })
+      .catch(() => { /* при ошибке остаётся статический CATEGORIES */ })
+  }, [])
+
+  const lookup = useTypePivotLookup(categories)
 
   return (
     <div className={`min-h-screen flex items-center justify-center p-4 ${isDark ? 'bg-[#282828]' : 'bg-gray-100'}`}>
