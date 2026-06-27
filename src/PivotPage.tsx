@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { CATEGORIES } from './categories'
+import { PivotCube } from './PivotCube'
 
 // --- TYPE → PIVOT LOOKUP HOOK ---
 
@@ -113,6 +114,11 @@ export function PivotPage({ isDark }: PivotPageProps) {
             </ul>
           )}
         </div>
+
+        {/* Куб появляется только когда категория выбрана и dropdown закрыт */}
+        {lookup.exactEntry && !lookup.open && (
+          <PivotCube pivot={lookup.exactEntry.pivot} isDark={isDark} />
+        )}
       </div>
     </div>
   )
