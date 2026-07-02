@@ -42,8 +42,9 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             git commit -m "chore: update pivot data"
-            git pull --rebase origin main
-            git push
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
