@@ -43,16 +43,25 @@ export function PivotPage({ isDark }: PivotPageProps) {
   // Начальные данные — статический CATEGORIES (мгновенно). При загрузке страницы
   // тихо заменяются свежими данными из pivot-data.json (генерируется GitHub Actions).
   const [categories, setCategories] = useState<{ type: string; pivot: string }[]>(CATEGORIES)
+  const [dataStale, setDataStale] = useState(false)
 
   useEffect(() => {
     fetch('./pivot-data.json')
       .then(r => r.json())
-      .then((map: Record<string, string>) => {
-        const entries = Object.entries(map)
+      .then((map: Record<string, string | null>) => {
+        const { _updated, ...rest } = map as Record<string, string | null>
+        const entries = Object.entries(rest)
         if (entries.length > 0)
           setCategories(entries.map(([type, pivot]) => ({ type, pivot })))
+        // Данные считаем устаревшими если обновлялись более 25 часов назад
+        if (_updated) {
+          const ageMs = Date.now() - new Date(_updated).getTime()
+          if (ageMs > 25 * 60 * 60 * 1000) setDataStale(true)
+        } else {
+          setDataStale(true)
+        }
       })
-      .catch(() => { /* при ошибке остаётся статический CATEGORIES */ })
+      .catch(() => setDataStale(true))
   }, [])
 
   const lookup = useTypePivotLookup(categories)
@@ -61,8 +70,9 @@ export function PivotPage({ isDark }: PivotPageProps) {
     <div className={`min-h-screen flex items-center justify-center p-4 ${isDark ? 'bg-[#282828]' : 'bg-gray-100'}`}>
       <div className={`p-8 rounded-2xl shadow-xl w-full max-w-[548px] ${isDark ? 'bg-[#333333]' : 'bg-white'}`}>
         <div className="flex items-center justify-between mb-6">
-          <h1 className={`text-2xl font-bold ${isDark ? '' : 'text-gray-800'}`} style={isDark ? { color: '#c8963c' } : undefined}>
+          <h1 className={`text-2xl font-bold flex items-center gap-2 ${isDark ? '' : 'text-gray-800'}`} style={isDark ? { color: '#c8963c' } : undefined}>
             Pivot lookup
+            {dataStale && <span style={{ width: 10, height: 10, borderRadius: '50%', backgroundColor: '#ef4444', display: 'inline-block', flexShrink: 0 }} />}
           </h1>
         </div>
 
@@ -88,7 +98,7 @@ export function PivotPage({ isDark }: PivotPageProps) {
             <div className={`w-20 shrink-0 border rounded-lg px-3 h-[36px] flex items-center justify-center text-xl font-mono font-bold transition-colors duration-300 ${
               isDark ? 'bg-[#262626] border-gray-600' : 'bg-[#ebebeb] border-gray-300'
             } ${lookup.exactEntry ? (isDark ? 'text-[#c8963c]' : 'text-blue-700') : (isDark ? 'text-gray-600' : 'text-gray-400')}`}>
-              {lookup.exactEntry?.pivot ?? '—'}
+              {lookup.exactEntry ? (lookup.exactEntry.pivot ?? 'null') : '—'}
             </div>
           </div>
 
