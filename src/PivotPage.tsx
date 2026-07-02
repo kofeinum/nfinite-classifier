@@ -4,7 +4,7 @@ import { PivotCube } from './PivotCube'
 
 // --- TYPE → PIVOT LOOKUP HOOK ---
 
-function useTypePivotLookup(categories: { type: string; pivot: string }[]) {
+function useTypePivotLookup(categories: { type: string; pivot: string | null }[]) {
   const [input, setInput] = useState('')
   const [open, setOpen] = useState(false)
   const [highlighted, setHighlighted] = useState(0)
@@ -42,7 +42,7 @@ interface PivotPageProps {
 export function PivotPage({ isDark }: PivotPageProps) {
   // Начальные данные — статический CATEGORIES (мгновенно). При загрузке страницы
   // тихо заменяются свежими данными из pivot-data.json (генерируется GitHub Actions).
-  const [categories, setCategories] = useState<{ type: string; pivot: string }[]>(CATEGORIES)
+  const [categories, setCategories] = useState<{ type: string; pivot: string | null }[]>(CATEGORIES)
   const [dataStale, setDataStale] = useState(false)
 
   useEffect(() => {
