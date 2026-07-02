@@ -127,7 +127,7 @@ export function PivotPage({ isDark }: PivotPageProps) {
 
         {/* Куб появляется только когда категория выбрана и dropdown закрыт */}
         {lookup.exactEntry && !lookup.open && (
-          <PivotCube pivot={lookup.exactEntry.pivot} isDark={isDark} />
+          <PivotCube pivot={lookup.exactEntry.pivot ?? ''} isDark={isDark} />
         )}
       </div>
     </div>
