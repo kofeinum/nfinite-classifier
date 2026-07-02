@@ -49,8 +49,8 @@ async function main() {
     pages++
     for (const it of page.items) {
       const code = (it.code || '').trim()
-      if (!code || code.startsWith('$') || !it.pivotPoint) continue
-      if (!(code in map)) map[code] = it.pivotPoint   // при дублях первый выигрывает
+      if (!code || code.startsWith('$')) continue
+      if (!(code in map)) map[code] = it.pivotPoint ?? null   // при дублях первый выигрывает
     }
     process.stdout.write(`\r  pages: ${pages}, codes: ${Object.keys(map).length}   `)
     if (!page.paging.hasNext) break
@@ -58,7 +58,8 @@ async function main() {
   }
   process.stdout.write('\n')
 
-  writeFileSync(outPath, JSON.stringify(map, null, 2), 'utf-8')
+  const output = { _updated: new Date().toISOString(), ...map }
+  writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf-8')
   console.log(`Written ${Object.keys(map).length} categories to ${outPath}`)
 }
 
