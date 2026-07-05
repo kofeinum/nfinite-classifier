@@ -321,6 +321,11 @@ export function App({ apiKeys, isDark, onAddKey, onRemoveKey }: AppProps) {
   const [selectedResultIndex, setSelectedResultIndex] = useState<number | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [usedModel, setUsedModel] = useState<string | null>(null)
+  // Инфо о кэше: сколько токенов пришло из implicit-кэша и сколько всего в промпте.
+  // Нужно, чтобы глазами увидеть, работает ли кэширование на бесплатном тире.
+  const [cacheInfo, setCacheInfo] = useState<{ cached: number; total: number } | null>(null)
+  // Счётчик обработанных картинок за текущую сессию (для контроля расхода квоты).
+  const [processedCount, setProcessedCount] = useState(0)
   const [activeKeyIndex, setActiveKeyIndex] = useState(0)
   const [everExpanded, setEverExpanded] = useState(false)
   const [showApiMenu, setShowApiMenu] = useState(false)
@@ -412,6 +417,7 @@ export function App({ apiKeys, isDark, onAddKey, onRemoveKey }: AppProps) {
     setNotFound(false)
     setSelectedResultIndex(null)
     setUsedModel(null)
+    setCacheInfo(null)
 
     try {
       const imagePart = await fileToGenerativePart(imageFile)
@@ -464,7 +470,9 @@ ${searchList}`
           try {
             response = await ai.models.generateContent({
               model,
-              contents: { parts: [imagePart, { text: prompt }] },
+              // Порядок важен: статический текст со списком идёт ПЕРВЫМ (стабильный
+              // префикс для implicit-кэша), а меняющаяся картинка — последней.
+              contents: { parts: [{ text: prompt }, imagePart] },
               config: schema,
             })
             usedKeyIdx = keyIdx
@@ -480,6 +488,12 @@ ${searchList}`
       setActiveKeyIndex(usedKeyIdx)
 
       if (!response) throw new Error('429: All API keys quota exceeded.')
+
+      // Снимаем метрики токенов из ответа. cachedContentTokenCount > 0 означает,
+      // что часть промпта (список категорий) реально пришла из кэша.
+      const usage = response.usageMetadata
+      setCacheInfo({ cached: usage?.cachedContentTokenCount ?? 0, total: usage?.promptTokenCount ?? 0 })
+      setProcessedCount(c => c + 1)
 
       const parsed = JSON.parse(response.text ?? '{}')
       const itemResults: { type: string; confidence: number }[] = parsed.results ?? []
@@ -531,7 +545,7 @@ ${searchList}`
                 Nfinite category classifier
               </h1>
               <div className="flex items-center gap-2">
-                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.10</span>
+                <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>v1.11</span>
                 <a
                   href="./pivot.html"
                   className={`text-xs underline px-1 transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
@@ -585,9 +599,10 @@ ${searchList}`
                 </div>
               </div>
             </div>
-            <p className={`text-sm mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-              Upload, drag & drop, or paste (Ctrl+V) an image.
-            </p>
+            <div className={`flex items-baseline justify-between mb-4 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+              <span>Upload, drag & drop, or paste (Ctrl+V) an image.</span>
+              <span>imgs: {processedCount}</span>
+            </div>
 
             <label
               htmlFor="file-upload"
@@ -689,6 +704,11 @@ ${searchList}`
             {usedModel === 'gemini-2.0-flash' && (
               <p className="mt-2 text-xs text-center text-amber-500">
                 ⚠ Rate limit reached — switched to gemini-2.0-flash
+              </p>
+            )}
+            {cacheInfo && (
+              <p className={`text-xs text-center ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+                cache: {cacheInfo.cached} / {cacheInfo.total} tokens
               </p>
             )}
             {selectedResultIndex !== null && results[selectedResultIndex] && (
